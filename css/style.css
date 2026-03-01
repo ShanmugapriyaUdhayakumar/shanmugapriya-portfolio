@@ -467,7 +467,6 @@ body.scrolled .nav-links a {
 =========================== */
 
 .timeline {
-  position: relative;
   max-width: 900px;
   margin: 0 auto;
   display: flex;
@@ -1340,6 +1339,7 @@ body.scrolled .nav-links a {
     display: flex;
   }
 }
+
 
 
 
