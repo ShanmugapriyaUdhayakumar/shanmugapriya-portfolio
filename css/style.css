@@ -143,7 +143,7 @@ body.scrolled .nav-links a {
 
 /* HERO SECTION */
 .hero {
-  background: #8b3dff;
+  background: linear-gradient(135deg, #3730A3 0%, #111827 100%);;
   color: #fff;
   display: flex;
   align-items: center;
@@ -221,13 +221,12 @@ body.scrolled .nav-links a {
   width: 304px;
   height: 304px;
   border-radius: 50%;
-  background: #ffeb3b;
-  border: 8px solid #e85dff;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .img-circle img {
@@ -1364,3 +1363,4 @@ body.scrolled .nav-links a {
     display: flex;
   }
 }
+
