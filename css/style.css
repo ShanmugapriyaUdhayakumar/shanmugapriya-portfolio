@@ -39,7 +39,7 @@ body.scrolled .navbar {
 }
 
 body.scrolled .logo {
-  color: #8b3dff;
+  color: #3730A3;
 }
 
 .logo span {
@@ -1318,6 +1318,7 @@ body.scrolled .nav-links a {
     display: flex;
   }
 }
+
 
 
 
