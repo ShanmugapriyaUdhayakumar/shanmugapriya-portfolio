@@ -343,7 +343,7 @@ body.scrolled .nav-links a {
 
 .education li {
   background: #fff;
-  border-left: 4px solid #8b3dff;
+  border-left: 4px solid #3730A3;
   padding: 15px 20px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -1363,5 +1363,6 @@ body.scrolled .nav-links a {
     display: flex;
   }
 }
+
 
 
