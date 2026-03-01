@@ -496,21 +496,6 @@ body.scrolled .nav-links a {
   position: relative;
 }
 
-/* ICON */
-
-.timeline-icon {
-  background: #ede9fe;
-  font-size: 18px;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
 /* CARD */
 
 .timeline-content {
@@ -1355,6 +1340,7 @@ body.scrolled .nav-links a {
     display: flex;
   }
 }
+
 
 
 
