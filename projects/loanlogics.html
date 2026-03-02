@@ -8,47 +8,218 @@
     <style>
         /* ----------- PAGE CONTENT STYLES ----------- */
 
+        html {
+  scroll-behavior: smooth;
+}
+
         .case-study-container {
-            max-width: 1150px;
-            margin: 120px auto 50px;
-            padding: 0 20px;
-            line-height: 1.7;
-        }
+  max-width: 900px;
+  margin: 140px auto 80px;
+  padding: 0 20px;
+  line-height: 1.7;
+}
 
-        .case-study-container h2 {
-            margin-top: 40px;
-            color: #8b3dff;
-            font-size: 1.8rem;
-        }
+.cs-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #111827;
+  line-height: 55px;
+}
 
-        .case-study-container h3 {
-            margin-top: 25px;
-            color: #444;
-            font-size: 1.4rem;
-        }
+.cs-tagline {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 30px;
+  max-width: 750px;
+}
 
-        .case-study-container p,
-        .case-study-container li {
-            font-size: 1rem;
-            color: #333;
-        }
+.cs-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  font-size: 0.95rem;
+  color: #374151;
+}
 
-        .case-study-container ul {
-            margin-left: 20px;
-        }
+.cs-meta span {
+  font-weight: 600;
+  color: #3730A3;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .case-study-container {
-                margin-top: 100px;
-            }
-            .case-study-container h2 {
-                font-size: 1.5rem;
-            }
-            .case-study-container h3 {
-                font-size: 1.2rem;
-            }
-        }
+.case-study-container h2 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.case-study-container h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+.case-study-container p {
+  color: #374151;
+}
+
+.case-study-container ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.case-study-container img {
+  width: 100%;
+  border-radius: 16px;
+  margin: 30px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.process-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.process-images img {
+  flex: 1;
+  min-width: 250px;
+}
+
+.cs-results {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.metric {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  min-width: 160px;
+}
+
+.metric h3 {
+  font-size: 2rem;
+  color: #3730A3;
+  margin-bottom: 6px;
+}
+
+.metric p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* ================= VISUAL SNAPSHOTS ================= */
+
+.case-visuals {
+  margin-top: 80px;
+}
+
+.case-visuals h2 {
+  margin-bottom: 15px;
+}
+
+.visual-note {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.case-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.case-images img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-images img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================= CTA EXPLORATION ================= */
+
+.cta-exploration {
+  margin-top: 100px;
+}
+
+.cta-note {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.cta-mockups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  align-items: center;
+}
+
+.cta-item {
+  text-align: center;
+  padding: 20px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.cta-item img {
+  width: 100%;
+  max-width: 260px;
+  margin-bottom: 15px;
+}
+
+.cta-item p {
+  font-weight: 500;
+  color: #444;
+}
+
+/* Highlight selected CTA */
+
+.selected-cta {
+  border: 2px solid #3730A3;
+  box-shadow: 0 12px 35px rgba(124, 58, 237, 0.15);
+  transform: translateY(-4px);
+}
+
+.selected-cta::before {
+  content: "✔ Approved Version";
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #3730A3;
+  margin-bottom: 10px;
+}
+
+.selected-cta p {
+  color: #3730A3;
+  font-weight: 600;
+}
+
+
+/* Responsive spacing */
+
+@media (max-width: 768px) {
+  .case-visuals,
+  .cta-exploration {
+    margin-top: 60px;
+  }
+}
     </style>
 </head>
 
@@ -84,249 +255,215 @@
 
 <div class="case-study-container">
 
-    <h2>LoanLogics - Marketing Website UI Revamp</h2>
+  <!-- HERO SECTION -->
+  <div class="cs-hero">
+    <h1>LoanLogics – Enterprise Marketing System Redesign</h1>
+    <p class="cs-tagline">
+      Redesigning a scalable enterprise marketing system to improve clarity,
+brand alignment, and conversion performance across 20+ pages.
+    </p>
 
-    <p><strong>Role:</strong> UI/UX Designer & Front End<br>
-    <strong>Duration:</strong> 17 months<br>
-    <strong>Type:</strong> Enterprise B2B – Financial / Mortgage Document Automation<br>
-    <strong>Team:</strong> Product Owner, Marketing Team (Including VP), Dev Team, UI/UX Team, QA<br>
-    <strong>Tools:</strong> Figma, Adobe XD, Jira, Photopea, HTML/CSS </p>
+    <div class="cs-meta">
+      <div><span>Role:</span> UI/UX Designer + Frontend</div>
+      <div><span>Duration:</span> 17 Months</div>
+      <div><span>Industry:</span> FinTech / Mortgage Automation</div>
+      <div><span>Team:</span> Product, Marketing, Dev, QA</div>
+      <div><span>Tools:</span> Figma, Adobe XD, Jira, HTML/CSS</div>
+    </div>
+  </div>
 
-    <br>
-    <strong>Note: Due to confidentiality, detailed designs and interactions are not displayed here. I’d be happy to walk through the complete design process and final screens during a call.</strong>
-
-
-    <h2>1. Project Overview</h2><br>
+  <!-- OVERVIEW -->
+  <section>
+    <h2>Overview</h2>
     <p>
-        LoanLogics wanted to revamp their marketing website to align with the launch of LoanBeam®, 
-        their mortgage income calculation automation tool.
-        My role was to help the marketing + design team:
+      LoanLogics aimed to revamp its marketing website to align with the launch of
+      LoanBeam®, an income calculation automation tool for lenders.
+    </p>
+
+    <p>
+      The existing experience lacked consistency, clarity, and a strong conversion path.
+      My responsibility was to create a scalable UI system that improved messaging clarity
+      while maintaining enterprise trust and compliance standards.
+    </p>
+  </section>
+
+  <!-- BUSINESS GOALS -->
+  <section>
+    <h2>Business Goals</h2>
+    <ul>
+      <li>Increase demo requests</li>
+      <li>Improve engagement and page clarity</li>
+      <li>Align LoanLogics and LoanBeam brand identity</li>
+      <li>Create a scalable and reusable page structure</li>
+      <li>Improve lead-generation flow</li>
+    </ul>
+  </section>
+
+  <!-- PROBLEM -->
+  <section>
+    <h2>The Problem</h2>
+    <p>
+      The marketing pages were functional but inconsistent. Content density was high,
+      CTAs lacked visibility, and visual hierarchy did not clearly communicate value.
     </p>
 
     <ul>
-        <li>Define a consistent UI structure across pages</li>
-        <li>Create reusable templates and design components</li>
-        <li>Ensure the site reflected the new automation-focused brand direction</li>
-        <li>Improve content clarity and lead-generation flow</li>
+      <li>No unified layout system</li>
+      <li>Benefits buried in large text blocks</li>
+      <li>Request Demo CTA poorly placed</li>
+      <li>Pages felt disconnected from brand positioning</li>
     </ul>
+  </section>
 
+  <!-- RESEARCH -->
+  <section>
+    <h2>Research & Discovery</h2>
+
+    <h3>Stakeholder Alignment</h3>
     <p>
-        Since the product is B2B financial tech, clarity, trust, and compliance were key.
+      Collaborated with product, marketing leadership, and engineering to ensure the
+      design aligned with enterprise expectations.
     </p>
 
-    <h2>2. Business Goals</h2><br>
-    <p>When I began redesigning the LoanLogics marketing pages, one of the first things I understood was that the brand didn’t want a flashy 
-        or overly creative experience. They wanted the pages to be <strong>clean, minimal, and straightforward,</strong> because their audience is 
-        <strong>not everyday consumers, but lenders, processors, and enterprise decision-makers</strong> who value clarity over decoration.
-
-        After speaking with stakeholders and reviewing how competitors communicate similar solutions, I identified five core 
-        business goals for this redesign:</p><br>
+    <h3>Competitor Analysis</h3>
     <ul>
-        <li>Increase demo requests</li>
-        <li>Improve page engagement</li>
-        <li>Communicate product benefits more clearly</li>
-        <li>Align LoanLogics and LoanBeam brand identity</li>
-        <li>Build a scalable page structure for future updates</li>
+      <li>Clear hero messaging with strong CTA</li>
+      <li>3–4 benefit grid structures</li>
+      <li>Minimalist layout with strong whitespace</li>
+      <li>Data-driven trust indicators</li>
     </ul>
 
-    <h2>3. Problem Statement</h2><br>
+    <h3>Content Audit</h3>
+    <p>
+      Reorganized content into scannable blocks and defined reusable UI modules
+      for scalability.
+    </p>
 
-<p>
-When we started working on the LoanLogics marketing experience, one challenge became clear:
-The existing marketing pages were not telling the story of the product effectively.
-</p>
+    <img src="../images/LoanLogicsMarketingUserPath.png" alt="Marketing Journey">
+  </section>
 
-<p>
-Although functional, they felt disconnected, each page looked slightly different, the content
-density was high, and the visual hierarchy was not helping users understand the key value proposition.
-</p>
+  <!-- INFORMATION ARCHITECTURE -->
+  <section>
+    <h2>Information Architecture</h2>
+    <p>
+      Designed a modular 7-section page framework to maintain clarity and scalability.
+    </p>
 
-<h3>What we observed</h3>
+    <ul>
+      <li>Hero with clear value proposition</li>
+      <li>Supporting context section</li>
+      <li>Benefits grid</li>
+      <li>Feature highlight blocks</li>
+      <li>Strategic CTA placement</li>
+      <li>Reusable content modules</li>
+    </ul>
+  </section>
 
-<p>
-Users had to scroll through large blocks of text before understanding what LoanLogics actually offered.
-</p>
+  <!-- ================= VISUAL SNAPSHOTS ================= -->
 
-<ul>
-    <li>There was no unified layout, so each page felt like it belonged to a different brand.</li>
-    <li>The benefits and features were not highlighted, making it difficult for first-time visitors to grasp value quickly.</li>
-    <li>The primary action — <strong>Request Demo</strong> CTA — was poorly placed and often missed.</li>
-    <li>Banner sections were visually plain, lacking storytelling and visual cues to drive engagement.</li>
-    <li>Frequent updates made it clear that the pages needed a modular, reusable UI system that could scale.</li>
-</ul>
+<section class="case-visuals">
+  <h2>Live UI Snapshots (Recreated for Portfolio)</h2>
 
-<h3>Why this was a problem</h3>
+  <p class="visual-note">
+    Note: These screens are recreated versions of the original designs I worked on.
+    The current live website has since been redesigned.
+  </p>
 
-<p>
-<strong>For a marketing site, first impressions matter. </strong> Visitors typically spend less than <strong>10 seconds</strong> deciding 
-whether a product is worth exploring.
-</p>
-
-<p>LoanLogics needed:</p>
-
-<ul>
-    <li>A structure that communicated trust,</li>
-    <li>A visual language that felt modern and consistent,</li>
-    <li>A page layout that gently guided users toward requesting a demo.</li>
-</ul>
-<br>
-<p>
-<strong>Challenge: </strong> To transform a text-heavy, inconsistent experience into a clean, minimalist, and conversion-friendly marketing journey,
-without overdesigning or complicating the product story.
-</p>
-
-
-    <section id="research-discovery">
-  <h2>4. Research & Discovery</h2>
-
-  <h3>A. Stakeholder Alignment</h3><br>
-  <p>To ensure the new marketing pages supported both business objectives and user needs, I collaborated with key internal stakeholders 
-    such as product leadership, marketing, and engineering.</p>
-
-  <p><strong>What we learned:</strong></p>
-  <ul>
-    <li>Content needed to highlight automation, accuracy, and enterprise-grade reliability.</li>
-    <li>The marketing pages had to support the company’s lead-generation strategy.</li>
-    <li>A consistent visual pattern — banner → value → CTA → content blocks — was required across all pages.</li>
-  </ul>
-
-  <h3>B. Competitor Landscape Review</h3><br>
-  <p>I conducted a high-level review of leading fintech and mortgage-tech websites to understand industry standards for B2B marketing pages.</p>
-
-  <p><strong>Patterns consistently observed:</strong></p>
-  <ul>
-    <li>Clear hero message with a prominent CTA</li>
-    <li>Benefit blocks arranged in simple 3–4 item grids</li>
-    <li>Use of numbers and data points to build trust</li>
-    <li>Clean visuals and purposeful whitespace</li>
-    <li>Minimalist storytelling with focused messaging</li>
-  </ul>
-
-  <p>These patterns helped define a direction that was modern, simple, and conversion-friendly, matching the brand’s 
-    preference for clean UI.</p><br>
-
-  <h3>C. Content Audit</h3><br>
-  <p>The existing pages had valuable information, but it was not structured for quick scanning.</p>
-
-  <p><strong>Key findings:</strong></p>
-  <ul>
-    <li>Several paragraphs were redundant or non-essential</li>
-    <li>Important points were buried in long text blocks</li>
-    <li>Visual hierarchy was unclear</li>
-    <li>No consistent content structure across pages</li>
-  </ul>
-
-  <p>I mapped the content, reorganized it into a clear hierarchy, and defined reusable content blocks to keep the experience consistent.</p><br>
-
-  <p>This is NOT a user flow for functionality — it’s just a marketing journey.</p><br>
-  <img src="../images/LoanLogicsMarketingUserPath.png" alt="LoanLogics Marketing User Path" style="width: 100%; height: 100%;">
-
-
-
+  <div class="case-images">
+    <img src="../images/Loanlogics-Desktop-1.png" alt="LoanLogics Recreated Screen 1">
+    <img src="../images/Loanlogics-Desktop-2.png" alt="LoanLogics Recreated Screen 2">
+    <img src="../images/Loanlogics-Desktop-3.png" alt="LoanLogics Recreated Screen 3">
+  </div>
 </section>
 
-    <h2>5. Personas</h2>
 
-    <h3>Persona 1: Loan Officer</h3>
+
+<!-- ================= CTA EXPLORATION ================= -->
+
+<section class="cta-exploration">
+  <h2>CTA Exploration & Stakeholder Validation</h2>
+
+  <p class="cta-note">
+    To improve conversion visibility, I explored multiple CTA visual directions.
+    Three variations were presented to leadership. Version 2 was selected by the VP for implementation.
+  </p>
+
+  <div class="cta-mockups">
+    
+    <div class="cta-item">
+      <img src="../images/BTN-mock1.png" alt="CTA Concept 1">
+      <p>Concept 1</p>
+    </div>
+
+    <div class="cta-item selected-cta">
+      <img src="../images/BTN-mock2.png" alt="CTA Concept 2">
+      <p>Concept 2 (Selected)</p>
+    </div>
+
+    <div class="cta-item">
+      <img src="../images/BTN-mock3.png" alt="CTA Concept 3">
+      <p>Concept 3</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- PROCESS IMAGES -->
+  <section>
+    <h2>Design Process</h2>
+    <div class="process-images">
+      <img src="../images/LL1.jpeg" alt="Wireframe sketch">
+      <img src="../images/LL2.jpeg" alt="Page ideation">
+    </div>
+  </section>
+
+  <!-- VALIDATION -->
+  <section>
+    <h2>Validation</h2>
+    <p>
+      Conducted informal validation sessions with marketing, sales, and SMEs.
+    </p>
+
     <ul>
-        <li><strong>Goals:</strong> Reduce manual work, speed up process</li>
-        <li><strong>Pain:</strong> Time-consuming calculations</li>
+      <li>Improved CTA visibility</li>
+      <li>Refined header spacing</li>
+      <li>Enhanced banner imagery engagement</li>
     </ul>
+  </section>
 
-    <h3>Persona 2: Underwriter</h3>
+  <!-- RESULTS -->
+  <section>
+    <h2>Outcomes</h2>
+
+    <div class="cs-results">
+      <div class="metric">
+        <h3>20+</h3>
+        <p>Marketing pages standardized</p>
+      </div>
+      <div class="metric">
+        <h3>30–40%</h3>
+        <p>Faster page creation</p>
+      </div>
+    </div>
+    <p style="margin-top:20px; color:#4b5563;">
+This redesign established a scalable design system that reduced content duplication,
+accelerated marketing deployment, and strengthened enterprise trust signals.
+</p>
+  </section>
+
+  <!-- CONTRIBUTIONS -->
+  <section>
+    <h2>My Contributions</h2>
     <ul>
-        <li><strong>Goals:</strong> Accuracy, reduce errors</li>
-        <li><strong>Pain:</strong> Manual checking, inconsistent docs</li>
+      <li>Designed complete information hierarchy</li>
+      <li>Created wireframes to high-fidelity UI</li>
+      <li>Built reusable grid & spacing system</li>
+      <li>Collaborated during design-to-code handoff</li>
+      <li>Ensured responsive consistency across breakpoints</li>
     </ul>
-
-    <h3>Persona 3: Compliance Manager</h3>
-    <ul>
-        <li><strong>Goals:</strong> Standardization, risk reduction</li>
-        <li><strong>Pain:</strong> Human error in income calculations</li>
-    </ul>
-
-    <h2>6. Information Architecture</h2>
-
-<p>
-To bring consistency and clarity across all LoanBeam-related marketing pages, I designed a
-<strong>modular page structure</strong> that could be reused and scaled easily.
-</p>
-
-<p>
-Each page followed a clear 7-section layout, ensuring users could quickly understand the product
-and move naturally toward conversion.
-</p>
-
-<h3>Page Structure I Created</h3><br>
-
-<ul>
-    <li><strong>Header</strong> – Persistent navigation with brand identity and key links</li>
-    <li><strong>Hero Banner</strong> – Clear value proposition with primary messaging</li>
-    <li><strong>Sub-Banner / Introduction</strong> – Supporting context and product positioning</li>
-    <li><strong>Benefits Section</strong> – High-level advantages focused on automation, speed, and accuracy</li>
-    <li><strong>Key Features / Icon Blocks</strong> – Scannable feature highlights with visual support</li>
-    <li><strong>Demo Request CTA</strong> – Strategically placed call-to-action for lead generation</li>
-    <li><strong>Footer</strong> – Supporting links, compliance information, and trust signals</li>
-</ul>
-<br>
-<p>
-This structured approach helped maintain visual and content consistency across pages while allowing
-the marketing and development teams to update or add sections without disrupting the overall layout.
-</p>
-
-  <h3>Here are some pics from the process</h3><br>
-    <p>Initial thinking around the design and layout :-</p><br>
-    <div class="LL-process-images">
-  <img src="../images/LL1.jpeg" alt="Initial wireframe sketch">
-  <img src="../images/LL2.jpeg" alt="Page structure ideation">
-</div>
-<h2>7. Usability Validation</h2>
-<p><em>(Informal but real-world validation)</em></p>
-
-<p>
-Although this was a marketing-focused project, we validated the designs through
-practical feedback sessions with internal teams who interacted with the product daily.
-</p>
-
-<h3>Who We Tested With</h3>
-<ul>
-    <li>Internal Marketing Team</li>
-    <li>Sales Team</li>
-    <li>Product Subject Matter Experts (SMEs)</li>
-</ul>
-
-<h3>Key Feedback & Iterations</h3>
-<ul>
-    <li><strong>Demo Request CTA</strong> needed higher visibility → improved size and placement</li>
-    <li><strong>Benefits section</strong> was performing well → structure retained</li>
-    <li><strong>Header spacing</strong> felt cramped → spacing refined</li>
-    <li><strong>Banner imagery</strong> improved engagement → visuals enhanced</li>
-</ul>
-
-<h2>8. Outcomes</h2>
-
-<ul>
-    <li>Consistent UI across <strong>20+ marketing pages</strong></li>
-    <li><strong>30–40% faster</strong> page creation for the marketing team</li>
-    <li> Stronger brand alignment between LoanLogics and LoanBeam</li>
-    <li>Increased clarity in product messaging</li>
-    <li>Improved user flow leading to demo requests</li>
-</ul>
-
-<h2>9. My Key Contributions</h2>
-
-<ul>
-    <li>Designed the complete page structure and information hierarchy</li>
-    <li>Created wireframes, mid-fidelity, and high-fidelity designs</li>
-    <li>Worked closely with developers during design-to-code handoff</li>
-    <li>Ensured responsive layout logic across all breakpoints</li>
-    <li>Designed icons, banners, and visual assets</li>
-    <li>Built a reusable spacing and grid system for scalability</li>
-</ul>
-
+  </section>
 
 </div>
 
 </body>
 </html>
-
