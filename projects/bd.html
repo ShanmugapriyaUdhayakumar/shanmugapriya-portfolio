@@ -17,8 +17,9 @@
 
         .case-study-container h2 {
             margin-top: 40px;
-            color: #8b3dff;
+            color: #3730A3;
             font-size: 1.8rem;
+            margin-bottom: 10px;
         }
 
         .case-study-container h3 {
@@ -33,9 +34,64 @@
             color: #333;
         }
 
+        .case-study-container p {
+          margin-bottom: 10px;
+        }
+
         .case-study-container ul {
             margin-left: 20px;
         }
+
+        /* ================= BD VISUAL SECTION ================= */
+
+.bd-visuals {
+  margin-top: 80px;
+}
+
+.bd-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.bd-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.bd-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.bd-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.bd-card p {
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Flow Section */
+
+.bd-flow {
+  margin-top: 100px;
+}
+
+.bd-flow img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -91,23 +147,22 @@
     <strong>Type:</strong> Enterprise B2B – Healthcare / Document Management System<br>
     <strong>Team:</strong> Product Owner, Engineering Team, UI/UX Designers, QA <br>
     <strong>Tools:</strong> Figma, Adobe XD, Jira, Photopea, HTML/CSS </p>
-
     <br>
-    <strong>Note: Due to confidentiality, detailed designs and interactions are not displayed here. I’d be happy to walk through the complete design process and final screens during a call.</strong>
-
-    <h2>1. Project Overview</h2><br>
+    <h2>Project Overview</h2><br>
     <p>
         Becton Dickinson required a redesign of an internal document management platform used to store and manage critical documents in a structured and permission-based environment.
 
-The platform had an existing version in use. However, the experience needed a modern UX refresh to improve usability, clarity, and consistency while maintaining strict healthcare and enterprise constraints.
+The platform was already in active enterprise use across internal healthcare workflows. However, the experience needed a modern UX refresh to improve usability, clarity, and consistency while maintaining strict healthcare and enterprise constraints.
 
 The project focused on redesigning 10 core screens that covered the primary document workflows.
+
+This project required balancing usability improvements with strict enterprise and healthcare compliance standards, making clarity and error prevention the primary design drivers.
     </p>
 
     
 
-    <h2>2. Problem Statement</h2><br>
-    <p>The existing document management system was functional but visually outdated and difficult to navigate.</p>
+    <h2>Problem Statement</h2><br>
+    <p>The outdated interface reduced efficiency in document-heavy workflows and increased friction in permission-based operations.</p>
     <p><strong>Key challenges included:</strong></p>
     <ul>
         <li>Complex folder structures that were hard to understand at a glance</li>
@@ -118,7 +173,7 @@ The project focused on redesigning 10 core screens that covered the primary docu
     </ul>
     
 
-    <h2>3. Understanding the Use Case</h2>
+    <h2>Understanding the Use Case</h2>
 
 <p>The platform followed a strict <strong>role-based access model</strong> to ensure document safety and compliance.</p>
 
@@ -142,7 +197,7 @@ Designing for both user types required <strong>clear permission visibility</stro
 </p>
 
 
-<h2>4. Design Scope</h2>
+<h2>Design Scope</h2>
 
 <p>This was a <strong>full redesign</strong>, not an incremental update.</p>
 
@@ -153,8 +208,10 @@ Designing for both user types required <strong>clear permission visibility</stro
   <li>Clear permission-based interactions</li>
 </ul>
 
+<p>The redesign aimed to create a scalable foundation for future product enhancements while reducing operational friction in document workflows.</p>
 
-<h2>5. Healthcare UX Constraints</h2>
+
+<h2>Healthcare UX Constraints</h2>
 
 <p>Given the healthcare domain, the design followed strict usability and compliance principles:</p>
 
@@ -167,7 +224,7 @@ Designing for both user types required <strong>clear permission visibility</stro
 </ul>
 
 
-<h2>6. Accessibility Considerations</h2>
+<h2>Accessibility Considerations</h2>
 
 <p>The redesigned experience accounted for accessibility best practices:</p>
 
@@ -180,25 +237,7 @@ Designing for both user types required <strong>clear permission visibility</stro
   <li>Clear feedback for success, warning, and error states</li>
 </ul>
 
-
-<h2>7. User Flow (Recreated for Portfolio)</h2>
-
-<p>The primary user journey was recreated for portfolio demonstration:</p>
-
-<p>
-<br>
-<img src="../images/UserPermissionBasedDocumentManagementFlow.png" alt="BD User Path" style="width: 100%; height: 100%;">
-</p><br>
-
-<p>This flow was designed to:</p>
-<ul>
-  <li>Minimize steps</li>
-  <li>Prevent accidental edits</li>
-  <li>Clearly reflect user permissions</li>
-</ul>
-
-
-<h2>8. Design Decisions</h2>
+<h2>Design Decisions</h2>
 
 <ul>
   <li>Simplified folder visualization for faster scanning</li>
@@ -209,8 +248,45 @@ Designing for both user types required <strong>clear permission visibility</stro
   <li>Consistent placement of primary and secondary actions</li>
 </ul>
 
+<!-- ================= APPROVED UI SCREENS ================= -->
 
-<h2>9. Components Designed</h2>
+<section class="bd-visuals">
+  <h2>Approved UI Screens (Client Sign-off)</h2>
+
+  <p class="visual-note">
+    The following screens were part of the redesigned experience and received
+    stakeholder approval during implementation.
+  </p>
+
+  <div class="bd-images">
+    <div class="bd-card">
+      <img src="../images/BD_inner_ActionDropdownNew.png" alt="BD Action Dropdown Screen">
+      <p>Permission-based Action Toolbar with Role Visibility</p>
+    </div>
+
+    <div class="bd-card">
+      <img src="../images/BDPermissionSets.png" alt="BD Permission Set Screen">
+      <p>Role-Based Permission Configuration Interface</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPLEX FLOW RECONSTRUCTION ================= -->
+
+<section class="bd-flow">
+  <h2>Complex Permission Flow (Recreated for Portfolio)</h2>
+
+  <p class="visual-note">
+    Due to confidentiality, detailed production flows cannot be shown.
+    Below is a reconstructed version demonstrating the logic behind
+    permission-based document management.
+  </p>
+
+  <img src="../images/UserPermissionBasedDocumentManagementFlow.png" alt="BD Permission Flow">
+</section>
+
+
+<h2>Components Designed</h2>
 
 <ul>
   <li>Folder and file cards</li>
@@ -224,7 +300,7 @@ Designing for both user types required <strong>clear permission visibility</stro
 <p>These components ensured visual and functional consistency across all 10 screens.</p>
 
 
-<h2>10. Usability Challenges</h2>
+<h2>Usability Challenges</h2>
 
 <ul>
   <li>Balancing simplicity with dense information</li>
@@ -235,33 +311,29 @@ Designing for both user types required <strong>clear permission visibility</stro
 </ul>
 
 
-<h2>11. Results & Impact</h2>
+<h2>Results & Impact</h2>
 
 <ul>
-  <li>Improved clarity and navigation</li>
-  <li>Reduced visual clutter</li>
-  <li>Faster document discovery</li>
-  <li>Clear differentiation between user roles</li>
-  <li>Positive stakeholder feedback on the UI direction</li>
+  <li>Standardized permission-based logic across 10 core workflows</li>
+  <li>Reduced workflow friction by simplifying folder hierarchy and action visibility</li>
+  <li>Improved task efficiency through contextual action toolbars</li>
+  <li>Enabled scalable component reuse for future product modules</li>
+  <li>Strengthened enterprise readiness through accessibility-focused improvements</li>
 </ul>
 
 
-<h2>12. My Role</h2>
+<h2>My Role & Ownership</h2>
 
 <ul>
-  <li>UX & UI Design</li>
-  <li>Redesign of 10+ application screens</li>
-  <li>Permission-based interaction design</li>
-  <li>Visual system updates (colors, icons, typography)</li>
-  <li>Accessibility-focused design decisions</li>
-  <li>Stakeholder collaboration and design documentation</li>
+  <li>UX redesign of 10 core application screens</li>
+  <li>Defined permission-based interaction logic for multi-role users</li>
+  <li>Established visual system updates aligned with BD enterprise branding</li>
+  <li>Collaborated with engineering to ensure accurate implementation</li>
+  <li>Advocated accessibility improvements within healthcare constraints</li>
+  <li>Presented design directions to stakeholders for approval</li>
 </ul>
-
-  
-
 
 </div>
 
 </body>
 </html>
-
