@@ -1,468 +1,2047 @@
-Rr<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoanLogics Case Study</title>
+
+    <title>LoanLogics | Enterprise Marketing System Redesign | Product Design Case Study</title>
+
     <link rel="stylesheet" href="../css/style.css" />
+
     <style>
-        /* ----------- PAGE CONTENT STYLES ----------- */
+
+        /* =========================================================
+           LOANLOGICS PRODUCT DESIGN CASE STUDY
+        ========================================================= */
 
         html {
-  scroll-behavior: smooth;
-}
+            scroll-behavior: smooth;
+        }
 
         .case-study-container {
-  max-width: 900px;
-  margin: 140px auto 80px;
-  padding: 0 20px;
-  line-height: 1.7;
-}
+            max-width: 1100px;
+            margin: 110px auto 80px;
+            padding: 0 24px;
+            line-height: 1.7;
+        }
 
-.cs-hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: #3730A3;
-  line-height: 55px;
-}
+        /* ================= TYPOGRAPHY ================= */
 
-.cs-tagline {
-  font-size: 1.1rem;
-  color: #4b5563;
-  margin-bottom: 30px;
-  max-width: 750px;
-}
+        .case-study-container h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #3730A3;
+            line-height: 1.25;
+            margin: 12px 0 16px;
+        }
 
-.cs-meta {
-  display: grid;
-  font-size: 0.95rem;
-  color: #374151;
-}
+        .case-study-container h2 {
+            margin-top: 70px;
+            margin-bottom: 18px;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #3730A3;
+            line-height: 1.3;
+        }
 
-.cs-meta span {
-  font-weight: 600;
-  color: #3730A3;
-}
+        .case-study-container h3 {
+            margin-top: 25px;
+            margin-bottom: 9px;
+            font-size: 1.1rem;
+            color: #374151;
+        }
 
-.case-study-container h2 {
-  margin-top: 60px;
-  margin-bottom: 20px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #3730A3;
-}
+        .case-study-container h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #3730A3;
+            font-size: 0.95rem;
+        }
 
-.case-study-container h3 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  color: #374151;
-}
+        .case-study-container p,
+        .case-study-container li {
+            font-size: 0.94rem;
+            color: #374151;
+        }
 
-.case-study-container p {
-  color: #374151;
-}
+        .case-study-container p {
+            margin-bottom: 12px;
+        }
 
-.case-study-container ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
+        .case-study-container ul {
+            margin-left: 20px;
+            padding-left: 8px;
+        }
 
-.case-study-container img {
-  width: 100%;
-  border-radius: 16px;
-  margin: 30px 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
+        .case-study-container li {
+            margin-bottom: 6px;
+        }
 
-.process-images {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+        /* ================= HERO ================= */
 
-.process-images img {
-  flex: 1;
-  min-width: 250px;
-}
+        .project-label {
+            display: inline-block;
+            background: #eeeefe;
+            color: #3730A3;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
 
-.cs-results {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
+        .cs-tagline {
+            max-width: 900px;
+            font-size: 1.08rem !important;
+            color: #4b5563 !important;
+            margin-bottom: 28px !important;
+        }
 
-.metric {
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  min-width: 160px;
-}
+        /* ================= PROJECT META ================= */
 
-.metric h3 {
-  font-size: 2rem;
-  color: #3730A3;
-  margin-bottom: 6px;
-}
+        .cs-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 25px;
+        }
 
-.metric p {
-  font-size: 0.95rem;
-  color: #4b5563;
-}
+        .meta-card {
+            background: #ffffff;
+            padding: 17px 18px;
+            border-radius: 11px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
 
-/* ================= VISUAL SNAPSHOTS ================= */
+        .meta-card span {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #777;
+            margin-bottom: 4px;
+        }
 
-.case-visuals {
-  margin-top: 80px;
-}
+        .meta-card strong {
+            font-size: 0.88rem;
+            color: #374151;
+        }
 
-.case-visuals h2 {
-  margin-bottom: 15px;
-}
+        /* ================= OVERVIEW ================= */
 
-.visual-note {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 30px;
-}
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
 
-.case-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
+        .overview-card {
+            background: #ffffff;
+            padding: 23px;
+            border-radius: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
 
-.case-images img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .overview-card h3 {
+            color: #3730A3;
+            margin-top: 0;
+        }
 
-.case-images img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
+        .overview-card p {
+            font-size: 0.88rem;
+            margin-bottom: 0;
+        }
 
+        /* ================= PROBLEM ================= */
 
-/* ================= CTA EXPLORATION ================= */
+        .problem-box {
+            background: #f3f3ff;
+            border-left: 4px solid #3730A3;
+            padding: 27px;
+            border-radius: 11px;
+            margin-top: 24px;
+        }
 
-.cta-exploration {
-  margin-top: 100px;
-}
+        /* ================= GOALS ================= */
 
-.cta-note {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 40px;
-  max-width: 800px;
-}
+        .goal-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            margin-top: 25px;
+        }
 
-.cta-mockups {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  align-items: center;
-}
+        .goal-card {
+            background: #ffffff;
+            padding: 20px 16px;
+            border-radius: 11px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
 
-.cta-item {
-  text-align: center;
-  padding: 20px;
-  border-radius: 16px;
-  background: #ffffff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
+        .goal-number {
+            color: #3730A3;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
 
-.cta-item img {
-  width: 100%;
-  max-width: 260px;
-  margin-bottom: 15px;
-}
+        .goal-card h3 {
+            font-size: 0.94rem;
+            margin-top: 6px;
+        }
 
-.cta-item p {
-  font-weight: 500;
-  color: #444;
-}
+        .goal-card p {
+            font-size: 0.8rem;
+            margin-bottom: 0;
+        }
 
-/* Highlight selected CTA */
+        /* ================= RESEARCH ================= */
 
-.selected-cta {
-  border: 2px solid #3730A3;
-  box-shadow: 0 12px 35px rgba(124, 58, 237, 0.15);
-  transform: translateY(-4px);
-}
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 25px;
+        }
 
-.selected-cta::before {
-  content: "✔ Approved Version";
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #3730A3;
-  margin-bottom: 10px;
-}
+        .research-card {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
 
-.selected-cta p {
-  color: #3730A3;
-  font-weight: 600;
-}
+        .research-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
 
+        /* ================= INSIGHTS ================= */
 
-/* Responsive spacing */
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
 
-@media (max-width: 768px) {
-  .case-visuals,
-  .cta-exploration {
-    margin-top: 60px;
-  }
-}
+        .insight-card {
+            background: #ffffff;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .insight-card h3 {
+            color: #3730A3;
+            margin-top: 0;
+        }
+
+        .insight-card p {
+            font-size: 0.87rem;
+        }
+
+        .design-response {
+            border-top: 1px solid #eeeeee;
+            padding-top: 13px;
+            margin-top: 14px;
+        }
+
+        .design-response strong {
+            color: #3730A3;
+            font-size: 0.8rem;
+        }
+
+        /* ================= JOURNEY ================= */
+
+        .journey-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 22px;
+            margin-top: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        .journey-box img {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .journey-note {
+            background: #f3f3ff;
+            border-left: 4px solid #3730A3;
+            padding: 17px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .journey-note p {
+            margin-bottom: 0;
+            font-size: 0.88rem;
+        }
+
+        /* ================= IA ================= */
+
+        .ia-box {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            margin-top: 25px;
+        }
+
+        .ia-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .ia-item {
+            background: #f7f7fb;
+            padding: 16px;
+            border-radius: 9px;
+            font-size: 0.84rem;
+            font-weight: 600;
+        }
+
+        /* ================= VISUALS ================= */
+
+        .visual-section {
+            margin-top: 70px;
+        }
+
+        .visual-note {
+            color: #666 !important;
+            font-size: 0.87rem !important;
+            margin-bottom: 25px;
+        }
+
+        .case-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .case-image-card {
+            background: #ffffff;
+            padding: 14px;
+            border-radius: 13px;
+            box-shadow: 0 7px 22px rgba(0,0,0,0.06);
+        }
+
+        .case-image-card img {
+            width: 100%;
+            border-radius: 9px;
+            display: block;
+        }
+
+        .case-image-card p {
+            font-size: 0.8rem;
+            color: #555;
+            margin: 11px 5px 3px;
+            text-align: center;
+        }
+
+        /* ================= DESIGN EXPLORATION ================= */
+
+        .exploration-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .exploration-card {
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 13px;
+            box-shadow: 0 7px 22px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .exploration-card img {
+            width: 100%;
+            border-radius: 9px;
+        }
+
+        .exploration-card p {
+            margin: 12px 0 0;
+            font-size: 0.83rem;
+            font-weight: 600;
+        }
+
+        .selected-design {
+            border: 2px solid #3730A3;
+        }
+
+        .selected-design .selected-label {
+            display: block;
+            color: #3730A3;
+            font-size: 0.74rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        /* ================= DESIGN PROCESS ================= */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .process-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .process-card span {
+            color: #3730A3;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        .process-card h3 {
+            margin-top: 7px;
+            font-size: 1rem;
+        }
+
+        .process-card p {
+            font-size: 0.82rem;
+            margin-bottom: 0;
+        }
+
+        /* ================= DESIGN DECISIONS ================= */
+
+        .decision-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .decision-card {
+            background: #ffffff;
+            padding: 23px;
+            border-radius: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-top: 3px solid #3730A3;
+        }
+
+        .decision-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
+
+        .decision-label {
+            display: block;
+            color: #777;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-top: 12px;
+        }
+
+        .decision-card p {
+            font-size: 0.86rem;
+        }
+
+        /* ================= TRADE-OFFS ================= */
+
+        .tradeoff-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .tradeoff-card {
+            background: #f7f7fb;
+            padding: 23px;
+            border-radius: 13px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .tradeoff-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
+
+        .tradeoff-card p {
+            font-size: 0.87rem;
+        }
+
+        /* ================= DESIGN SYSTEM ================= */
+
+        .system-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px;
+            margin-top: 25px;
+        }
+
+        .system-card {
+            background: #ffffff;
+            padding: 21px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .system-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+            font-size: 1rem;
+        }
+
+        .system-card p {
+            font-size: 0.83rem;
+            margin-bottom: 0;
+        }
+
+        /* ================= COLLABORATION ================= */
+
+        .collaboration-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .collaboration-card {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .collaboration-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
+
+        /* ================= VALIDATION ================= */
+
+        .validation-box {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-top: 25px;
+        }
+
+        .validation-type {
+            display: inline-block;
+            background: #eeeefe;
+            color: #3730A3;
+            padding: 6px 11px;
+            border-radius: 20px;
+            font-size: 0.74rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        /* ================= OUTCOMES ================= */
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .metric {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+        .metric h3 {
+            font-size: 2.2rem;
+            color: #3730A3;
+            margin: 0 0 4px;
+        }
+
+        .metric p {
+            font-size: 0.87rem;
+            margin-bottom: 0;
+        }
+
+        .outcome-list {
+            margin-top: 25px;
+        }
+
+        /* ================= OWNERSHIP ================= */
+
+        .ownership-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .ownership-card {
+            background: #ffffff;
+            padding: 21px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .ownership-icon {
+            font-size: 1.3rem;
+            margin-bottom: 7px;
+        }
+
+        .ownership-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
+
+        .ownership-card li {
+            font-size: 0.8rem;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 950px) {
+
+            .cs-meta-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .goal-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ownership-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .system-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ia-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .case-study-container {
+                margin-top: 95px;
+                padding: 0 18px;
+            }
+
+            .case-study-container h1 {
+                font-size: 1.8rem;
+            }
+
+            .case-study-container h2 {
+                font-size: 1.45rem;
+                margin-top: 52px;
+            }
+
+            .overview-grid,
+            .research-grid,
+            .insight-grid,
+            .decision-grid,
+            .tradeoff-grid,
+            .collaboration-grid,
+            .system-grid,
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-images,
+            .exploration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ownership-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .goal-grid,
+            .ia-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .cs-meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .goal-grid,
+            .ownership-grid,
+            .ia-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 
+
 <body style="background-color: #f9f9f9;">
 
-<header class="cs-navbar">
-  <div class="cs-nav-wrapper">
 
-    <div class="cs-logo">
-      Shanmugapriya <span>Udhayakumar</span>
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="cs-navbar">
+
+    <div class="cs-nav-wrapper">
+
+        <div class="cs-logo">
+            Shanmugapriya <span>Udhayakumar</span>
+        </div>
+
+        <input type="checkbox" id="cs-menu-toggle" />
+
+        <label for="cs-menu-toggle" class="cs-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="cs-nav-links">
+
+            <a href="../index.html#home">Home</a>
+
+            <a href="../index.html#about">About</a>
+
+            <a href="../index.html#experience">Experience</a>
+
+            <a href="../index.html#portfolio">Portfolio</a>
+
+            <a href="../index.html#contact">Contact</a>
+
+        </nav>
+
     </div>
 
-    <input type="checkbox" id="cs-menu-toggle" />
-    <label for="cs-menu-toggle" class="cs-hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
-    <nav class="cs-nav-links">
-      <a href="../index.html#home">Home</a>
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#experience">Experience</a>
-      <a href="../index.html#portfolio">Portfolio</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-
-  </div>
 </header>
 
 
-<!-- ================= CASE STUDY CONTENT ================= -->
+<!-- =========================================================
+     CASE STUDY
+========================================================= -->
 
-<div class="case-study-container">
+<main class="case-study-container">
 
-  <!-- HERO SECTION -->
-  <div class="cs-hero">
-    <h1>LoanLogics – Enterprise Marketing System Redesign</h1>
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <span class="project-label">
+        Enterprise Product Design Case Study
+    </span>
+
+    <h1>
+        LoanLogics — Enterprise Marketing System Redesign
+    </h1>
+
     <p class="cs-tagline">
-      Redesigning a scalable enterprise marketing system to improve clarity,
-brand alignment, and conversion performance across 20+ pages.
+        Redesigning a scalable enterprise marketing experience to improve
+        content clarity, strengthen conversion paths, establish reusable
+        design patterns, and support consistent experiences across 20+ pages.
     </p>
 
-    <div class="cs-meta">
-      <div><span>Role:</span> UI/UX Designer + Frontend</div>
-      <div><span>Duration:</span> 17 Months</div>
-      <div><span>Industry:</span> FinTech / Mortgage Automation</div>
-      <div><span>Team:</span> Product, Marketing, Dev, QA</div>
-      <div><span>Tools:</span> Figma, Adobe XD, Jira, HTML/CSS</div>
-    </div>
-  </div>
 
-  <!-- OVERVIEW -->
-  <section>
-    <h2>Overview</h2>
-    <p>
-      LoanLogics aimed to revamp its marketing website to align with the launch of
-      LoanBeam®, an income calculation automation tool for lenders.
-    </p>
+    <!-- =====================================================
+         PROJECT META
+    ===================================================== -->
 
-    <p>
-      The existing experience lacked consistency, clarity, and a strong conversion path.
-      My responsibility was to create a scalable UI system that improved messaging clarity
-      while maintaining enterprise trust and compliance standards.
-    </p>
-  </section>
+    <div class="cs-meta-grid">
 
-  <!-- BUSINESS GOALS -->
-  <section>
-    <h2>Business Goals</h2>
-    <ul>
-      <li>Increase demo requests</li>
-      <li>Improve engagement and page clarity</li>
-      <li>Align LoanLogics and LoanBeam brand identity</li>
-      <li>Create a scalable and reusable page structure</li>
-      <li>Improve lead-generation flow</li>
-    </ul>
-  </section>
+        <div class="meta-card">
+            <span>Role</span>
+            <strong>UI/UX Designer + Frontend</strong>
+        </div>
 
-  <!-- PROBLEM -->
-  <section>
-    <h2>The Problem</h2>
-    <p>
-      The marketing pages were functional but inconsistent. Content density was high,
-      CTAs lacked visibility, and visual hierarchy did not clearly communicate value.
-    </p>
+        <div class="meta-card">
+            <span>Duration</span>
+            <strong>17 Months</strong>
+        </div>
 
-    <ul>
-      <li>No unified layout system</li>
-      <li>Benefits buried in large text blocks</li>
-      <li>Request Demo CTA poorly placed</li>
-      <li>Pages felt disconnected from brand positioning</li>
-    </ul>
-  </section>
+        <div class="meta-card">
+            <span>Industry</span>
+            <strong>FinTech / Mortgage Automation</strong>
+        </div>
 
-  <!-- RESEARCH -->
-  <section>
-    <h2>Research & Discovery</h2>
+        <div class="meta-card">
+            <span>Product Context</span>
+            <strong>Enterprise Marketing Experience</strong>
+        </div>
 
-    <h3>Stakeholder Alignment</h3>
-    <p>
-      Collaborated with product, marketing leadership, and engineering to ensure the
-      design aligned with enterprise expectations.
-    </p>
+        <div class="meta-card">
+            <span>Team</span>
+            <strong>Product, Marketing, Development, QA</strong>
+        </div>
 
-    <h3>Competitor Analysis</h3>
-    <ul>
-      <li>Clear hero messaging with strong CTA</li>
-      <li>3–4 benefit grid structures</li>
-      <li>Minimalist layout with strong whitespace</li>
-      <li>Data-driven trust indicators</li>
-    </ul>
+        <div class="meta-card">
+            <span>Tools</span>
+            <strong>Figma, Adobe XD, Jira, HTML/CSS</strong>
+        </div>
 
-    <h3>Content Audit</h3>
-    <p>
-      Reorganized content into scannable blocks and defined reusable UI modules
-      for scalability.
-    </p>
-
-    <img src="../images/LoanLogicsMarketingUserPath.png" alt="Marketing Journey">
-  </section>
-
-  <!-- INFORMATION ARCHITECTURE -->
-  <section>
-    <h2>Information Architecture</h2>
-    <p>
-      Designed a modular 7-section page framework to maintain clarity and scalability.
-    </p>
-
-    <ul>
-      <li>Hero with clear value proposition</li>
-      <li>Supporting context section</li>
-      <li>Benefits grid</li>
-      <li>Feature highlight blocks</li>
-      <li>Strategic CTA placement</li>
-      <li>Reusable content modules</li>
-    </ul>
-  </section>
-
-  <!-- ================= VISUAL SNAPSHOTS ================= -->
-
-<section class="case-visuals">
-  <h2>Live UI Snapshots (Recreated for Portfolio)</h2>
-
-  <p class="visual-note">
-    Note: These screens are recreated versions of the original designs I worked on.
-    The current live website has since been redesigned.
-  </p>
-
-  <div class="case-images">
-    <img src="../images/Loanlogics-Screen-1.png" alt="LoanLogics Recreated Screen 1">
-    <img src="../images/Loanlogics-Screen-2.png" alt="LoanLogics Recreated Screen 2">
-    <img src="../images/Loanlogics-Screen-3.png" alt="LoanLogics Recreated Screen 3">
-  </div> 
-</section>
-
-
-
-<!-- ================= CTA EXPLORATION ================= -->
-
-<section class="cta-exploration">
-  <h2>CTA Exploration & Stakeholder Validation</h2>
-
-  <p class="cta-note">
-    To improve conversion visibility, I explored multiple CTA visual directions.
-    Three variations were presented to leadership. Version 2 was selected by the VP for implementation.
-  </p>
-
-  <div class="cta-mockups">
-    
-    <div class="cta-item">
-      <img src="../images/BTN-mock1.png" alt="CTA Concept 1">
-      <p>Concept 1</p>
     </div>
 
-    <div class="cta-item selected-cta">
-      <img src="../images/BTN-mock2.png" alt="CTA Concept 2">
-      <p>Concept 2 (Selected)</p>
-    </div>
 
-    <div class="cta-item">
-      <img src="../images/BTN-mock3.png" alt="CTA Concept 3">
-      <p>Concept 3</p>
-    </div>
+    <!-- =====================================================
+         01 — OVERVIEW
+    ===================================================== -->
 
-  </div>
-</section>
+    <section>
 
-  <!-- PROCESS IMAGES -->
-  <section>
-    <h2>Design Process</h2>
-    <div class="process-images">
-      <img src="../images/LL1.jpeg" alt="Wireframe sketch">
-      <img src="../images/LL2.jpeg" alt="Page ideation">
-    </div>
-  </section>
+        <h2>01 — Product Overview</h2>
 
-  <!-- VALIDATION -->
-  <section>
-    <h2>Validation</h2>
-    <p>
-      Conducted informal validation sessions with marketing, sales, and SMEs.
-    </p>
+        <div class="overview-grid">
 
-    <ul>
-      <li>Improved CTA visibility</li>
-      <li>Refined header spacing</li>
-      <li>Enhanced banner imagery engagement</li>
-    </ul>
-  </section>
+            <div class="overview-card">
 
-  <!-- RESULTS -->
-  <section>
-    <h2>Outcomes</h2>
+                <h3>Product Context</h3>
 
-    <div class="cs-results">
-      <div class="metric">
-        <h3>20+</h3>
-        <p>Marketing pages standardized</p>
-      </div>
-      <div class="metric">
-        <h3>30–40%</h3>
-        <p>Faster page creation</p>
-      </div>
-    </div>
-    <p style="margin-top:20px; color:#4b5563;">
-This redesign established a scalable design system that reduced content duplication,
-accelerated marketing deployment, and strengthened enterprise trust signals.
-</p>
-  </section>
+                <p>
+                    LoanLogics operates in the FinTech and mortgage automation
+                    space, with LoanBeam® positioned as an income calculation
+                    automation solution for lenders.
+                </p>
 
-  <!-- CONTRIBUTIONS -->
-  <section>
-    <h2>My Contributions</h2>
-    <ul>
-      <li>Designed complete information hierarchy</li>
-      <li>Created wireframes to high-fidelity UI</li>
-      <li>Built reusable grid & spacing system</li>
-      <li>Collaborated during design-to-code handoff</li>
-      <li>Ensured responsive consistency across breakpoints</li>
-    </ul>
-  </section>
+            </div>
 
-</div>
+
+            <div class="overview-card">
+
+                <h3>The Opportunity</h3>
+
+                <p>
+                    The existing marketing experience needed stronger
+                    consistency, clearer messaging, and more visible
+                    conversion paths across the website.
+                </p>
+
+            </div>
+
+
+            <div class="overview-card">
+
+                <h3>Design Objective</h3>
+
+                <p>
+                    Create a scalable experience that communicates product
+                    value clearly while supporting consistent page creation
+                    across a growing marketing ecosystem.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         02 — BUSINESS GOALS
+    ===================================================== -->
+
+    <section>
+
+        <h2>02 — Business & User Goals</h2>
+
+        <p>
+            The redesign needed to connect business objectives such as
+            lead generation and brand alignment with user needs around
+            clarity, navigation, and understanding product value.
+        </p>
+
+
+        <div class="goal-grid">
+
+            <div class="goal-card">
+
+                <span class="goal-number">01</span>
+
+                <h3>Lead Generation</h3>
+
+                <p>
+                    Improve visibility and accessibility of demo-request
+                    pathways.
+                </p>
+
+            </div>
+
+
+            <div class="goal-card">
+
+                <span class="goal-number">02</span>
+
+                <h3>Clarity</h3>
+
+                <p>
+                    Make product messaging easier to scan and understand.
+                </p>
+
+            </div>
+
+
+            <div class="goal-card">
+
+                <span class="goal-number">03</span>
+
+                <h3>Brand Alignment</h3>
+
+                <p>
+                    Create stronger visual consistency across LoanLogics
+                    and LoanBeam experiences.
+                </p>
+
+            </div>
+
+
+            <div class="goal-card">
+
+                <span class="goal-number">04</span>
+
+                <h3>Scalability</h3>
+
+                <p>
+                    Establish reusable page structures and UI patterns.
+                </p>
+
+            </div>
+
+
+            <div class="goal-card">
+
+                <span class="goal-number">05</span>
+
+                <h3>Consistency</h3>
+
+                <p>
+                    Support responsive and consistent experiences across
+                    multiple pages.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         03 — PROBLEM
+    ===================================================== -->
+
+    <section>
+
+        <h2>03 — The Product Problem</h2>
+
+        <div class="problem-box">
+
+            <p>
+                The existing marketing experience was functional but lacked
+                a consistent information hierarchy and clear conversion
+                structure. High content density made product value harder
+                to scan, while inconsistent layouts made pages feel
+                disconnected from the overall brand experience.
+            </p>
+
+            <p><strong>Key challenges:</strong></p>
+
+            <ul>
+
+                <li>
+                    No unified layout and content structure across pages.
+                </li>
+
+                <li>
+                    Product benefits were buried within large content blocks.
+                </li>
+
+                <li>
+                    Request Demo CTAs lacked sufficient visibility.
+                </li>
+
+                <li>
+                    Pages lacked consistent visual and brand patterns.
+                </li>
+
+                <li>
+                    The existing structure was difficult to scale efficiently
+                    across new marketing pages.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         04 — RESEARCH & DISCOVERY
+    ===================================================== -->
+
+    <section>
+
+        <h2>04 — Research & Discovery</h2>
+
+        <p>
+            The discovery phase focused on understanding the existing
+            experience, business priorities, content structure, competitive
+            patterns, and stakeholder expectations before defining the
+            redesigned system.
+        </p>
+
+
+        <div class="research-grid">
+
+
+            <div class="research-card">
+
+                <h3>Stakeholder Alignment</h3>
+
+                <p>
+                    Collaborated with Product, Marketing leadership, and
+                    Engineering to understand business objectives, content
+                    requirements, implementation considerations, and
+                    enterprise expectations.
+                </p>
+
+                <ul>
+
+                    <li>Product requirements</li>
+
+                    <li>Marketing objectives</li>
+
+                    <li>Brand expectations</li>
+
+                    <li>Technical constraints</li>
+
+                    <li>Implementation considerations</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>Competitive Analysis</h3>
+
+                <p>
+                    Reviewed enterprise marketing experiences to identify
+                    patterns that improve information scanning, product
+                    communication, trust, and conversion visibility.
+                </p>
+
+                <ul>
+
+                    <li>Hero messaging patterns</li>
+
+                    <li>CTA hierarchy</li>
+
+                    <li>Benefit presentation</li>
+
+                    <li>Trust indicators</li>
+
+                    <li>Content hierarchy</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>Content Audit</h3>
+
+                <p>
+                    Reviewed existing content and reorganized information
+                    into more scannable sections while identifying reusable
+                    structures that could be applied across multiple pages.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>Design Opportunity</h3>
+
+                <p>
+                    The research pointed toward a modular marketing system
+                    rather than treating each page as an independent design
+                    problem.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         05 — USER JOURNEY
+    ===================================================== -->
+
+    <section>
+
+        <h2>05 — User Journey & Content Structure</h2>
+
+        <p>
+            I mapped the marketing journey to understand how users could move
+            from initial product discovery toward understanding value and
+            taking a conversion action.
+        </p>
+
+
+        <div class="journey-box">
+
+            <img
+                src="../images/LoanLogicsMarketingUserPath.png"
+                alt="LoanLogics marketing user journey"
+            >
+
+            <div class="journey-note">
+
+                <p>
+                    <strong>Design focus:</strong>
+                    Reduce the gap between product discovery, understanding
+                    product benefits, building trust, and reaching the
+                    appropriate conversion action.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         06 — INFORMATION ARCHITECTURE
+    ===================================================== -->
+
+    <section>
+
+        <h2>06 — Information Architecture</h2>
+
+        <p>
+            I structured the experience around a reusable page framework
+            so users could consistently find product value, supporting
+            information, trust signals, and conversion actions.
+        </p>
+
+
+        <div class="ia-box">
+
+            <div class="ia-grid">
+
+                <div class="ia-item">
+                    Hero & Value Proposition
+                </div>
+
+                <div class="ia-item">
+                    Supporting Context
+                </div>
+
+                <div class="ia-item">
+                    Benefits & Key Features
+                </div>
+
+                <div class="ia-item">
+                    Product / Feature Highlights
+                </div>
+
+                <div class="ia-item">
+                    Trust & Supporting Information
+                </div>
+
+                <div class="ia-item">
+                    Strategic CTA Placement
+                </div>
+
+            </div>
+
+        </div>
+
+        <p style="margin-top:20px;">
+
+            The structure was designed to remain flexible enough for different
+            product pages while maintaining consistent information hierarchy
+            and interaction patterns.
+
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         07 — DESIGN PROCESS
+    ===================================================== -->
+
+    <section>
+
+        <h2>07 — End-to-End Design Process</h2>
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <span>01 — DISCOVER</span>
+
+                <h3>Understand</h3>
+
+                <p>
+                    Stakeholder alignment, content audit, competitive
+                    analysis, and existing experience review.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span>02 — DEFINE</span>
+
+                <h3>Structure</h3>
+
+                <p>
+                    Problem framing, user journey, information architecture,
+                    content hierarchy, and conversion goals.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span>03 — DESIGN</span>
+
+                <h3>Explore</h3>
+
+                <p>
+                    Wireframes, visual exploration, CTA alternatives,
+                    responsive layouts, and reusable UI patterns.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span>04 — DELIVER</span>
+
+                <h3>Validate & Implement</h3>
+
+                <p>
+                    Stakeholder validation, developer collaboration,
+                    design handoff, and responsive implementation support.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         08 — WIREFRAMES
+    ===================================================== -->
+
+    <section class="visual-section">
+
+        <h2>08 — Wireframes & Early Exploration</h2>
+
+        <p class="visual-note">
+            Early sketches were used to explore page hierarchy, content
+            grouping, CTA placement, and responsive layout direction
+            before moving into high-fidelity design.
+        </p>
+
+
+        <div class="case-images">
+
+            <div class="case-image-card">
+
+                <img
+                    src="../images/LL1.jpeg"
+                    alt="LoanLogics early wireframe exploration"
+                >
+
+                <p>
+                    Early page structure and content hierarchy exploration
+                </p>
+
+            </div>
+
+
+            <div class="case-image-card">
+
+                <img
+                    src="../images/LL2.jpeg"
+                    alt="LoanLogics page ideation sketch"
+                >
+
+                <p>
+                    Page layout and responsive content exploration
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         09 — HIGH FIDELITY
+    ===================================================== -->
+
+    <section class="visual-section">
+
+        <h2>09 — High-Fidelity Product Experience</h2>
+
+        <p class="visual-note">
+            The following screens are recreated versions of the original
+            designs I worked on. The current live website has since been
+            redesigned.
+        </p>
+
+
+        <div class="case-images">
+
+            <div class="case-image-card">
+
+                <img
+                    src="../images/Loanlogics-Screen-1.png"
+                    alt="LoanLogics recreated high-fidelity screen 1"
+                >
+
+                <p>
+                    Product messaging and value proposition
+                </p>
+
+            </div>
+
+
+            <div class="case-image-card">
+
+                <img
+                    src="../images/Loanlogics-Screen-2.png"
+                    alt="LoanLogics recreated high-fidelity screen 2"
+                >
+
+                <p>
+                    Feature and benefits presentation
+                </p>
+
+            </div>
+
+
+            <div class="case-image-card">
+
+                <img
+                    src="../images/Loanlogics-Screen-3.png"
+                    alt="LoanLogics recreated high-fidelity screen 3"
+                >
+
+                <p>
+                    Product navigation and supporting content
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         10 — CTA EXPLORATION
+    ===================================================== -->
+
+    <section class="visual-section">
+
+        <h2>10 — CTA Exploration & Stakeholder Validation</h2>
+
+        <p>
+            Because the Request Demo CTA was a key conversion point,
+            I explored multiple visual directions and presented the
+            alternatives to leadership for review.
+        </p>
+
+
+        <div class="exploration-grid">
+
+
+            <div class="exploration-card">
+
+                <img
+                    src="../images/BTN-mock1.png"
+                    alt="LoanLogics CTA concept 1"
+                >
+
+                <p>
+                    Concept 1
+                </p>
+
+            </div>
+
+
+            <div class="exploration-card selected-design">
+
+                <span class="selected-label">
+                    Approved Direction
+                </span>
+
+                <img
+                    src="../images/BTN-mock2.png"
+                    alt="LoanLogics CTA selected concept"
+                >
+
+                <p>
+                    Concept 2 — Selected by VP
+                </p>
+
+            </div>
+
+
+            <div class="exploration-card">
+
+                <img
+                    src="../images/BTN-mock3.png"
+                    alt="LoanLogics CTA concept 3"
+                >
+
+                <p>
+                    Concept 3
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p style="margin-top:20px;">
+
+            The selected direction was chosen through stakeholder review
+            and was subsequently used for implementation.
+
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         11 — KEY DESIGN DECISIONS
+    ===================================================== -->
+
+    <section>
+
+        <h2>11 — Key Design Decisions</h2>
+
+        <div class="decision-grid">
+
+
+            <div class="decision-card">
+
+                <h3>Scannable Content Hierarchy</h3>
+
+                <span class="decision-label">
+                    Design Choice
+                </span>
+
+                <p>
+                    Reorganized dense content into structured sections,
+                    benefit groups, and feature blocks.
+                </p>
+
+                <span class="decision-label">
+                    Why
+                </span>
+
+                <p>
+                    Users needed to understand product value without
+                    navigating through large undifferentiated text blocks.
+                </p>
+
+            </div>
+
+
+            <div class="decision-card">
+
+                <h3>Stronger CTA Hierarchy</h3>
+
+                <span class="decision-label">
+                    Design Choice
+                </span>
+
+                <p>
+                    Increased the visual prominence and consistency of
+                    conversion actions across the experience.
+                </p>
+
+                <span class="decision-label">
+                    Why
+                </span>
+
+                <p>
+                    Demo requests were an important business objective and
+                    needed clearer visibility within the page hierarchy.
+                </p>
+
+            </div>
+
+
+            <div class="decision-card">
+
+                <h3>Reusable Page Modules</h3>
+
+                <span class="decision-label">
+                    Design Choice
+                </span>
+
+                <p>
+                    Created reusable structures that could be adapted across
+                    multiple marketing pages.
+                </p>
+
+                <span class="decision-label">
+                    Why
+                </span>
+
+                <p>
+                    A reusable system reduced the need to design every page
+                    from scratch and improved consistency.
+                </p>
+
+            </div>
+
+
+            <div class="decision-card">
+
+                <h3>Responsive Structure</h3>
+
+                <span class="decision-label">
+                    Design Choice
+                </span>
+
+                <p>
+                    Maintained consistent information hierarchy while adapting
+                    layouts for different viewport sizes.
+                </p>
+
+                <span class="decision-label">
+                    Why
+                </span>
+
+                <p>
+                    The system needed to provide a consistent experience
+                    across responsive breakpoints.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         12 — TRADE-OFFS
+    ===================================================== -->
+
+    <section>
+
+        <h2>12 — Design Trade-offs</h2>
+
+        <p>
+            The redesign involved balancing business conversion objectives,
+            content requirements, visual consistency, and scalability.
+        </p>
+
+
+        <div class="tradeoff-grid">
+
+
+            <div class="tradeoff-card">
+
+                <h3>Content Depth vs. Scannability</h3>
+
+                <p>
+                    Enterprise marketing pages required sufficient product
+                    information, but displaying everything with equal visual
+                    weight increased cognitive load. Content was therefore
+                    grouped into clearer sections with stronger hierarchy.
+                </p>
+
+            </div>
+
+
+            <div class="tradeoff-card">
+
+                <h3>CTA Visibility vs. Visual Balance</h3>
+
+                <p>
+                    Increasing CTA prominence could make the page feel overly
+                    conversion-focused. Multiple visual directions were explored
+                    to find a balance between discoverability and overall
+                    page hierarchy.
+                </p>
+
+            </div>
+
+
+            <div class="tradeoff-card">
+
+                <h3>Reusable System vs. Page Flexibility</h3>
+
+                <p>
+                    Standardizing every page could restrict content flexibility.
+                    The solution therefore used reusable structures that could
+                    be adapted to different marketing content.
+                </p>
+
+            </div>
+
+
+            <div class="tradeoff-card">
+
+                <h3>Brand Consistency vs. Product Differentiation</h3>
+
+                <p>
+                    The experience needed to align with the broader LoanLogics
+                    brand while still allowing individual product content
+                    to communicate its own value proposition.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         13 — DESIGN SYSTEM
+    ===================================================== -->
+
+    <section>
+
+        <h2>13 — Reusable Design System & Components</h2>
+
+        <p>
+            A reusable design approach was established to support consistency
+            across 20+ marketing pages and make future page creation more
+            efficient.
+        </p>
+
+
+        <div class="system-grid">
+
+
+            <div class="system-card">
+
+                <h3>Grid & Layout</h3>
+
+                <p>
+                    Consistent page widths, spacing, grids, and responsive
+                    layout structures.
+                </p>
+
+            </div>
+
+
+            <div class="system-card">
+
+                <h3>Typography Hierarchy</h3>
+
+                <p>
+                    Standardized heading, body, supporting text, and
+                    content hierarchy patterns.
+                </p>
+
+            </div>
+
+
+            <div class="system-card">
+
+                <h3>CTA Patterns</h3>
+
+                <p>
+                    Reusable primary and secondary conversion patterns
+                    with consistent visual treatment.
+                </p>
+
+            </div>
+
+
+            <div class="system-card">
+
+                <h3>Content Modules</h3>
+
+                <p>
+                    Reusable hero, benefits, feature, supporting-content,
+                    and CTA sections.
+                </p>
+
+            </div>
+
+
+            <div class="system-card">
+
+                <h3>Responsive Patterns</h3>
+
+                <p>
+                    Consistent behavior across desktop and smaller
+                    responsive breakpoints.
+                </p>
+
+            </div>
+
+
+            <div class="system-card">
+
+                <h3>Brand Alignment</h3>
+
+                <p>
+                    Reusable visual patterns supporting a consistent
+                    LoanLogics and LoanBeam experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         14 — CROSS FUNCTIONAL COLLABORATION
+    ===================================================== -->
+
+    <section>
+
+        <h2>14 — Cross-functional Collaboration</h2>
+
+        <p>
+            The redesign was developed collaboratively with Product,
+            Marketing, Development, and QA to balance business goals,
+            content requirements, design quality, and implementation
+            feasibility.
+        </p>
+
+
+        <div class="collaboration-grid">
+
+
+            <div class="collaboration-card">
+
+                <h3>Collaborated With</h3>
+
+                <ul>
+
+                    <li>Product Team</li>
+
+                    <li>Marketing Leadership</li>
+
+                    <li>Engineering / Development</li>
+
+                    <li>QA</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="collaboration-card">
+
+                <h3>Key Activities</h3>
+
+                <ul>
+
+                    <li>Requirement discussions</li>
+
+                    <li>Design reviews</li>
+
+                    <li>Stakeholder presentations</li>
+
+                    <li>CTA direction review</li>
+
+                    <li>Developer handoff</li>
+
+                    <li>Responsive implementation validation</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         15 — VALIDATION
+    ===================================================== -->
+
+    <section>
+
+        <h2>15 — Validation & Iteration</h2>
+
+        <div class="validation-box">
+
+            <span class="validation-type">
+                Stakeholder & SME Validation
+            </span>
+
+            <p>
+                Informal validation sessions were conducted with Marketing,
+                Sales, and subject-matter experts to review the redesigned
+                experience and identify areas requiring refinement.
+            </p>
+
+            <p><strong>Key refinements included:</strong></p>
+
+            <ul>
+
+                <li>
+                    Improved CTA visibility.
+                </li>
+
+                <li>
+                    Refined header spacing and hierarchy.
+                </li>
+
+                <li>
+                    Enhanced banner imagery and visual engagement.
+                </li>
+
+                <li>
+                    Refined page structure for clearer content scanning.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         16 — OUTCOMES
+    ===================================================== -->
+
+    <section>
+
+        <h2>16 — Outcomes & Measurable Impact</h2>
+
+        <p>
+            The redesign created a more scalable marketing experience while
+            improving consistency and reducing the effort required to create
+            new pages.
+        </p>
+
+
+        <div class="results-grid">
+
+
+            <div class="metric">
+
+                <h3>20+</h3>
+
+                <p>
+                    Marketing pages standardized using the redesigned
+                    structure and reusable patterns.
+                </p>
+
+            </div>
+
+
+            <div class="metric">
+
+                <h3>30–40%</h3>
+
+                <p>
+                    Faster page creation through reusable design structures
+                    and components.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <ul class="outcome-list">
+
+            <li>
+                Established a scalable page and component structure across
+                the marketing experience.
+            </li>
+
+            <li>
+                Improved content hierarchy and product messaging clarity.
+            </li>
+
+            <li>
+                Strengthened conversion-path visibility through clearer
+                CTA placement.
+            </li>
+
+            <li>
+                Improved consistency across LoanLogics and LoanBeam
+                marketing experiences.
+            </li>
+
+            <li>
+                Supported more efficient marketing deployment through
+                reusable design patterns.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- =====================================================
+         17 — MY ROLE & OWNERSHIP
+    ===================================================== -->
+
+    <section>
+
+        <h2>17 — My Role & Ownership</h2>
+
+        <p>
+            I contributed across the end-to-end design lifecycle, from
+            understanding business and content requirements through
+            information architecture, visual design, stakeholder validation,
+            and design-to-development collaboration.
+        </p>
+
+
+        <div class="ownership-grid">
+
+
+            <div class="ownership-card">
+
+                <div class="ownership-icon">
+                    🔍
+                </div>
+
+                <h3>Discover</h3>
+
+                <ul>
+
+                    <li>Stakeholder discussions</li>
+
+                    <li>Content audit</li>
+
+                    <li>Competitive analysis</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="ownership-card">
+
+                <div class="ownership-icon">
+                    🧠
+                </div>
+
+                <h3>Define</h3>
+
+                <ul>
+
+                    <li>Information architecture</li>
+
+                    <li>User journey</li>
+
+                    <li>Content hierarchy</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="ownership-card">
+
+                <div class="ownership-icon">
+                    🎨
+                </div>
+
+                <h3>Design</h3>
+
+                <ul>
+
+                    <li>Wireframes</li>
+
+                    <li>High-fidelity UI</li>
+
+                    <li>CTA exploration</li>
+
+                    <li>Responsive layouts</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="ownership-card">
+
+                <div class="ownership-icon">
+                    🚀
+                </div>
+
+                <h3>Deliver</h3>
+
+                <ul>
+
+                    <li>Stakeholder presentations</li>
+
+                    <li>Developer handoff</li>
+
+                    <li>Design QA</li>
+
+                    <li>Frontend collaboration</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
 
 </body>
 </html>
