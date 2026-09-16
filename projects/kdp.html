@@ -3,662 +3,2263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keurig Dr Pepper – KSK Bundle Builder & Cross-Sell Experience</title>
+
+    <title>Keurig Dr Pepper | KSK Bundle Builder | Product Design Case Study</title>
+
     <link rel="stylesheet" href="../css/style.css" />
+
     <style>
-        /* ----------- PAGE CONTENT STYLES ----------- */
+
+        /* =========================================================
+           KDP PRODUCT DESIGN CASE STUDY
+        ========================================================= */
 
         .case-study-container {
-            max-width: 1150px;
-            margin: 120px auto 50px;
-            padding: 0 20px;
+            max-width: 1100px;
+            margin: 110px auto 70px;
+            padding: 0 24px;
             line-height: 1.7;
         }
 
-        .case-study-container h2 {
-            margin-top: 40px;
+        /* ================= TYPOGRAPHY ================= */
+
+        .case-study-container h1 {
             color: #3730A3;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+            font-size: 2.3rem;
+            line-height: 1.25;
+            margin: 12px 0 14px;
+        }
+
+        .case-study-container h2 {
+            margin-top: 70px;
+            margin-bottom: 18px;
+            color: #3730A3;
+            font-size: 1.75rem;
+            line-height: 1.3;
         }
 
         .case-study-container h3 {
             margin-top: 25px;
-            color: #444;
-            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 1.15rem;
+        }
+
+        .case-study-container h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #3730A3;
+            font-size: 0.95rem;
         }
 
         .case-study-container p,
         .case-study-container li {
-            font-size: 1rem;
+            font-size: 0.96rem;
             color: #333;
         }
 
         .case-study-container p {
-          margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .case-study-container ul {
             margin-left: 20px;
+            padding-left: 8px;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .case-study-container {
-                margin-top: 100px;
+        .case-study-container li {
+            margin-bottom: 6px;
+        }
+
+        /* ================= PROJECT HERO ================= */
+
+        .project-label {
+            display: inline-block;
+            background: #eeeefe;
+            color: #3730A3;
+            padding: 7px 13px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .cs-tagline {
+            max-width: 900px;
+            font-size: 1.08rem !important;
+            color: #444 !important;
+            margin-bottom: 25px !important;
+        }
+
+        /* ================= PROJECT META ================= */
+
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .meta-card {
+            background: #fff;
+            padding: 17px 18px;
+            border-radius: 10px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .meta-card span {
+            display: block;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #777;
+            margin-bottom: 4px;
+        }
+
+        .meta-card strong {
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        /* ================= CONFIDENTIALITY ================= */
+
+        .confidential-notice {
+            margin-top: 35px;
+        }
+
+        .confidential-card {
+            display: flex;
+            gap: 18px;
+            background: #fff8e8;
+            border-left: 4px solid #f59e0b;
+            border-radius: 10px;
+            padding: 22px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .confidential-icon {
+            font-size: 1.5rem;
+        }
+
+        .confidential-content h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .confidential-content p {
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+        }
+
+        /* ================= INTRO CARDS ================= */
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .intro-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 22px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .intro-card h3 {
+            color: #3730A3;
+            margin-top: 0;
+        }
+
+        .intro-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* ================= PROBLEM ================= */
+
+        .problem-box {
+            background: #f3f3ff;
+            border-radius: 14px;
+            padding: 28px;
+            margin-top: 22px;
+        }
+
+        .problem-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ================= GOALS ================= */
+
+        .goal-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            margin-top: 25px;
+        }
+
+        .goal-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 17px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .goal-number {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #3730A3;
+        }
+
+        .goal-card h3 {
+            margin-top: 7px;
+            font-size: 0.95rem;
+        }
+
+        .goal-card p {
+            font-size: 0.82rem;
+            margin-bottom: 0;
+        }
+
+        /* ================= RESEARCH ================= */
+
+        .research-intro {
+            max-width: 900px;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .research-card {
+            background: #fff;
+            padding: 24px;
+            border-radius: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .research-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
+
+        .research-card ul {
+            margin-bottom: 0;
+        }
+
+        /* ================= INSIGHTS ================= */
+
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .insight-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 22px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .insight-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
+
+        .insight-card p {
+            font-size: 0.88rem;
+        }
+
+        .insight-card .design-response {
+            margin-top: 15px;
+            padding-top: 13px;
+            border-top: 1px solid #eee;
+        }
+
+        .design-response strong {
+            color: #3730A3;
+        }
+
+        /* ================= COMPETITIVE ANALYSIS ================= */
+
+        .analysis-box {
+            background: #fff;
+            border-radius: 13px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-top: 25px;
+        }
+
+        .analysis-focus {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .analysis-item {
+            background: #f7f7fb;
+            padding: 15px;
+            border-radius: 9px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #444;
+        }
+
+        /* ================= IA / VISUALS ================= */
+
+        .visual-wrapper {
+            background: #fff;
+            border-radius: 15px;
+            padding: 22px;
+            margin-top: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        .case-study-image {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .visual-caption {
+            font-size: 0.84rem !important;
+            color: #666 !important;
+            margin-top: 12px;
+        }
+
+        /* ================= JOURNEY ================= */
+
+        .journey-box {
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        .journey-highlight {
+            background: #f3f3ff;
+            border-left: 4px solid #3730A3;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 22px;
+        }
+
+        .journey-highlight strong {
+            color: #3730A3;
+        }
+
+        /* ================= DESIGN EXPLORATION ================= */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 17px;
+            margin-top: 25px;
+        }
+
+        .process-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .process-card span {
+            font-size: 0.73rem;
+            color: #3730A3;
+            font-weight: 700;
+        }
+
+        .process-card h3 {
+            font-size: 1rem;
+            margin-top: 7px;
+        }
+
+        .process-card p {
+            font-size: 0.84rem;
+            margin-bottom: 0;
+        }
+
+        /* ================= NDA ARTIFACT NOTE ================= */
+
+        .artifact-note {
+            background: #f7f7f7;
+            border: 1px dashed #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 22px;
+        }
+
+        .artifact-note p {
+            font-size: 0.87rem;
+            margin-bottom: 0;
+        }
+
+        /* ================= DESIGN DECISIONS ================= */
+
+        .decision-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .decision-card {
+            background: #fff;
+            border-radius: 13px;
+            padding: 24px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-top: 3px solid #3730A3;
+        }
+
+        .decision-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
+
+        .decision-card p {
+            font-size: 0.88rem;
+        }
+
+        .decision-label {
+            display: block;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-weight: 700;
+            color: #777;
+            margin-top: 12px;
+        }
+
+        /* ================= TRADE-OFFS ================= */
+
+        .tradeoff-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .tradeoff-card {
+            background: #f7f7fb;
+            border-radius: 13px;
+            padding: 24px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .tradeoff-card h3 {
+            color: #3730A3;
+            margin-top: 0;
+        }
+
+        .tradeoff-card p {
+            font-size: 0.89rem;
+        }
+
+        /* ================= COLLABORATION ================= */
+
+        .collaboration-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .collaboration-card {
+            background: #fff;
+            padding: 24px;
+            border-radius: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .collaboration-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
+
+        /* ================= CHALLENGES ================= */
+
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .challenge-card {
+            background: #fff;
+            border-radius: 13px;
+            padding: 23px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            border-top: 3px solid #3730A3;
+        }
+
+        .challenge-card > h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
+
+        .challenge-block,
+        .solution-block,
+        .outcome-block {
+            margin-top: 17px;
+            padding-top: 13px;
+            border-top: 1px solid #eee;
+        }
+
+        .challenge-block h4 {
+            color: #c2410c;
+        }
+
+        .solution-block h4 {
+            color: #3730A3;
+        }
+
+        .outcome-block h4 {
+            color: #15803d;
+        }
+
+        .challenge-card p {
+            font-size: 0.84rem;
+        }
+
+        /* ================= DESIGN SYSTEM ================= */
+
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .pattern-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 11px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .pattern-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+            font-size: 1rem;
+        }
+
+        .pattern-card p {
+            font-size: 0.84rem;
+            margin-bottom: 0;
+        }
+
+        /* ================= VALIDATION ================= */
+
+        .validation-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-top: 25px;
+        }
+
+        .validation-status {
+            display: inline-block;
+            background: #f3f3ff;
+            color: #3730A3;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        /* ================= OUTCOMES ================= */
+
+        .outcome-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .outcome-card {
+            background: #fff;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .outcome-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+            font-size: 1rem;
+        }
+
+        .outcome-card p {
+            font-size: 0.86rem;
+            margin-bottom: 0;
+        }
+
+        /* ================= OWNERSHIP ================= */
+
+        .role-intro {
+            max-width: 900px;
+        }
+
+        .ownership-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .ownership-card {
+            background: #fff;
+            padding: 21px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .ownership-icon {
+            font-size: 1.3rem;
+            margin-bottom: 7px;
+        }
+
+        .ownership-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+        }
+
+        .ownership-card ul {
+            margin-left: 16px;
+        }
+
+        .ownership-card li {
+            font-size: 0.82rem;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .project-meta {
+                grid-template-columns: repeat(2, 1fr);
             }
-            .case-study-container h2 {
-                font-size: 1.5rem;
+
+            .goal-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            .case-study-container h3 {
-                font-size: 1.2rem;
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .challenge-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ownership-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .analysis-focus {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
+
+        @media (max-width: 768px) {
+
+            .case-study-container {
+                margin-top: 95px;
+                padding: 0 18px;
+            }
+
+            .case-study-container h1 {
+                font-size: 1.75rem;
+            }
+
+            .case-study-container h2 {
+                font-size: 1.45rem;
+                margin-top: 52px;
+            }
+
+            .project-meta,
+            .intro-grid,
+            .research-grid,
+            .insight-grid,
+            .decision-grid,
+            .tradeoff-grid,
+            .collaboration-grid,
+            .pattern-grid,
+            .outcome-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .goal-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ownership-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .analysis-focus {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .confidential-card {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .goal-grid,
+            .ownership-grid,
+            .analysis-focus {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 
+
 <body style="background-color: #f9f9f9;">
 
-<header class="cs-navbar">
-  <div class="cs-nav-wrapper">
 
-    <div class="cs-logo">
-      Shanmugapriya <span>Udhayakumar</span>
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="cs-navbar">
+
+    <div class="cs-nav-wrapper">
+
+        <div class="cs-logo">
+            Shanmugapriya <span>Udhayakumar</span>
+        </div>
+
+        <input type="checkbox" id="cs-menu-toggle" />
+
+        <label for="cs-menu-toggle" class="cs-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="cs-nav-links">
+
+            <a href="../index.html#home">Home</a>
+
+            <a href="../index.html#about">About</a>
+
+            <a href="../index.html#experience">Experience</a>
+
+            <a href="../index.html#portfolio">Portfolio</a>
+
+            <a href="../index.html#contact">Contact</a>
+
+        </nav>
+
     </div>
 
-    <input type="checkbox" id="cs-menu-toggle" />
-    <label for="cs-menu-toggle" class="cs-hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
-    <nav class="cs-nav-links">
-      <a href="../index.html#home">Home</a>
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#experience">Experience</a>
-      <a href="../index.html#portfolio">Portfolio</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-
-  </div>
 </header>
 
 
-<!-- ================= CASE STUDY CONTENT ================= -->
+<!-- =========================================================
+     CASE STUDY
+========================================================= -->
 
-<div class="case-study-container">
+<main class="case-study-container">
 
-    <h2>Keurig Dr Pepper – KSK Bundle Builder & Accessory Experience Redesign</h2>
 
-     <p class="cs-tagline">
-     Redesigning the Starter Kit purchasing journey to improve bundle customization, accessory discoverability, 
-     and support future experimentation through a user-centered, responsive experience.
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <span class="project-label">
+        End-to-End Product Design Case Study
+    </span>
+
+    <h1>
+        Keurig Dr Pepper — KSK Bundle Builder & Accessory Experience
+    </h1>
+
+    <p class="cs-tagline">
+        Redesigning the Starter Kit purchasing journey to simplify bundle
+        customization, introduce contextual accessory recommendations,
+        and balance customer experience with business cross-sell goals.
     </p>
 
-    <!-- ===========================================================
-Confidential Client Project
-=========================================================== -->
 
-<section class="confidential-notice">
+    <!-- =====================================================
+         CONFIDENTIALITY
+    ===================================================== -->
 
-    <div class="confidential-card">
+    <section class="confidential-notice">
 
-        <div class="confidential-icon">
-            🔒
+        <div class="confidential-card">
+
+            <div class="confidential-icon">
+                🔒
+            </div>
+
+            <div class="confidential-content">
+
+                <h3>Confidential Client Project</h3>
+
+                <p>
+                    This case study has been adapted to respect client
+                    confidentiality. Selected production deliverables,
+                    detailed business information, and proprietary
+                    implementation details have been intentionally omitted
+                    because the feature is under NDA and has not yet been
+                    publicly released.
+                </p>
+
+                <p>
+                    The case study focuses on my product design process,
+                    research, strategic thinking, design decisions,
+                    collaboration, and problem-solving approach.
+                </p>
+
+                <p>
+                    Detailed interaction flows, design rationale, and
+                    confidential project outcomes can be discussed during
+                    interviews while respecting client confidentiality.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="confidential-content">
+    </section>
 
-            <h3>Confidential Client Project</h3>
+
+    <!-- =====================================================
+         PROJECT INFORMATION
+    ===================================================== -->
+
+    <div class="project-meta">
+
+        <div class="meta-card">
+            <span>Role</span>
+            <strong>Senior UX Designer</strong>
+        </div>
+
+        <div class="meta-card">
+            <span>Duration</span>
+            <strong>2026 – Present</strong>
+        </div>
+
+        <div class="meta-card">
+            <span>Platform</span>
+            <strong>Desktop & Mobile</strong>
+        </div>
+
+        <div class="meta-card">
+            <span>Product Type</span>
+            <strong>E-commerce / Consumer Products</strong>
+        </div>
+
+        <div class="meta-card">
+            <span>Team</span>
+            <strong>Product, BA, UX, Engineering, QA, Marketing</strong>
+        </div>
+
+        <div class="meta-card">
+            <span>Tools</span>
+            <strong>Figma, FigJam, UserTesting.com, Optimizely, Jira</strong>
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         01 — PRODUCT OVERVIEW
+    ===================================================== -->
+
+    <section>
+
+        <h2>01 — Product Overview</h2>
+
+        <div class="intro-grid">
+
+            <div class="intro-card">
+
+                <h3>The Product</h3>
+
+                <p>
+                    A Starter Kit purchasing experience that allows customers
+                    to customize a bundle of products as part of the
+                    subscription journey.
+                </p>
+
+            </div>
+
+
+            <div class="intro-card">
+
+                <h3>The Opportunity</h3>
+
+                <p>
+                    Revisit the accessory experience after a previous
+                    experiment introduced friction into the Starter Kit
+                    purchasing journey.
+                </p>
+
+            </div>
+
+
+            <div class="intro-card">
+
+                <h3>The Design Goal</h3>
+
+                <p>
+                    Create a clearer and more flexible journey that supports
+                    bundle customization while introducing accessories as
+                    an optional cross-sell opportunity.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         02 — BUSINESS & USER GOALS
+    ===================================================== -->
+
+    <section>
+
+        <h2>02 — Business & User Goals</h2>
+
+        <p>
+            The design needed to balance two sides of the product problem:
+            helping customers complete their Starter Kit configuration while
+            supporting the business opportunity to increase accessory
+            discoverability.
+        </p>
+
+        <div class="goal-grid">
+
+            <div class="goal-card">
+                <span class="goal-number">01</span>
+                <h3>Customize</h3>
+                <p>
+                    Make Starter Kit customization easier to understand.
+                </p>
+            </div>
+
+
+            <div class="goal-card">
+                <span class="goal-number">02</span>
+                <h3>Discover</h3>
+                <p>
+                    Improve visibility of relevant accessories.
+                </p>
+            </div>
+
+
+            <div class="goal-card">
+                <span class="goal-number">03</span>
+                <h3>Cross-sell</h3>
+                <p>
+                    Support accessory attachment without disrupting the
+                    primary purchase journey.
+                </p>
+            </div>
+
+
+            <div class="goal-card">
+                <span class="goal-number">04</span>
+                <h3>Scale</h3>
+                <p>
+                    Create a modular experience suitable for future
+                    experimentation.
+                </p>
+            </div>
+
+
+            <div class="goal-card">
+                <span class="goal-number">05</span>
+                <h3>Responsive</h3>
+                <p>
+                    Provide a consistent experience across desktop and mobile.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         03 — PROBLEM
+    ===================================================== -->
+
+    <section>
+
+        <h2>03 — The Product Problem</h2>
+
+        <div class="problem-box">
 
             <p>
-                This case study has been adapted to respect client confidentiality.
-                Certain deliverables including wireframes, high-fidelity designs,
+                A previous accessory experiment introduced an accessory
+                selection step within the Starter Kit flow and resulted in
+                increased abandonment and lower conversion.
+            </p>
+
+            <p>
+                The challenge was therefore not simply to add an accessory
+                offer, but to determine how the opportunity could be introduced
+                without unnecessarily interrupting the customer's primary
+                purchase task.
+            </p>
+
+            <p><strong>Key challenges included:</strong></p>
+
+            <ul>
+
+                <li>
+                    A mandatory accessory step interrupted the purchasing flow.
+                </li>
+
+                <li>
+                    Customers had limited visibility into compatible accessories.
+                </li>
+
+                <li>
+                    Multiple product combinations increased decision complexity.
+                </li>
+
+                <li>
+                    The business wanted higher accessory discoverability without
+                    compromising the core purchase journey.
+                </li>
+
+                <li>
+                    The experience needed to support future A/B testing and
+                    optimization.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         04 — RESEARCH & DISCOVERY
+    ===================================================== -->
+
+    <section>
+
+        <h2>04 — Research & Discovery</h2>
+
+        <p class="research-intro">
+
+            The discovery phase focused on understanding the previous
+            experiment, customer purchasing behavior, business objectives,
+            stakeholder expectations, competitive patterns, and technical
+            constraints before defining the redesigned experience.
+
+        </p>
+
+
+        <div class="research-grid">
+
+            <div class="research-card">
+
+                <h3>Stakeholder Workshops</h3>
+
+                <p>
+                    Collaborated with cross-functional stakeholders to gather
+                    requirements, understand business objectives, and align
+                    around the customer journey.
+                </p>
+
+                <ul>
+
+                    <li>Product Managers</li>
+
+                    <li>Business Analysts</li>
+
+                    <li>Marketing Team</li>
+
+                    <li>Developers</li>
+
+                    <li>UX Design Team</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>What I Investigated</h3>
+
+                <ul>
+
+                    <li>Previous experiment outcomes</li>
+
+                    <li>Business objectives</li>
+
+                    <li>Customer purchase behavior</li>
+
+                    <li>Technical constraints</li>
+
+                    <li>Existing purchase journey</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         05 — RESEARCH INSIGHTS
+    ===================================================== -->
+
+    <section>
+
+        <h2>05 — Key Insights & Design Implications</h2>
+
+        <p>
+            Previous experimentation and discovery highlighted several
+            opportunities for improving the Starter Kit journey.
+        </p>
+
+
+        <div class="insight-grid">
+
+
+            <div class="insight-card">
+
+                <h3>01 — Mandatory choices created friction</h3>
+
+                <p>
+                    Previous experimentation showed that mandatory accessory
+                    selection increased friction during the purchasing journey.
+                </p>
+
+                <div class="design-response">
+
+                    <strong>Design implication</strong>
+
+                    <p>
+                        Make accessory selection optional rather than requiring
+                        customers to make an additional decision.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="insight-card">
+
+                <h3>02 — Core customization should come first</h3>
+
+                <p>
+                    Customers preferred completing Starter Kit customization
+                    before considering optional accessories.
+                </p>
+
+                <div class="design-response">
+
+                    <strong>Design implication</strong>
+
+                    <p>
+                        Preserve the primary bundle-building task and introduce
+                        the accessory opportunity at an appropriate point in
+                        the journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="insight-card">
+
+                <h3>03 — Context matters for cross-sell</h3>
+
+                <p>
+                    Contextual recommendations created a more natural
+                    cross-sell experience than mandatory decision points.
+                </p>
+
+                <div class="design-response">
+
+                    <strong>Design implication</strong>
+
+                    <p>
+                        Present relevant accessories as contextual,
+                        optional recommendations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="insight-card">
+
+                <h3>04 — The experience should be modular</h3>
+
+                <p>
+                    A simplified and modular journey would better support
+                    future experimentation and continuous optimization.
+                </p>
+
+                <div class="design-response">
+
+                    <strong>Design implication</strong>
+
+                    <p>
+                        Use flexible interaction patterns that can support
+                        future experimentation without restructuring the
+                        entire purchase journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         06 — COMPETITIVE ANALYSIS
+    ===================================================== -->
+
+    <section>
+
+        <h2>06 — Competitive Analysis</h2>
+
+        <div class="analysis-box">
+
+            <p>
+                I reviewed bundle customization and cross-sell experiences
+                across leading e-commerce platforms to understand how products
+                guide customers through configuration while introducing
+                additional purchase opportunities.
+            </p>
+
+            <p>
+                The analysis focused on how different experiences manage
+                decision complexity, progressive disclosure, product
+                recommendations, and optional add-ons.
+            </p>
+
+
+            <div class="analysis-focus">
+
+                <div class="analysis-item">
+                    Bundle Configuration
+                </div>
+
+                <div class="analysis-item">
+                    Progressive Disclosure
+                </div>
+
+                <div class="analysis-item">
+                    Cross-sell Placement
+                </div>
+
+                <div class="analysis-item">
+                    Product Recommendations
+                </div>
+
+                <div class="analysis-item">
+                    Optional Add-ons
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         07 — INFORMATION ARCHITECTURE
+    ===================================================== -->
+
+    <section>
+
+        <h2>07 — Information Architecture</h2>
+
+        <p>
+            The purchase journey was restructured to keep the primary
+            subscription task clear while introducing the accessory opportunity
+            as a contextual and optional part of the experience.
+        </p>
+
+
+        <div class="visual-wrapper">
+
+            <img
+                src="../images/KDP-Purchase-Journey-Flow.png"
+                alt="KDP purchase journey information architecture"
+                class="case-study-image"
+            >
+
+            <p class="visual-caption">
+                Purchase journey structure used to organize the Starter Kit
+                experience and accessory opportunity.
+            </p>
+
+        </div>
+
+
+        <p style="margin-top:20px;">
+
+            Instead of introducing a mandatory accessory decision, the revised
+            structure allows customers to complete the core Starter Kit journey
+            while giving them the opportunity to discover and add relevant
+            accessories.
+
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         08 — END-TO-END USER JOURNEY
+    ===================================================== -->
+
+    <section>
+
+        <h2>08 — End-to-End User Journey</h2>
+
+        <p>
+            The user flow maps the customer's journey from initial Starter Kit
+            selection through accessory consideration, purchase review,
+            checkout, and confirmation.
+        </p>
+
+
+        <div class="journey-box">
+
+            <img
+                src="../images/KDP-User-Flow.png"
+                alt="KDP end-to-end user flow"
+                class="case-study-image"
+            >
+
+            <div class="journey-highlight">
+
+                <strong>Key Product Decision</strong>
+
+                <p>
+                    The critical design decision was determining where and how
+                    to introduce the optional accessory without disrupting
+                    the customer's primary subscription journey.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         09 — DESIGN APPROACH
+    ===================================================== -->
+
+    <section>
+
+        <h2>09 — Design Approach</h2>
+
+        <p>
+            The design process moved from understanding the existing journey
+            and business objectives to structuring the experience, exploring
+            interaction patterns, and preparing the solution for validation
+            and experimentation.
+        </p>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <span>01 — DISCOVER</span>
+
+                <h3>Understand</h3>
+
+                <p>
+                    Stakeholder workshops, previous experiment insights,
+                    competitive analysis, customer behavior, and constraints.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span>02 — DEFINE</span>
+
+                <h3>Structure</h3>
+
+                <p>
+                    Problem framing, business goals, information architecture,
+                    user journey, and key decision points.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span>03 — DESIGN</span>
+
+                <h3>Explore</h3>
+
+                <p>
+                    User flows, wireframing, responsive layouts, interaction
+                    patterns, and product experience concepts.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span>04 — DELIVER</span>
+
+                <h3>Prepare & Validate</h3>
+
+                <p>
+                    Stakeholder reviews, developer collaboration, design QA,
+                    and preparation for UserTesting.com and experimentation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="artifact-note">
+
+            <p>
+                <strong>Confidentiality note:</strong>
+                Detailed production wireframes, high-fidelity screens,
                 interactive prototypes, and implementation details have been
-                intentionally omitted because the feature is currently under a
-                <strong>NDA</strong> and has not yet
-                been publicly released.
+                omitted from this public case study because the feature is
+                currently under NDA and has not yet been publicly released.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         10 — DESIGN DECISIONS
+    ===================================================== -->
+
+    <section>
+
+        <h2>10 — Key Design Decisions</h2>
+
+        <p>
+            The design direction was driven by the need to simplify the
+            customer's primary task while still creating a meaningful
+            opportunity for accessory discovery.
+        </p>
+
+
+        <div class="decision-grid">
+
+
+            <div class="decision-card">
+
+                <h3>Simplified Bundle Customization</h3>
+
+                <span class="decision-label">Design Choice</span>
+
+                <p>
+                    Reduced cognitive load by presenting one decision at a time,
+                    allowing customers to focus on completing each step before
+                    moving forward.
+                </p>
+
+                <span class="decision-label">Why</span>
+
+                <p>
+                    The primary subscription task should remain easy to
+                    understand even when multiple products are involved.
+                </p>
+
+            </div>
+
+
+            <div class="decision-card">
+
+                <h3>Contextual Accessory Recommendations</h3>
+
+                <span class="decision-label">Design Choice</span>
+
+                <p>
+                    Introduced accessories as contextual, optional recommendations
+                    rather than mandatory selections.
+                </p>
+
+                <span class="decision-label">Why</span>
+
+                <p>
+                    This preserves the core purchase journey while supporting
+                    the business goal of accessory discoverability.
+                </p>
+
+            </div>
+
+
+            <div class="decision-card">
+
+                <h3>Progressive Disclosure</h3>
+
+                <span class="decision-label">Design Choice</span>
+
+                <p>
+                    Additional options are presented when they become relevant
+                    rather than exposing every decision at once.
+                </p>
+
+                <span class="decision-label">Why</span>
+
+                <p>
+                    Helps reduce decision complexity during bundle configuration.
+                </p>
+
+            </div>
+
+
+            <div class="decision-card">
+
+                <h3>Responsive Experience</h3>
+
+                <span class="decision-label">Design Choice</span>
+
+                <p>
+                    Designed the experience for both desktop and mobile,
+                    adapting layouts and interactions to each device context.
+                </p>
+
+                <span class="decision-label">Why</span>
+
+                <p>
+                    Maintains a consistent product experience across
+                    different customer entry points.
+                </p>
+
+            </div>
+
+
+            <div class="decision-card">
+
+                <h3>Clear Purchase Summary</h3>
+
+                <span class="decision-label">Design Choice</span>
+
+                <p>
+                    Used a clear purchase summary to help customers review
+                    their selections, pricing, and bundle configuration.
+                </p>
+
+                <span class="decision-label">Why</span>
+
+                <p>
+                    Provides purchase context as customers move through
+                    multiple configuration decisions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         11 — DESIGN TRADE-OFFS
+    ===================================================== -->
+
+    <section>
+
+        <h2>11 — Design Trade-offs</h2>
+
+        <p>
+            The redesign required balancing customer usability with the
+            commercial objective of introducing an additional accessory
+            opportunity.
+        </p>
+
+
+        <div class="tradeoff-grid">
+
+
+            <div class="tradeoff-card">
+
+                <h3>Accessory Opportunity vs. Journey Friction</h3>
+
+                <p>
+                    Adding another purchase decision could increase the length
+                    and complexity of the journey. The design therefore treated
+                    the accessory as an optional opportunity rather than
+                    interrupting the core Starter Kit task with a mandatory step.
+                </p>
+
+            </div>
+
+
+            <div class="tradeoff-card">
+
+                <h3>Discoverability vs. Primary Task Focus</h3>
+
+                <p>
+                    The accessory needed sufficient visibility to support
+                    discovery without competing with the customer's primary
+                    product-selection task. Contextual placement and progressive
+                    disclosure were used to balance these objectives.
+                </p>
+
+            </div>
+
+
+            <div class="tradeoff-card">
+
+                <h3>Flexibility vs. Experience Consistency</h3>
+
+                <p>
+                    The experience needed to support future experimentation
+                    without creating inconsistent journeys. Reusable and
+                    modular interaction patterns helped provide flexibility
+                    while maintaining a consistent experience.
+                </p>
+
+            </div>
+
+
+            <div class="tradeoff-card">
+
+                <h3>Information vs. Cognitive Load</h3>
+
+                <p>
+                    Customers needed enough information to make confident
+                    purchasing decisions without being overwhelmed by multiple
+                    product options. Progressive disclosure helped manage
+                    this balance.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         12 — CROSS FUNCTIONAL COLLABORATION
+    ===================================================== -->
+
+    <section>
+
+        <h2>12 — Cross-functional Collaboration</h2>
+
+        <p>
+            Product decisions were developed collaboratively across Product,
+            Business, UX, Engineering, QA, and Marketing to align customer
+            needs, business objectives, and implementation considerations.
+        </p>
+
+
+        <div class="collaboration-grid">
+
+
+            <div class="collaboration-card">
+
+                <h3>Collaborated With</h3>
+
+                <ul>
+
+                    <li>Product Manager</li>
+
+                    <li>Business Analyst</li>
+
+                    <li>Developers</li>
+
+                    <li>QA Engineers</li>
+
+                    <li>Marketing Team</li>
+
+                    <li>UX Design Team</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="collaboration-card">
+
+                <h3>Key Activities</h3>
+
+                <ul>
+
+                    <li>Requirement workshops</li>
+
+                    <li>UX and design reviews</li>
+
+                    <li>Stakeholder presentations</li>
+
+                    <li>Developer handoff</li>
+
+                    <li>Design QA</li>
+
+                    <li>Implementation validation</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         13 — STRATEGIC CHALLENGES
+    ===================================================== -->
+
+    <section>
+
+        <h2>13 — Design Challenges & Strategic Decisions</h2>
+
+        <div class="challenge-grid">
+
+
+            <!-- Challenge 01 -->
+
+            <div class="challenge-card">
+
+                <h3>Challenge 01</h3>
+
+                <div class="challenge-block">
+
+                    <h4>Challenge</h4>
+
+                    <p>
+                        Previous accessory experiments introduced additional
+                        friction into the purchasing journey.
+                    </p>
+
+                </div>
+
+                <div class="solution-block">
+
+                    <h4>Design Decision</h4>
+
+                    <p>
+                        Redesigned the experience around contextual,
+                        optional accessory recommendations rather than
+                        mandatory selections.
+                    </p>
+
+                </div>
+
+                <div class="outcome-block">
+
+                    <h4>Product Outcome</h4>
+
+                    <p>
+                        Created a purchase journey designed to preserve the
+                        core Starter Kit task while supporting accessory
+                        discovery.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Challenge 02 -->
+
+            <div class="challenge-card">
+
+                <h3>Challenge 02</h3>
+
+                <div class="challenge-block">
+
+                    <h4>Challenge</h4>
+
+                    <p>
+                        Balance the business cross-sell opportunity with
+                        customer usability during bundle customization.
+                    </p>
+
+                </div>
+
+                <div class="solution-block">
+
+                    <h4>Design Decision</h4>
+
+                    <p>
+                        Applied progressive disclosure and contextual
+                        recommendations so additional options appear
+                        when relevant.
+                    </p>
+
+                </div>
+
+                <div class="outcome-block">
+
+                    <h4>Product Outcome</h4>
+
+                    <p>
+                        Structured the experience around the customer's
+                        primary task while maintaining accessory visibility.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Challenge 03 -->
+
+            <div class="challenge-card">
+
+                <h3>Challenge 03</h3>
+
+                <div class="challenge-block">
+
+                    <h4>Challenge</h4>
+
+                    <p>
+                        Create a flexible experience that can support
+                        future experimentation without requiring major
+                        structural changes.
+                    </p>
+
+                </div>
+
+                <div class="solution-block">
+
+                    <h4>Design Decision</h4>
+
+                    <p>
+                        Used modular layouts and reusable interaction
+                        patterns that can support future experimentation.
+                    </p>
+
+                </div>
+
+                <div class="outcome-block">
+
+                    <h4>Product Outcome</h4>
+
+                    <p>
+                        Prepared a scalable experience for future
+                        optimization and experimentation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         14 — REUSABLE DESIGN PATTERNS
+    ===================================================== -->
+
+    <section>
+
+        <h2>14 — Reusable Design Patterns</h2>
+
+        <p>
+            The experience was designed with reusable interaction patterns
+            and responsive layouts to support consistency across the product
+            journey and future experimentation.
+        </p>
+
+
+        <div class="pattern-grid">
+
+
+            <div class="pattern-card">
+
+                <h3>Bundle Configuration</h3>
+
+                <p>
+                    Structured patterns for selecting and reviewing
+                    Starter Kit products.
+                </p>
+
+            </div>
+
+
+            <div class="pattern-card">
+
+                <h3>Optional Add-on Pattern</h3>
+
+                <p>
+                    Contextual interaction pattern for presenting
+                    accessory opportunities without making them mandatory.
+                </p>
+
+            </div>
+
+
+            <div class="pattern-card">
+
+                <h3>Progressive Disclosure</h3>
+
+                <p>
+                    Reveals additional information and options when
+                    they become relevant to the customer.
+                </p>
+
+            </div>
+
+
+            <div class="pattern-card">
+
+                <h3>Purchase Summary</h3>
+
+                <p>
+                    Provides clear visibility into selected products
+                    and purchase context.
+                </p>
+
+            </div>
+
+
+            <div class="pattern-card">
+
+                <h3>Responsive Layouts</h3>
+
+                <p>
+                    Adapted product structure and interactions for
+                    desktop and mobile experiences.
+                </p>
+
+            </div>
+
+
+            <div class="pattern-card">
+
+                <h3>Experiment-ready Structure</h3>
+
+                <p>
+                    Designed modular patterns that can support
+                    future experimentation and optimization.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         15 — VALIDATION & EXPERIMENTATION
+    ===================================================== -->
+
+    <section>
+
+        <h2>15 — Validation & Experimentation</h2>
+
+        <div class="validation-box">
+
+            <span class="validation-status">
+                Prepared for validation
+            </span>
+
+            <p>
+                The redesigned experience was structured to support subsequent
+                validation through UserTesting.com and experimentation through
+                Optimizely.
             </p>
 
             <p>
-                The content presented here focuses on my UX process, research,
-                strategic thinking, collaboration, design decisions, and
-                problem-solving approach rather than confidential business
-                information or proprietary product assets.
+                The validation approach was intended to evaluate whether the
+                redesigned journey could introduce accessory discovery while
+                maintaining clarity and minimizing friction within the primary
+                Starter Kit purchase flow.
             </p>
 
             <p>
-                I'm happy to discuss the complete design process, interaction
-                flows, design rationale, and outcomes during interviews while
-                respecting client confidentiality obligations.
+                Because the feature is currently under NDA and has not yet been
+                publicly released, production test results and business metrics
+                are not included in this public case study.
             </p>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
-    <p><strong>Role:</strong> Senior UX Designer<br>
-    <strong>Duration:</strong> 2026 – Present<br>
-    <strong>Platform</strong> Desktop & Mobile<br>
-    <strong>Type:</strong> E-commerce / Consumer Products<br>
-    <strong>Team:</strong> Product Manager, Business Analyst, UX, Developers, QA, Marketing <br>
-    <strong>Tools:</strong> Figma, FigJam, UserTesting.com, Optimizely, Jira </p>
-    <br>
-    <h2>Project Overview</h2><br>
-    <p>
-        Keurig wanted to revisit the Starter Kit purchase experience after a previous accessory upsell experiment negatively impacted 
-        conversion. The objective was to redesign the flow so customers could easily customize their beverage starter kits 
-        while discovering relevant accessories in a way that felt helpful rather than disruptive.
+    <!-- =====================================================
+         16 — OUTCOME
+    ===================================================== -->
 
-The project focused on balancing customer usability with business cross-sell goals while creating a scalable 
-experience suitable for future experimentation and implementation.
-    </p>
+    <section>
 
-     <h2>Business Goals</h2><br>
-    <ul>
-        <li>Improve Starter Kit customization experience</li>
-        <li>Increase accessory discoverability</li>
-        <li>Support cross-sell opportunities</li>
-        <li>Create a scalable experience for experimentation</li>
-        <li>Design responsive Desktop & Mobile experiences</li>
+        <h2>16 — Outcome & Product Impact</h2>
 
-    </ul>
+        <p>
+            The resulting concept created a clearer foundation for the Starter
+            Kit purchase experience while balancing customer needs with the
+            business objective of accessory discovery.
+        </p>
 
-    <h2>Problem Statement</h2><br>
-    <p>Previous experimentation introduced an accessory selection step within the Starter Kit flow, resulting in increased abandonment and lower conversion.</p>
-    <p><strong>Key challenges included:</strong></p>
-    <ul>
-        <li>Mandatory accessory step interrupted purchasing flow</li>
-        <li>Limited visibility of compatible accessories</li>
-        <li>Multiple product combinations increased decision complexity</li>
-        <li>Business wanted higher accessory attachment without reducing conversions</li>
-        <li>Needed an experience suitable for A/B testing and future optimization</li>
 
-    </ul>
+        <div class="outcome-grid">
 
-     <!-- ===========================================================
-Research & Discovery
-=========================================================== -->
 
-<section class="section">
+            <div class="outcome-card">
 
-    <h2>Research & Discovery</h2>
+                <h3>Clearer Bundle Journey</h3>
 
-    <p>
-        The discovery phase focused on understanding business objectives,
-        customer needs, previous experimentation, and technical constraints
-        before defining the redesigned purchase experience.
-    </p>
+                <p>
+                    Structured the Starter Kit experience around a simpler,
+                    more focused customization journey.
+                </p>
 
-    <h3>Stakeholder Workshops</h3>
+            </div>
 
-    <p>
-        Collaborated with cross-functional stakeholders to gather requirements,
-        align business objectives, and understand customer purchasing behavior.
-    </p>
 
-    <div class="research-grid">
+            <div class="outcome-card">
 
-        <div class="research-card">
+                <h3>Contextual Cross-sell</h3>
 
-            <h4>Collaborated With</h4>
+                <p>
+                    Introduced accessory discovery as an optional,
+                    contextual part of the purchasing journey.
+                </p>
 
-            <ul>
-                <li>Product Managers</li>
-                <li>Business Analysts</li>
-                <li>Marketing Team</li>
-                <li>Developers</li>
-                <li>UX Design Team</li>
-            </ul>
+            </div>
+
+
+            <div class="outcome-card">
+
+                <h3>Reduced Journey Complexity</h3>
+
+                <p>
+                    Used progressive disclosure and focused decisions
+                    to manage product-selection complexity.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <h3>Responsive Experience</h3>
+
+                <p>
+                    Designed the experience across desktop and mobile
+                    contexts.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <h3>Scalable Structure</h3>
+
+                <p>
+                    Created modular interaction patterns suitable for
+                    future experimentation and optimization.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <h3>Experiment-ready</h3>
+
+                <p>
+                    Prepared the experience for subsequent UserTesting.com
+                    validation and Optimizely experimentation.
+                </p>
+
+            </div>
 
         </div>
 
-        <div class="research-card">
 
-            <h4>Key Discoveries</h4>
+        <div class="artifact-note">
 
-            <ul>
-                <li>Previous experiment outcomes</li>
-                <li>Business objectives</li>
-                <li>Technical constraints</li>
-                <li>Customer purchase behavior</li>
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ===========================================================
-Experiment Insights
-=========================================================== -->
-
-<section class="section">
-
-    <h2>Key Research Insights</h2>
-
-    <p>
-        Previous experimentation provided valuable insights into customer
-        behavior and highlighted opportunities to improve the purchasing
-        experience without compromising business objectives.
-    </p>
-
-    <ul>
-
-        <li>
-            Previous experimentation showed that mandatory accessory selection increased friction during the purchasing journey.
-        </li>
-
-        <li>
-            Customers preferred completing Starter Kit customization before considering optional accessories.
-        </li>
-
-        <li>
-            Contextual recommendations created a more natural cross-sell experience than mandatory decision points.
-        </li>
-
-        <li>
-            A simplified and modular purchase flow would better support future experimentation and continuous optimization.
-        </li>
-
-    </ul>
-
-</section>
-
-<!-- Competitive Analysis -->
-<h2>Competitive Analysis</h2>
-
-<p>
-To understand industry best practices, I reviewed bundle customization experiences across leading
-e-commerce platforms and analyzed how they guided users through product configuration while
-encouraging additional purchases without increasing friction.
-</p>
-
-<p><strong>Focus areas included:</strong></p>
-
-<ul>
-    <li>Progressive disclosure to simplify complex purchase decisions</li>
-    <li>Cross-sell positioning within the customer journey</li>
-    <li>Bundle configuration and product customization flows</li>
-    <li>Product recommendation patterns and merchandising strategies</li>
-    <li>Optional add-on experiences that minimize purchase friction</li>
-</ul>
-
-<!-- Information Architecture -->
-<h2>Information Architecture</h2>
-
-<p>
-The purchase journey was restructured to create a more intuitive and user-friendly experience while
-keeping accessory recommendations contextual rather than interrupting the primary purchase flow.
-</p>
-
-<img src="../images/KDP-Purchase-Journey-Flow.png"
-     alt="KDP Information Architecture"
-     style="width:100%; border-radius:16px; margin-top:25px; box-shadow:0 10px 30px rgba(0,0,0,0.08);"> <br>
-
-<p>
-Instead of introducing mandatory accessory selections, recommendations were presented as contextual,
-optional add-ons, allowing users to continue their purchase journey with minimal friction while
-supporting business cross-sell objectives.
-</p>
-
-<h2>User Flow</h2>
-
-<p>
-The purchase journey was designed to minimize friction while enabling users to
-customize their Starter Kit and optionally add relevant accessories.
-</p>
-
-<img src="../images/KDP-User-Flow.png"
-     alt="KDP User Flow"
-     class="case-study-image"></img>
-
-<!-- Design Decisions -->
-<section class="section">
-    <h2>Design Decisions</h2>
-
-    <div class="decision-grid">
-
-        <div class="decision-card">
-            <h3>Simplified Bundle Customization</h3>
             <p>
-                Reduced cognitive load by presenting one decision at a time,
-                allowing users to focus on completing each step before moving
-                to the next.
+                <strong>Impact measurement:</strong>
+                Production conversion, attachment-rate, usability, and
+                experimentation results are not included because the feature
+                is confidential and has not yet been publicly released.
             </p>
-        </div>
-
-        <div class="decision-card">
-            <h3>Contextual Accessory Recommendations</h3>
-            <p>
-                Introduced accessories naturally within the purchasing journey
-                instead of interrupting users with mandatory selections,
-                supporting both usability and business cross-sell goals.
-            </p>
-        </div>
-
-        <div class="decision-card">
-            <h3>Progressive Disclosure</h3>
-            <p>
-                Displayed additional options only when relevant,
-                helping users make informed decisions without overwhelming them.
-            </p>
-        </div>
-
-        <div class="decision-card">
-            <h3>Responsive Layout</h3>
-            <p>
-                Maintained a consistent experience across Desktop and Mobile
-                while optimizing layouts and interactions for each device.
-            </p>
-        </div>
-
-        <div class="decision-card">
-            <h3>Clear Purchase Summary</h3>
-            <p>
-                Designed a persistent order summary that helped users review
-                their selections, pricing, and bundle configuration
-                throughout the purchase journey.
-            </p>
-        </div>
-
-    </div>
-
-</section>     
-
-<!-- ===========================================================
-Cross-functional Collaboration
-=========================================================== -->
-
-<section class="section">
-
-    <h2>Cross-functional Collaboration</h2>
-
-    <p>
-        Worked closely with cross-functional teams throughout the design lifecycle
-        to align business objectives, customer needs, and technical feasibility
-        while ensuring smooth implementation.
-    </p>
-
-    <div class="collaboration-grid">
-
-        <div class="collaboration-card">
-
-            <h3>Collaborated With</h3>
-
-            <ul>
-                <li>👨‍💼 Product Manager</li>
-                <li>📊 Business Analyst</li>
-                <li>💻 Developers</li>
-                <li>🧪 QA Engineers</li>
-                <li>📣 Marketing Team</li>
-                <li>🎨 UX Design Team</li>
-            </ul>
 
         </div>
 
-        <div class="collaboration-card">
-
-            <h3>Key Activities</h3>
-
-            <ul>
-                <li>Requirement Workshops</li>
-                <li>UX & Design Reviews</li>
-                <li>Stakeholder Presentations</li>
-                <li>Developer Handoff</li>
-                <li>Design QA & Implementation Validation</li>
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- ===========================================================
-Design Challenges & Strategic Decisions
-=========================================================== -->
+    <!-- =====================================================
+         17 — MY ROLE & OWNERSHIP
+    ===================================================== -->
 
-<section class="section">
+    <section>
 
-    <h2>Design Challenges & Strategic Decisions</h2>
+        <h2>17 — My Role & Ownership</h2>
 
-    <div class="challenge-grid">
+        <p class="role-intro">
 
-        <!-- Challenge 1 -->
+            I owned the end-to-end UX design process, translating business
+            requirements and customer needs into a responsive product
+            experience while collaborating closely with Product, Business,
+            Engineering, QA, Marketing, and UX stakeholders.
 
-        <div class="challenge-card">
+        </p>
 
-            <h3>Challenge 01</h3>
 
-            <div class="challenge-block">
+        <div class="ownership-grid">
 
-                <h4>⚠ Challenge</h4>
 
-                <p>
-                    Previous accessory experiments introduced additional friction
-                    during the purchase journey, negatively impacting conversions.
-                </p>
+            <!-- Discover -->
+
+            <div class="ownership-card">
+
+                <div class="ownership-icon">
+                    🔍
+                </div>
+
+                <h3>Discover</h3>
+
+                <ul>
+
+                    <li>UX Research</li>
+
+                    <li>Competitive Analysis</li>
+
+                    <li>Stakeholder Workshops</li>
+
+                    <li>Previous Experiment Insights</li>
+
+                </ul>
 
             </div>
 
-            <div class="solution-block">
 
-                <h4>💡 Design Decision</h4>
+            <!-- Define -->
 
-                <p>
-                    Redesigned the experience using contextual, optional accessory
-                    recommendations instead of mandatory selections.
-                </p>
+            <div class="ownership-card">
+
+                <div class="ownership-icon">
+                    🧠
+                </div>
+
+                <h3>Define</h3>
+
+                <ul>
+
+                    <li>Problem Framing</li>
+
+                    <li>Business Goals</li>
+
+                    <li>Information Architecture</li>
+
+                    <li>User Flows</li>
+
+                </ul>
 
             </div>
 
-            <div class="outcome-block">
 
-                <h4>✅ Outcome</h4>
+            <!-- Design -->
 
-                <p>
-                    Created a smoother purchasing journey while supporting
-                    business cross-sell objectives.
-                </p>
+            <div class="ownership-card">
+
+                <div class="ownership-icon">
+                    🎨
+                </div>
+
+                <h3>Design</h3>
+
+                <ul>
+
+                    <li>Wireframing</li>
+
+                    <li>High-Fidelity UI</li>
+
+                    <li>Responsive Design</li>
+
+                    <li>Interactive Prototypes</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Deliver -->
+
+            <div class="ownership-card">
+
+                <div class="ownership-icon">
+                    🚀
+                </div>
+
+                <h3>Deliver</h3>
+
+                <ul>
+
+                    <li>Stakeholder Presentations</li>
+
+                    <li>Developer Handoff</li>
+
+                    <li>Design QA</li>
+
+                    <li>UserTesting Preparation</li>
+
+                </ul>
 
             </div>
 
         </div>
 
+    </section>
 
-        <!-- Challenge 2 -->
 
-        <div class="challenge-card">
-
-            <h3>Challenge 02</h3>
-
-            <div class="challenge-block">
-
-                <h4>⚠ Challenge</h4>
-
-                <p>
-                    Balance business cross-sell goals with customer usability
-                    without overwhelming users during bundle customization.
-                </p>
-
-            </div>
-
-            <div class="solution-block">
-
-                <h4>💡 Design Decision</h4>
-
-                <p>
-                    Applied progressive disclosure and contextual recommendations
-                    so users encountered additional options only when relevant.
-                </p>
-
-            </div>
-
-            <div class="outcome-block">
-
-                <h4>✅ Outcome</h4>
-
-                <p>
-                    Reduced cognitive load while maintaining a seamless,
-                    user-centered purchasing experience.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- Challenge 3 -->
-
-        <div class="challenge-card">
-
-            <h3>Challenge 03</h3>
-
-            <div class="challenge-block">
-
-                <h4>⚠ Challenge</h4>
-
-                <p>
-                    Design a scalable experience that could support future
-                    experimentation without requiring major redesign efforts.
-                </p>
-
-            </div>
-
-            <div class="solution-block">
-
-                <h4>💡 Design Decision</h4>
-
-                <p>
-                    Created reusable interaction patterns, modular layouts,
-                    and flexible components suitable for future A/B testing.
-                </p>
-
-            </div>
-
-            <div class="outcome-block">
-
-                <h4>✅ Outcome</h4>
-
-                <p>
-                    Delivered a scalable design framework that supports
-                    continuous optimization and future enhancements.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Outcomes -->
-<section class="section">
-    <h2>Outcomes</h2>
-
-    <ul>
-        <strong><li>Designed a scalable Starter Kit bundle builder experience balancing customer usability with business cross-sell objectives.</li>
-        <li>Enhanced accessory discoverability through contextual recommendations integrated into the purchasing journey.</li>
-        <li>Reduced purchase friction by simplifying bundle customization and interaction flows.</li>
-        <li>Delivered responsive Desktop and Mobile experiences using reusable design components.</li>
-        <li>Prepared the experience for future A/B testing and UserTesting.com validation.</li></strong>
-    </ul>
-</section>
-
-<!-- ===========================================================
-My Role & Ownership
-=========================================================== -->
-
-<section class="section">
-
-    <h2>My Role &amp; Ownership</h2>
-
-    <p class="role-intro">
-        I owned the end-to-end UX design process, collaborating with cross-functional
-        stakeholders to transform business requirements into intuitive, scalable,
-        and user-centered experiences.
-    </p>
-
-    <div class="ownership-grid">
-
-        <!-- Discover -->
-
-        <div class="ownership-card">
-
-            <div class="ownership-icon">🔍</div>
-
-            <h3>Discover</h3>
-
-            <ul>
-                <li>UX Research</li>
-                <li>Competitive Analysis</li>
-                <li>Stakeholder Workshops</li>
-            </ul>
-
-        </div>
-
-        <!-- Define -->
-
-        <div class="ownership-card">
-
-            <div class="ownership-icon">🧠</div>
-
-            <h3>Define</h3>
-
-            <ul>
-                <li>Information Architecture</li>
-                <li>User Flows</li>
-                <li>Wireframing</li>
-            </ul>
-
-        </div>
-
-        <!-- Design -->
-
-        <div class="ownership-card">
-
-            <div class="ownership-icon">🎨</div>
-
-            <h3>Design</h3>
-
-            <ul>
-                <li>High-Fidelity UI</li>
-                <li>Responsive Design</li>
-                <li>Interactive Prototypes</li>
-            </ul>
-
-        </div>
-
-        <!-- Deliver -->
-
-        <div class="ownership-card">
-
-            <div class="ownership-icon">🚀</div>
-
-            <h3>Deliver</h3>
-
-            <ul>
-                <li>Developer Handoff</li>
-                <li>Design QA</li>
-                <li>UserTesting Preparation</li>
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
-    
-
-
+</main>
 
 
 </body>
