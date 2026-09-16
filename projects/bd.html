@@ -3,337 +3,1368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Becton Dickinson Case Study</title>
+
+    <title>Becton Dickinson | Enterprise Product Design Case Study</title>
+
     <link rel="stylesheet" href="../css/style.css" />
+
     <style>
-        /* ----------- PAGE CONTENT STYLES ----------- */
+
+        /* ================= CASE STUDY ================= */
 
         .case-study-container {
-            max-width: 1150px;
-            margin: 120px auto 50px;
-            padding: 0 20px;
+            max-width: 1100px;
+            margin: 110px auto 70px;
+            padding: 0 24px;
             line-height: 1.7;
         }
 
-        .case-study-container h2 {
-            margin-top: 40px;
+        .case-study-container h1 {
             color: #3730A3;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
+            line-height: 1.25;
             margin-bottom: 10px;
         }
 
+        .case-study-container h2 {
+            margin-top: 65px;
+            margin-bottom: 16px;
+            color: #3730A3;
+            font-size: 1.75rem;
+            line-height: 1.3;
+        }
+
         .case-study-container h3 {
-            margin-top: 25px;
-            color: #444;
-            font-size: 1.4rem;
+            margin-top: 28px;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 1.15rem;
         }
 
         .case-study-container p,
         .case-study-container li {
-            font-size: 1rem;
+            font-size: 0.98rem;
             color: #333;
         }
 
         .case-study-container p {
-          margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .case-study-container ul {
             margin-left: 20px;
+            padding-left: 8px;
         }
 
-        /* ================= BD VISUAL SECTION ================= */
+        .case-study-container li {
+            margin-bottom: 6px;
+        }
 
-.bd-visuals {
-  margin-top: 80px;
-}
+        /* ================= PROJECT META ================= */
 
-.bd-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-}
+        .project-label {
+            display: inline-block;
+            background: #eeeefe;
+            color: #3730A3;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
 
-.bd-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  text-align: center;
-  transition: all 0.3s ease;
-}
+        .project-intro {
+            font-size: 1.05rem !important;
+            max-width: 900px;
+            color: #444 !important;
+            margin-bottom: 25px !important;
+        }
 
-.bd-card img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
+        .project-meta {
+            background: #fff;
+            border-left: 4px solid #3730A3;
+            padding: 20px 24px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-top: 25px;
+        }
 
-.bd-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
+        .project-meta p {
+            margin: 5px 0;
+            font-size: 0.92rem;
+        }
 
-.bd-card p {
-  font-size: 0.95rem;
-  color: #444;
-  font-weight: 500;
-}
+        /* ================= PRODUCT CONTEXT ================= */
 
-/* Flow Section */
+        .context-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
 
-.bd-flow {
-  margin-top: 100px;
-}
+        .context-card {
+            background: #fff;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
 
-.bd-flow img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
+        .context-card h3 {
+            margin-top: 0;
+            color: #3730A3;
+            font-size: 1rem;
+        }
 
-        /* Responsive */
+        .context-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* ================= PROBLEM ================= */
+
+        .problem-box {
+            background: #f3f3ff;
+            border-radius: 14px;
+            padding: 28px;
+            margin-top: 20px;
+        }
+
+        .problem-box p {
+            margin-bottom: 8px;
+        }
+
+        /* ================= DESIGN GOALS ================= */
+
+        .goal-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .goal-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .goal-number {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #3730A3;
+        }
+
+        .goal-card h3 {
+            margin-top: 8px;
+            font-size: 1rem;
+        }
+
+        .goal-card p {
+            font-size: 0.88rem;
+        }
+
+        /* ================= RESEARCH ================= */
+
+        .research-box {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-top: 25px;
+        }
+
+        .research-methods {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .research-method {
+            border: 1px solid #e7e7e7;
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        .research-method strong {
+            display: block;
+            color: #3730A3;
+            margin-bottom: 5px;
+        }
+
+        .research-method span {
+            font-size: 0.86rem;
+            color: #555;
+        }
+
+        /* ================= WORKFLOW ================= */
+
+        .workflow-box {
+            background: #fff;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            margin-top: 25px;
+        }
+
+        .workflow-steps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .workflow-step {
+            background: #f3f3ff;
+            color: #3730A3;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .workflow-arrow {
+            color: #777;
+            font-weight: bold;
+        }
+
+        /* ================= VISUALS ================= */
+
+        .bd-visuals {
+            margin-top: 40px;
+        }
+
+        .bd-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            margin-top: 25px;
+        }
+
+        .bd-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .bd-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .bd-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+
+        .bd-card p {
+            font-size: 0.9rem;
+            color: #444;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        /* ================= PROCESS ================= */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .process-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .process-card span {
+            font-size: 0.78rem;
+            color: #3730A3;
+            font-weight: 700;
+        }
+
+        .process-card h3 {
+            margin-top: 6px;
+            font-size: 1rem;
+        }
+
+        .process-card p {
+            font-size: 0.85rem;
+        }
+
+        /* ================= FLOW ================= */
+
+        .bd-flow {
+            margin-top: 50px;
+        }
+
+        .bd-flow img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-top: 20px;
+        }
+
+        .confidential-note {
+            font-size: 0.85rem !important;
+            color: #666 !important;
+            font-style: italic;
+        }
+
+        /* ================= DECISIONS ================= */
+
+        .decision-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .decision-card h3 {
+            color: #3730A3;
+            margin-top: 0;
+        }
+
+        .decision-card p {
+            margin-bottom: 7px;
+        }
+
+        .decision-label {
+            font-weight: 700;
+            color: #333;
+        }
+
+        /* ================= TRADE OFF ================= */
+
+        .tradeoff-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .tradeoff-card {
+            background: #f7f7fb;
+            padding: 22px;
+            border-radius: 12px;
+            border: 1px solid #e7e7e7;
+        }
+
+        .tradeoff-card h3 {
+            color: #3730A3;
+            margin-top: 0;
+        }
+
+        .tradeoff-card p {
+            font-size: 0.9rem;
+        }
+
+        /* ================= COMPONENTS ================= */
+
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .component-item {
+            background: #fff;
+            border-radius: 10px;
+            padding: 17px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* ================= OUTCOME ================= */
+
+        .outcome-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .outcome-card {
+            background: #fff;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .outcome-card h3 {
+            color: #3730A3;
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .outcome-card p {
+            font-size: 0.88rem;
+        }
+
+        /* ================= ROLE ================= */
+
+        .role-box {
+            background: #f3f3ff;
+            border-radius: 14px;
+            padding: 28px;
+            margin-top: 25px;
+        }
+
+        /* ================= MOBILE ================= */
+
         @media (max-width: 768px) {
+
             .case-study-container {
-                margin-top: 100px;
+                margin-top: 95px;
+                padding: 0 18px;
             }
+
+            .case-study-container h1 {
+                font-size: 1.7rem;
+            }
+
             .case-study-container h2 {
-                font-size: 1.5rem;
+                font-size: 1.45rem;
+                margin-top: 50px;
             }
-            .case-study-container h3 {
-                font-size: 1.2rem;
+
+            .context-grid,
+            .goal-grid,
+            .research-methods,
+            .process-grid,
+            .outcome-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bd-images,
+            .tradeoff-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .component-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .workflow-steps {
+                flex-direction: column;
+            }
+
+            .workflow-arrow {
+                transform: rotate(90deg);
             }
         }
+
     </style>
 </head>
 
+
 <body style="background-color: #f9f9f9;">
 
-<header class="cs-navbar">
-  <div class="cs-nav-wrapper">
+<!-- ================= NAVIGATION ================= -->
 
-    <div class="cs-logo">
-      Shanmugapriya <span>Udhayakumar</span>
+<header class="cs-navbar">
+
+    <div class="cs-nav-wrapper">
+
+        <div class="cs-logo">
+            Shanmugapriya <span>Udhayakumar</span>
+        </div>
+
+        <input type="checkbox" id="cs-menu-toggle" />
+
+        <label for="cs-menu-toggle" class="cs-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="cs-nav-links">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#portfolio">Portfolio</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+
     </div>
 
-    <input type="checkbox" id="cs-menu-toggle" />
-    <label for="cs-menu-toggle" class="cs-hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
-    <nav class="cs-nav-links">
-      <a href="../index.html#home">Home</a>
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#experience">Experience</a>
-      <a href="../index.html#portfolio">Portfolio</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-
-  </div>
 </header>
 
 
-<!-- ================= CASE STUDY CONTENT ================= -->
+<!-- ================= CASE STUDY ================= -->
 
-<div class="case-study-container">
+<main class="case-study-container">
 
-    <h2>Becton Dickinson - Document Management Platform (UX Redesign Case Study)</h2>
 
-    <p><strong>Role:</strong> UI/UX Designer & Front End<br>
-    <strong>Duration:</strong> 19 months<br>
-    <strong>Type:</strong> Enterprise B2B – Healthcare / Document Management System<br>
-    <strong>Team:</strong> Product Owner, Engineering Team, UI/UX Designers, QA <br>
-    <strong>Tools:</strong> Figma, Adobe XD, Jira, Photopea, HTML/CSS </p>
-    <br>
-    <h2>Project Overview</h2><br>
-    <p>
-        Becton Dickinson required a redesign of an internal document management platform used to store and manage critical documents in a structured and permission-based environment.
+    <!-- ================= HERO ================= -->
 
-The platform was already in active enterprise use across internal healthcare workflows. However, the experience needed a modern UX refresh to improve usability, clarity, and consistency while maintaining strict healthcare and enterprise constraints.
+    <span class="project-label">Enterprise Product Design Case Study</span>
 
-The project focused on redesigning 10 core screens that covered the primary document workflows.
+    <h1>Becton Dickinson — Document Management Platform</h1>
 
-This project required balancing usability improvements with strict enterprise and healthcare compliance standards, making clarity and error prevention the primary design drivers.
+    <p class="project-intro">
+        Redesigning complex document-management and permission-based workflows
+        for an enterprise healthcare platform, with a focus on usability, clarity,
+        consistency, accessibility, and scalable product patterns.
     </p>
 
-    
+    <div class="project-meta">
 
-    <h2>Problem Statement</h2><br>
-    <p>The outdated interface reduced efficiency in document-heavy workflows and increased friction in permission-based operations.</p>
-    <p><strong>Key challenges included:</strong></p>
-    <ul>
-        <li>Complex folder structures that were hard to understand at a glance</li>
-        <li>Limited visual differentiation between user actions and permissions</li>
-        <li>Inconsistent use of colors, icons, typography, and branding</li>
-        <li>High cognitive load when managing or locating documents</li>
+        <p><strong>Role:</strong> UI/UX Designer & Front End</p>
 
-    </ul>
-    
+        <p><strong>Duration:</strong> 19 months</p>
 
-    <h2>Understanding the Use Case</h2>
+        <p><strong>Type:</strong> Enterprise B2B · Healthcare · Document Management System</p>
 
-<p>The platform followed a strict <strong>role-based access model</strong> to ensure document safety and compliance.</p>
+        <p><strong>Team:</strong> Product Owner, Engineering Team, UI/UX Designers, QA</p>
 
-<h3>Edit Access Users</h3>
-<ul>
-  <li>Upload documents</li>
-  <li>Edit metadata</li>
-  <li>Delete or manage files</li>
-</ul>
+        <p><strong>Tools:</strong> Figma, Adobe XD, Jira, Photopea, HTML/CSS</p>
 
-<h3>View-Only Users</h3>
-<ul>
-  <li>Browse folders</li>
-  <li>View documents</li>
-  <li>No modification privileges</li>
-</ul>
-
-<p>
-Designing for both user types required <strong>clear permission visibility</strong> and
-<strong>error prevention</strong> to avoid accidental actions.
-</p>
-
-
-<h2>Design Scope</h2>
-
-<p>This was a <strong>full redesign</strong>, not an incremental update.</p>
-
-<ul>
-  <li>Redesign of <strong>10 key application screens</strong></li>
-  <li>Complete visual refresh</li>
-  <li>Improved information hierarchy</li>
-  <li>Clear permission-based interactions</li>
-</ul>
-
-<p>The redesign aimed to create a scalable foundation for future product enhancements while reducing operational friction in document workflows.</p>
-
-
-<h2>Healthcare UX Constraints</h2>
-
-<p>Given the healthcare domain, the design followed strict usability and compliance principles:</p>
-
-<ul>
-  <li>Accuracy and clarity prioritized over visual flair</li>
-  <li>Minimal, non-decorative UI elements</li>
-  <li>Clearly labeled and confirmed actions</li>
-  <li>Predictable layouts to reduce user errors</li>
-  <li>No ambiguity in critical actions like upload, edit, or delete</li>
-</ul>
-
-
-<h2>Accessibility Considerations</h2>
-
-<p>The redesigned experience accounted for accessibility best practices:</p>
-
-<ul>
-  <li>Improved color contrast</li>
-  <li>Clear typography hierarchy</li>
-  <li>Readable font sizes</li>
-  <li>Consistent spacing patterns</li>
-  <li>Larger click targets for critical actions</li>
-  <li>Clear feedback for success, warning, and error states</li>
-</ul>
-
-<h2>Design Decisions</h2>
-
-<ul>
-  <li>Simplified folder visualization for faster scanning</li>
-  <li>Clear permission indicators at folder and file level</li>
-  <li>Updated color palette aligned with enterprise branding</li>
-  <li>Standardized icons for document actions</li>
-  <li>Improved typography for readability</li>
-  <li>Consistent placement of primary and secondary actions</li>
-</ul>
-
-<!-- ================= APPROVED UI SCREENS ================= -->
-
-<section class="bd-visuals">
-  <h2>Approved UI Screens (Client Sign-off)</h2>
-
-  <p class="visual-note">
-    The following screens were part of the redesigned experience and received
-    stakeholder approval during implementation.
-  </p>
-
-  <div class="bd-images">
-    <div class="bd-card">
-      <img src="../images/BD_inner_ActionDropdownNew.png" alt="BD Action Dropdown Screen">
-      <p>Permission-based Action Toolbar with Role Visibility</p>
     </div>
 
-    <div class="bd-card">
-      <img src="../images/BDPermissionSets.png" alt="BD Permission Set Screen">
-      <p>Role-Based Permission Configuration Interface</p>
-    </div>
-  </div>
-</section>
 
-<!-- ================= COMPLEX FLOW RECONSTRUCTION ================= -->
+    <!-- ================= PRODUCT OVERVIEW ================= -->
 
-<section class="bd-flow">
-  <h2>Complex Permission Flow (Recreated for Portfolio)</h2>
+    <section>
 
-  <p class="visual-note">
-    Due to confidentiality, detailed production flows cannot be shown.
-    Below is a reconstructed version demonstrating the logic behind
-    permission-based document management.
-  </p>
+        <h2>01 — Product Overview</h2>
 
-  <img src="../images/UserPermissionBasedDocumentManagementFlow.png" alt="BD Permission Flow">
-</section>
+        <p>
+            Becton Dickinson required a redesign of an internal document management
+            platform used to store and manage critical documents in a structured
+            and permission-based environment.
+        </p>
 
+        <p>
+            The platform was already in active enterprise use across internal
+            healthcare workflows. The redesign focused on improving usability,
+            clarity, consistency, and interaction patterns while maintaining
+            enterprise and healthcare constraints.
+        </p>
 
-<h2>Components Designed</h2>
+        <p>
+            The project covered the redesign of
+            <strong>10 core application screens</strong> supporting primary
+            document-management workflows.
+        </p>
 
-<ul>
-  <li>Folder and file cards</li>
-  <li>Permission indicators</li>
-  <li>Action toolbars</li>
-  <li>Upload and confirmation modals</li>
-  <li>Alert and error states</li>
-  <li>Table layouts for document lists</li>
-</ul>
-
-<p>These components ensured visual and functional consistency across all 10 screens.</p>
+    </section>
 
 
-<h2>Usability Challenges</h2>
+    <!-- ================= PROBLEM ================= -->
 
-<ul>
-  <li>Balancing simplicity with dense information</li>
-  <li>Designing for multiple permission levels</li>
-  <li>Preventing accidental destructive actions</li>
-  <li>Maintaining consistency across redesigned screens</li>
-  <li>Working within healthcare compliance constraints</li>
-</ul>
+    <section>
+
+        <h2>02 — The Product Problem</h2>
+
+        <div class="problem-box">
+
+            <p>
+                The existing interface created friction within document-heavy
+                workflows, particularly where users needed to understand
+                permissions and available actions.
+            </p>
+
+            <p><strong>Key challenges:</strong></p>
+
+            <ul>
+                <li>Complex folder structures were difficult to understand at a glance.</li>
+                <li>Permission and action states were not sufficiently differentiated.</li>
+                <li>UI patterns such as colors, icons, typography, and branding were inconsistent.</li>
+                <li>Managing and locating documents created unnecessary cognitive load.</li>
+            </ul>
+
+        </div>
+
+    </section>
 
 
-<h2>Results & Impact</h2>
+    <!-- ================= USERS ================= -->
 
-<ul>
-  <li>Standardized permission-based logic across 10 core workflows</li>
-  <li>Reduced workflow friction by simplifying folder hierarchy and action visibility</li>
-  <li>Improved task efficiency through contextual action toolbars</li>
-  <li>Enabled scalable component reuse for future product modules</li>
-  <li>Strengthened enterprise readiness through accessibility-focused improvements</li>
-</ul>
+    <section>
+
+        <h2>03 — Users & Product Context</h2>
+
+        <p>
+            The platform followed a strict role-based access model to support
+            document safety and controlled access.
+        </p>
+
+        <div class="context-grid">
+
+            <div class="context-card">
+
+                <h3>Edit Access Users</h3>
+
+                <p>
+                    Users who could upload documents, edit metadata,
+                    and delete or manage files.
+                </p>
+
+            </div>
 
 
-<h2>My Role & Ownership</h2>
+            <div class="context-card">
 
-<ul>
-  <li>UX redesign of 10 core application screens</li>
-  <li>Defined permission-based interaction logic for multi-role users</li>
-  <li>Established visual system updates aligned with BD enterprise branding</li>
-  <li>Collaborated with engineering to ensure accurate implementation</li>
-  <li>Advocated accessibility improvements within healthcare constraints</li>
-  <li>Presented design directions to stakeholders for approval</li>
-</ul>
+                <h3>View-Only Users</h3>
 
-</div>
+                <p>
+                    Users who could browse folders and view documents
+                    without modification privileges.
+                </p>
+
+            </div>
+
+
+            <div class="context-card">
+
+                <h3>Product Constraint</h3>
+
+                <p>
+                    Different permission levels required clear visibility
+                    of available actions and safeguards against unintended actions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GOALS ================= -->
+
+    <section>
+
+        <h2>04 — Product Design Goals</h2>
+
+        <div class="goal-grid">
+
+            <div class="goal-card">
+                <span class="goal-number">01</span>
+                <h3>Simplify</h3>
+                <p>Make document-heavy workflows easier to understand and navigate.</p>
+            </div>
+
+            <div class="goal-card">
+                <span class="goal-number">02</span>
+                <h3>Clarify</h3>
+                <p>Make permissions and available actions easier to identify.</p>
+            </div>
+
+            <div class="goal-card">
+                <span class="goal-number">03</span>
+                <h3>Standardize</h3>
+                <p>Create consistent interaction and visual patterns across screens.</p>
+            </div>
+
+            <div class="goal-card">
+                <span class="goal-number">04</span>
+                <h3>Scale</h3>
+                <p>Create reusable patterns that could support future product enhancements.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RESEARCH ================= -->
+
+    <section>
+
+        <h2>05 — Research & Usability Validation</h2>
+
+        <div class="research-box">
+
+            <p>
+                The redesign incorporated UX evaluation and validation activities
+                to identify usability issues and refine the experience.
+            </p>
+
+            <div class="research-methods">
+
+                <div class="research-method">
+
+                    <strong>Usability Testing</strong>
+
+                    <span>
+                        Used to identify usability issues and areas of friction
+                        within the redesigned experience.
+                    </span>
+
+                </div>
+
+
+                <div class="research-method">
+
+                    <strong>Heuristic Evaluation</strong>
+
+                    <span>
+                        Evaluated interaction and usability issues across
+                        the application experience.
+                    </span>
+
+                </div>
+
+
+                <div class="research-method">
+
+                    <strong>Design Validation</strong>
+
+                    <span>
+                        Used feedback and evaluation findings to refine
+                        design solutions before implementation.
+                    </span>
+
+                </div>
+
+            </div>
+
+            <p style="margin-top:20px;">
+                <strong>Note:</strong> Detailed research data, participant information,
+                and production evidence are not shown because of project confidentiality.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WORKFLOW ================= -->
+
+    <section>
+
+        <h2>06 — Complex Workflow</h2>
+
+        <p>
+            Permission-based document management introduced different paths
+            depending on user access and available actions.
+        </p>
+
+        <div class="workflow-box">
+
+            <div class="workflow-steps">
+
+                <span class="workflow-step">Access Document Area</span>
+
+                <span class="workflow-arrow">→</span>
+
+                <span class="workflow-step">Identify User Permission</span>
+
+                <span class="workflow-arrow">→</span>
+
+                <span class="workflow-step">View Available Actions</span>
+
+                <span class="workflow-arrow">→</span>
+
+                <span class="workflow-step">Perform Document Action</span>
+
+                <span class="workflow-arrow">→</span>
+
+                <span class="workflow-step">Confirmation / Feedback</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FLOW RECONSTRUCTION ================= -->
+
+    <section class="bd-flow">
+
+        <h2>Complex Permission Workflow</h2>
+
+        <p class="confidential-note">
+            Due to confidentiality, detailed production flows cannot be shown.
+            The following is a reconstructed representation of the permission-based
+            document-management logic for portfolio presentation.
+        </p>
+
+        <img
+            src="../images/UserPermissionBasedDocumentManagementFlow.png"
+            alt="Recreated permission-based document management workflow"
+        />
+
+    </section>
+
+
+    <!-- ================= DESIGN APPROACH ================= -->
+
+    <section>
+
+        <h2>07 — Design Approach</h2>
+
+        <div class="process-grid">
+
+            <div class="process-card">
+
+                <span>01 — UNDERSTAND</span>
+
+                <h3>Requirements & Context</h3>
+
+                <p>
+                    Reviewed business requirements, user roles,
+                    document workflows, and product constraints.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span>02 — STRUCTURE</span>
+
+                <h3>Flows & Information</h3>
+
+                <p>
+                    Structured information hierarchy and clarified
+                    task flows for document-management scenarios.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span>03 — EXPLORE</span>
+
+                <h3>Wireframes & Interaction</h3>
+
+                <p>
+                    Explored layouts, interaction patterns, permission
+                    visibility, and action placement before final UI.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span>04 — VALIDATE</span>
+
+                <h3>Prototype & Design Validation</h3>
+
+                <p>
+                    Validated design solutions and refined the experience
+                    before implementation.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!--
+        IMPORTANT:
+        If you have actual BD wireframes or prototype screenshots,
+        ADD THEM HERE.
+
+        Example:
+
+        <div class="bd-images">
+            <div class="bd-card">
+                <img src="../images/BD_wireframe_01.png"
+                     alt="BD wireframe exploration">
+                <p>Early wireframe exploration</p>
+            </div>
+
+            <div class="bd-card">
+                <img src="../images/BD_prototype_01.png"
+                     alt="BD interactive prototype">
+                <p>Prototype used for interaction validation</p>
+            </div>
+        </div>
+        -->
+
+    </section>
+
+
+    <!-- ================= DESIGN DECISIONS ================= -->
+
+    <section>
+
+        <h2>08 — Key Design Decisions</h2>
+
+
+        <div class="decision-card">
+
+            <h3>01. Simplify Document Hierarchy</h3>
+
+            <p>
+                <span class="decision-label">Challenge:</span>
+                Document-heavy screens made it difficult to scan and locate information.
+            </p>
+
+            <p>
+                <span class="decision-label">Decision:</span>
+                Simplified folder and file visualization and improved information hierarchy.
+            </p>
+
+            <p>
+                <span class="decision-label">Rationale:</span>
+                Make important document information easier to locate and understand.
+            </p>
+
+        </div>
+
+
+        <div class="decision-card">
+
+            <h3>02. Make Permissions More Visible</h3>
+
+            <p>
+                <span class="decision-label">Challenge:</span>
+                Users needed clearer understanding of available actions and permissions.
+            </p>
+
+            <p>
+                <span class="decision-label">Decision:</span>
+                Introduced clearer permission indicators at folder and file level.
+            </p>
+
+            <p>
+                <span class="decision-label">Rationale:</span>
+                Improve visibility of access states and reduce ambiguity around actions.
+            </p>
+
+        </div>
+
+
+        <div class="decision-card">
+
+            <h3>03. Standardize Interaction Patterns</h3>
+
+            <p>
+                <span class="decision-label">Challenge:</span>
+                UI patterns such as icons, action placement, typography, and visual
+                treatments were inconsistent.
+            </p>
+
+            <p>
+                <span class="decision-label">Decision:</span>
+                Standardized document actions, typography, icon usage,
+                and primary/secondary action placement.
+            </p>
+
+            <p>
+                <span class="decision-label">Rationale:</span>
+                Create more predictable interactions across the application.
+            </p>
+
+        </div>
+
+
+        <div class="decision-card">
+
+            <h3>04. Design for Error Prevention</h3>
+
+            <p>
+                <span class="decision-label">Challenge:</span>
+                Actions such as upload, edit, and delete required clarity
+                within permission-controlled workflows.
+            </p>
+
+            <p>
+                <span class="decision-label">Decision:</span>
+                Used clearly labeled actions, confirmation states,
+                and consistent feedback patterns.
+            </p>
+
+            <p>
+                <span class="decision-label">Rationale:</span>
+                Reduce ambiguity around critical document actions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TRADE OFFS ================= -->
+
+    <section>
+
+        <h2>09 — Design Trade-offs</h2>
+
+        <div class="tradeoff-grid">
+
+            <div class="tradeoff-card">
+
+                <h3>Information Density vs. Simplicity</h3>
+
+                <p>
+                    The platform required users to work with document-heavy
+                    information while keeping the interface easy to scan.
+                    The redesign prioritized essential information and clearer
+                    visual hierarchy rather than adding more UI elements.
+                </p>
+
+            </div>
+
+
+            <div class="tradeoff-card">
+
+                <h3>Permission Visibility vs. Interface Clarity</h3>
+
+                <p>
+                    Permission states needed to remain visible without making
+                    the interface visually overwhelming. The solution focused
+                    on contextual permission indicators and clearer action visibility.
+                </p>
+
+            </div>
+
+        </div>
+
+        <p class="confidential-note" style="margin-top:18px;">
+            Trade-offs shown here reflect the documented design considerations
+            available for portfolio presentation.
+        </p>
+
+    </section>
+
+
+    <!-- ================= FINAL UI ================= -->
+
+    <section class="bd-visuals">
+
+        <h2>10 — Final Product Experience</h2>
+
+        <p>
+            The following approved screens demonstrate the redesigned
+            permission-based document-management experience.
+        </p>
+
+        <div class="bd-images">
+
+            <div class="bd-card">
+
+                <img
+                    src="../images/BD_inner_ActionDropdownNew.png"
+                    alt="Becton Dickinson permission based action toolbar"
+                >
+
+                <p>
+                    Permission-based Action Toolbar with Role Visibility
+                </p>
+
+            </div>
+
+
+            <div class="bd-card">
+
+                <img
+                    src="../images/BDPermissionSets.png"
+                    alt="Becton Dickinson role based permission configuration"
+                >
+
+                <p>
+                    Role-Based Permission Configuration Interface
+                </p>
+
+            </div>
+
+        </div>
+
+        <p class="confidential-note" style="margin-top:20px;">
+            Screens shown were part of the redesigned experience and received
+            stakeholder approval during implementation.
+        </p>
+
+    </section>
+
+
+    <!-- ================= DESIGN SYSTEM ================= -->
+
+    <section>
+
+        <h2>11 — Design System & Reusable Components</h2>
+
+        <p>
+            Reusable UI patterns were established to maintain visual and
+            functional consistency across the redesigned application.
+        </p>
+
+        <div class="component-grid">
+
+            <div class="component-item">
+                Folder & File Cards
+            </div>
+
+            <div class="component-item">
+                Permission Indicators
+            </div>
+
+            <div class="component-item">
+                Action Toolbars
+            </div>
+
+            <div class="component-item">
+                Upload & Confirmation Modals
+            </div>
+
+            <div class="component-item">
+                Alert & Error States
+            </div>
+
+            <div class="component-item">
+                Document Table Layouts
+            </div>
+
+        </div>
+
+        <p style="margin-top:20px;">
+            These reusable components supported consistent interaction patterns
+            across the 10 redesigned screens.
+        </p>
+
+    </section>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <section>
+
+        <h2>12 — Accessibility & Healthcare Considerations</h2>
+
+        <p>
+            Because the product operated within a healthcare enterprise context,
+            the redesign prioritized clarity, consistency, accessibility,
+            and error prevention.
+        </p>
+
+        <ul>
+
+            <li>Improved color contrast</li>
+
+            <li>Clear typography hierarchy</li>
+
+            <li>Readable font sizes</li>
+
+            <li>Consistent spacing patterns</li>
+
+            <li>Larger click targets for critical actions</li>
+
+            <li>Clear feedback for success, warning, and error states</li>
+
+            <li>Clearly labeled and confirmed actions</li>
+
+            <li>Predictable layouts to reduce user errors</li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- ================= VALIDATION ================= -->
+
+    <section>
+
+        <h2>13 — Validation & Iteration</h2>
+
+        <p>
+            Usability testing, heuristic evaluation, and design validation
+            were used to identify usability issues and refine the redesigned
+            experience before implementation.
+        </p>
+
+        <div class="decision-card">
+
+            <h3>What was evaluated</h3>
+
+            <ul>
+
+                <li>Clarity of document hierarchy</li>
+
+                <li>Visibility of permissions and available actions</li>
+
+                <li>Consistency of interaction patterns</li>
+
+                <li>Clarity of critical document actions</li>
+
+                <li>Overall usability of the redesigned workflows</li>
+
+            </ul>
+
+        </div>
+
+        <!--
+        If you have actual testing findings, ADD them here.
+
+        Recommended format:
+
+        FINDING
+        Users struggled with ______.
+
+        DESIGN CHANGE
+        We changed ______.
+
+        OUTCOME
+        This resulted in ______.
+
+        Do not add numbers unless you have genuine project data.
+        -->
+
+    </section>
+
+
+    <!-- ================= OUTCOME ================= -->
+
+    <section>
+
+        <h2>14 — Outcome & Product Impact</h2>
+
+        <div class="outcome-grid">
+
+            <div class="outcome-card">
+
+                <h3>Standardized Workflows</h3>
+
+                <p>
+                    Standardized permission-based interaction patterns
+                    across 10 core application workflows.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <h3>Improved Clarity</h3>
+
+                <p>
+                    Improved visibility of document actions, permissions,
+                    hierarchy, and interaction states.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <h3>Scalable Foundation</h3>
+
+                <p>
+                    Established reusable UI components and interaction patterns
+                    to support future product enhancements.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <h3>Accessibility Focus</h3>
+
+                <p>
+                    Incorporated accessibility and error-prevention considerations
+                    into the redesigned enterprise experience.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <h3>Stakeholder Approval</h3>
+
+                <p>
+                    Redesigned screens received stakeholder approval during
+                    implementation.
+                </p>
+
+            </div>
+
+
+            <div class="outcome-card">
+
+                <h3>Implementation Ready</h3>
+
+                <p>
+                    Supported engineering implementation through design
+                    specifications, collaboration, and design QA.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ROLE ================= -->
+
+    <section>
+
+        <h2>15 — My Role & Ownership</h2>
+
+        <div class="role-box">
+
+            <ul>
+
+                <li>
+                    Owned UX redesign of 10 core application screens.
+                </li>
+
+                <li>
+                    Defined permission-based interaction logic for multi-role users.
+                </li>
+
+                <li>
+                    Translated business requirements into user flows,
+                    interaction patterns, and high-fidelity UI.
+                </li>
+
+                <li>
+                    Established visual system updates aligned with
+                    Becton Dickinson enterprise branding.
+                </li>
+
+                <li>
+                    Contributed reusable components and scalable interaction patterns.
+                </li>
+
+                <li>
+                    Conducted usability testing, heuristic evaluation,
+                    and design validation activities.
+                </li>
+
+                <li>
+                    Collaborated with engineering to support accurate implementation.
+                </li>
+
+                <li>
+                    Advocated accessibility improvements within healthcare constraints.
+                </li>
+
+                <li>
+                    Presented design directions and solutions to stakeholders for approval.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+</main>
 
 </body>
 </html>
