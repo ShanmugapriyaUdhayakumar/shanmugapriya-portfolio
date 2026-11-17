@@ -362,6 +362,32 @@
             font-style: italic;
         }
 
+        figure {
+    width: 48%;
+    max-width: 600px;
+    margin: 25px auto;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+figure figcaption {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    figure {
+        width: 100%;
+    }
+}
+
         @media (max-width: 900px) {
             .project-meta,
             .process-grid {
