@@ -231,6 +231,58 @@
             margin-top: 8px;
         }
 
+        /* LoanLogics image gallery */
+.case-images,
+.exploration-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+    align-items: start;
+}
+
+.case-image-card,
+.exploration-card {
+    width: 100%;
+    min-width: 0;
+    background: #fff;
+    padding: 14px;
+    border-radius: 13px;
+    box-shadow: 0 7px 22px rgba(0,0,0,0.06);
+}
+
+.case-image-card img,
+.exploration-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 9px;
+}
+
+.case-image-card p,
+.exploration-card p {
+    font-size: 0.83rem;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .case-images,
+    .exploration-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    .case-images,
+    .exploration-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
         @media (max-width: 768px) {
             .case-study-container {
                 margin-top: 95px;
@@ -543,22 +595,11 @@
 
         <p>
             The following visuals represent the main deliverables
-            from my LoanLogics work.
-        </p>
-
-          <!-- =====================================================
-         09 — HIGH FIDELITY
-    ===================================================== -->
-
-    <section class="visual-section">
-
-        <h2>09 — High-Fidelity Product Experience</h2>
-
-        <p class="visual-note">
-            The following screens are recreated versions of the original
-            designs I worked on. The current live website has since been
+            from my LoanLogics work.  The current live website has since been
             redesigned.
         </p>
+
+         
 
 
         <div class="case-images">
@@ -610,15 +651,15 @@
 
 
     <!-- =====================================================
-         10 — CTA EXPLORATION
+         6 — CTA EXPLORATION
     ===================================================== -->
 
     <section class="visual-section">
 
-        <h2>10 — CTA Exploration & Stakeholder Validation</h2>
+        <h2>6 — CTA Exploration & Stakeholder Validation</h2>
 
         <p>
-            Because the Request Demo CTA was a key conversion point,
+       
             I explored multiple visual directions and presented the
             alternatives to leadership for review.
         </p>
