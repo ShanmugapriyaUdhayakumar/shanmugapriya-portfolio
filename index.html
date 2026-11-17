@@ -23,6 +23,52 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
+
+  <style>
+    /* Project status labels */
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin: 5px 0 14px;
+}
+
+.status-live {
+    background: #e7f6ec;
+    color: #237442;
+    border: 1px solid #c5e6d0;
+}
+
+.status-previously-live {
+    background: #eaf1ff;
+    color: #315a9b;
+    border: 1px solid #cedcf5;
+}
+
+.status-approved {
+    background: #fff2df;
+    color: #89500b;
+    border: 1px solid #ead8bd;
+}
+
+.live-project-link {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #237442;
+    text-decoration: underline;
+    margin-bottom: 12px;
+}
+
+.project-card .desc {
+    line-height: 1.65;
+}
+  </style>
 </head>
 
 
@@ -678,340 +724,342 @@
   </p>
 
 
-  <div class="projects-grid">
+  
+<!-- =====================================================
+     PROJECT PORTFOLIO
+====================================================== -->
+
+<section id="portfolio" class="portfolio-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <h2>Selected Projects</h2>
+            <p>
+                Real-world product and website experiences
+                across e-commerce, enterprise UX and web design.
+            </p>
+        </div>
+
+        <div class="projects-grid">
 
 
-    <!-- =====================================================
-         KDP
-    ====================================================== -->
+            <!-- =====================================================
+                 01 — DUNHILL
+            ====================================================== -->
 
-    <div class="project-card loanlogics">
+            <div class="project-card dunhill">
 
-      <div class="project-header">
+                <div class="project-header">
 
-        <h3>
-          Keurig Dr Pepper
-        </h3>
+                    <h3>Dunhill</h3>
 
-        <p class="date">
-          📅 2026 – July 2026
-        </p>
+                    <p class="date">
+                        📅 July 2025 – July 2026
+                    </p>
 
-      </div>
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-status status-live">
+                        LIVE
+                    </span>
+
+                    <p class="desc">
+                        Designed and contributed to live luxury
+                        e-commerce experiences for Dunhill, including
+                        PLP Filter & Sort, customer account flows
+                        and shopping interactions across desktop
+                        and mobile.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            PLP Filter & Sort panel with responsive
+                            desktop and mobile behaviour
+                        </li>
+
+                        <li>
+                            Sign In, Forgot Password and Create Account
+                            flows with validation and error states
+                        </li>
+
+                        <li>
+                            Add to Bag diamond loader — client-approved
+                            and implemented in staging, not yet live
+                        </li>
+
+                        <li>
+                            Collaboration with design, engineering
+                            and QA teams
+                        </li>
+
+                    </ul>
+
+                    <div class="tags">
+
+                        <span>E-commerce UX</span>
+                        <span>Luxury Retail</span>
+                        <span>Responsive Design</span>
+                        <span>Salesforce Commerce Cloud</span>
+                        <span>Interaction Design</span>
+
+                    </div>
+
+                    <a
+                        href="https://www.dunhill.com/en-gb/cat/new/"
+                        class="live-project-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Live Dunhill Website ↗
+                    </a>
+
+                    <a
+                        href="projects/dunhill.html"
+                        class="btn project-btn"
+                    >
+                        View Case Study
+                        <span class="arrow">↗</span>
+                    </a>
+
+                </div>
+
+            </div>
 
 
-      <div class="project-body">
+            <!-- =====================================================
+                 02 — LOANLOGICS
+            ====================================================== -->
 
-        <p class="desc">
+            <div class="project-card loanlogics">
 
-          Redesigned the Keurig Starter Kit purchasing experience
-          by exploring a bundle builder and optional accessory
-          recommendation flow that balanced customer usability
-          with business cross-sell objectives.
+                <div class="project-header">
 
-        </p>
+                    <h3>LoanLogics</h3>
+
+                    <p class="date">
+                        📅 2023 – 2024
+                    </p>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-status status-previously-live">
+                        PREVIOUSLY LIVE
+                    </span>
+
+                    <p class="desc">
+                        Designed and built the CARBN page and
+                        supporting marketing banners for the
+                        LoanLogics website. My contribution
+                        covered both visual design and frontend
+                        implementation using HTML and CSS.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            CARBN page layout and content presentation
+                        </li>
+
+                        <li>
+                            Desktop and mobile marketing banners
+                        </li>
+
+                        <li>
+                            Designed and implemented using HTML and CSS
+                        </li>
+
+                        <li>
+                            Alignment with the existing website
+                            visual experience
+                        </li>
+
+                    </ul>
+
+                    <div class="tags">
+
+                        <span>Web Design</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Frontend Development</span>
+
+                    </div>
+
+                    <a
+                        href="https://web.archive.org/web/20241105125229/https://loanlogics.com/"
+                        class="live-project-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Archived Website ↗
+                    </a>
+
+                    <a
+                        href="projects/loanlogics.html"
+                        class="btn project-btn"
+                    >
+                        View Case Study
+                        <span class="arrow">↗</span>
+                    </a>
+
+                </div>
+
+            </div>
 
 
-        <ul>
+            <!-- =====================================================
+                 03 — BECTON DICKINSON
+            ====================================================== -->
 
-          <li>
-            Desktop & Mobile Product Design
-          </li>
+            <div class="project-card becton">
 
-          <li>
-            User Flows, Prototypes & User Testing
-          </li>
+                <div class="project-header">
 
-          <li>
-            Bundle Builder & Cross-Sell Experience
-          </li>
+                    <h3>Becton Dickinson</h3>
 
-        </ul>
+                    <p class="date">
+                        📅 2021 – 2022
+                    </p>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-status status-approved">
+                        APPROVED, NOT RELEASED
+                    </span>
+
+                    <p class="desc">
+                        Designed an internal ICX Quality Document
+                        Portal to help employees manage permissions,
+                        complete setup, find quality documents
+                        and take actions based on their access.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Role-based permissions and access management
+                        </li>
+
+                        <li>
+                            Setup and first-time user experience
+                        </li>
+
+                        <li>
+                            Document discovery and document actions
+                        </li>
+
+                        <li>
+                            Client-approved designs for the planned
+                            release version
+                        </li>
+
+                    </ul>
+
+                    <div class="tags">
+
+                        <span>Enterprise UX</span>
+                        <span>Healthcare</span>
+                        <span>Workflow Design</span>
+                        <span>Permissions</span>
+
+                    </div>
+
+                    <a
+                        href="projects/bd.html"
+                        class="btn project-btn"
+                    >
+                        View Case Study
+                        <span class="arrow">↗</span>
+                    </a>
+
+                </div>
+
+            </div>
 
 
-        <div class="tags">
+            <!-- =====================================================
+                 04 — KEURIG DR PEPPER
+            ====================================================== -->
 
-          <span>
-            Product Design
-          </span>
+            <div class="project-card keurig">
 
-          <span>
-            Research
-          </span>
+                <div class="project-header">
 
-          <span>
-            E-commerce
-          </span>
+                    <h3>Keurig Dr Pepper</h3>
 
-          <span>
-            Usability
-          </span>
+                    <p class="date">
+                        Starter Kit & Accessory Flow
+                    </p>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-status status-approved">
+                        APPROVED, NOT RELEASED
+                    </span>
+
+                    <p class="desc">
+                        Worked across mobile and desktop on an
+                        optional accessory experience for the
+                        Keurig Starter Kit journey, exploring
+                        three design variants and taking
+                        Version A through user testing.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Mobile and desktop Starter Kit experience
+                        </li>
+
+                        <li>
+                            Three design variants: A, B and C
+                        </li>
+
+                        <li>
+                            Version A evaluated through user testing
+                        </li>
+
+                        <li>
+                            Design completed and client-approved;
+                            no production release or live A/B test
+                        </li>
+
+                    </ul>
+
+                    <div class="tags">
+
+                        <span>E-commerce UX</span>
+                        <span>Mobile & Desktop</span>
+                        <span>User Testing</span>
+                        <span>Cross-sell</span>
+
+                    </div>
+
+                    <a
+                        href="projects/kdp.html"
+                        class="btn project-btn"
+                    >
+                        View Case Study
+                        <span class="arrow">↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
 
         </div>
 
-
-        <a
-          href="projects/kdp.html"
-          class="btn project-btn"
-        >
-          View Case Study
-          <span class="arrow">
-            ↗
-          </span>
-        </a>
-
-      </div>
-
     </div>
-
-
-
-    <!-- =====================================================
-         DUNHILL
-    ====================================================== -->
-
-    <div class="project-card loanlogics">
-
-      <div class="project-header">
-
-        <h3>
-          Dunhill
-        </h3>
-
-        <p class="date">
-          📅 July 2025 – July 2026
-        </p>
-
-      </div>
-
-
-      <div class="project-body">
-
-        <p class="desc">
-
-          Designed responsive luxury e-commerce experiences
-          across product discovery, product detail, Shop the Look
-          and checkout, using reusable UI patterns and consistent
-          interactions across desktop and mobile.
-
-        </p>
-
-
-        <ul>
-
-          <li>
-            PDP, PLP, Shop the Look & Checkout
-          </li>
-
-          <li>
-            Responsive Interaction Design
-          </li>
-
-          <li>
-            Design System & Component Thinking
-          </li>
-
-        </ul>
-
-
-        <div class="tags">
-
-          <span>
-            E-commerce
-          </span>
-
-          <span>
-            Responsive UX
-          </span>
-
-          <span>
-            Design Systems
-          </span>
-
-          <span>
-            Interaction Design
-          </span>
-
-        </div>
-
-
-        <a
-          href="projects/dunhill.html"
-          class="btn project-btn"
-        >
-          View Case Study
-          <span class="arrow">
-            ↗
-          </span>
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         BECTON DICKINSON
-    ====================================================== -->
-
-    <div class="project-card becton">
-
-      <div class="project-header">
-
-        <h3>
-          Becton Dickinson
-        </h3>
-
-        <p class="date">
-          📅 2021 – 2022
-        </p>
-
-      </div>
-
-
-      <div class="project-body">
-
-        <p class="desc">
-
-          Redesigned a workflow-heavy healthcare document
-          management experience with permission-based interaction
-          logic, clearer role visibility and accessibility-focused
-          improvements.
-
-        </p>
-
-
-        <ul>
-
-          <li>
-            10+ enterprise workflow screens
-          </li>
-
-          <li>
-            Permission-based UX logic
-          </li>
-
-          <li>
-            Accessibility & error prevention
-          </li>
-
-        </ul>
-
-
-        <div class="tags">
-
-          <span>
-            Enterprise UX
-          </span>
-
-          <span>
-            Workflow Systems
-          </span>
-
-          <span>
-            Accessibility
-          </span>
-
-        </div>
-
-
-        <a
-          href="projects/bd.html"
-          class="btn project-btn"
-        >
-          View Case Study
-          <span class="arrow">
-            ↗
-          </span>
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         LOANLOGICS
-    ====================================================== -->
-
-    <div class="project-card loanlogics">
-
-      <div class="project-header">
-
-        <h3>
-          LoanLogics
-        </h3>
-
-        <p class="date">
-          📅 2023 – 2024
-        </p>
-
-      </div>
-
-
-      <div class="project-body">
-
-        <p class="desc">
-
-          Revamped a financial marketing platform across
-          20+ responsive pages, focusing on conversion structure,
-          information hierarchy, performance clarity and scalable
-          UI consistency.
-
-        </p>
-
-
-        <ul>
-
-          <li>
-            20+ responsive marketing pages
-          </li>
-
-          <li>
-            Conversion-focused UX structure
-          </li>
-
-          <li>
-            Responsive UI consistency
-          </li>
-
-        </ul>
-
-
-        <div class="tags">
-
-          <span>
-            Enterprise UX
-          </span>
-
-          <span>
-            Conversion Design
-          </span>
-
-          <span>
-            Responsive Systems
-          </span>
-
-        </div>
-
-
-        <a
-          href="projects/loanlogics.html"
-          class="btn project-btn"
-        >
-          View Case Study
-          <span class="arrow">
-            ↗
-          </span>
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
