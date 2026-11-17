@@ -1,24 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Dunhill | Luxury E-commerce Product Design Case Study
-    </title>
+    <title>Dunhill | Luxury E-commerce Product Design Case Study</title>
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style.css">
 
     <style>
-
-        /* =========================================================
-           DUNHILL PRODUCT DESIGN CASE STUDY
-        ========================================================= */
-
         html {
             scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f9f9f9;
         }
 
         .case-study-container {
@@ -28,62 +25,35 @@
             line-height: 1.7;
         }
 
-        /* =========================================================
-           TYPOGRAPHY
-        ========================================================= */
-
         .case-study-container h1 {
             font-size: 2.45rem;
             line-height: 1.25;
             color: #3730A3;
             margin: 12px 0 16px;
-            font-weight: 700;
         }
 
         .case-study-container h2 {
-            margin-top: 70px;
-            margin-bottom: 18px;
+            margin: 65px 0 18px;
             color: #3730A3;
             font-size: 1.7rem;
             line-height: 1.3;
         }
 
         .case-study-container h3 {
-            margin-top: 24px;
-            margin-bottom: 8px;
-            color: #374151;
-            font-size: 1.1rem;
-        }
-
-        .case-study-container h4 {
-            margin-top: 0;
-            margin-bottom: 8px;
+            margin: 0 0 10px;
             color: #3730A3;
-            font-size: 0.92rem;
+            font-size: 1.05rem;
         }
 
         .case-study-container p,
         .case-study-container li {
             color: #374151;
-            font-size: 0.94rem;
+            font-size: .92rem;
         }
 
         .case-study-container p {
             margin-bottom: 12px;
         }
-
-        .case-study-container ul {
-            margin-left: 20px;
-            padding-left: 8px;
-        }
-
-        .case-study-container li {
-            margin-bottom: 6px;
-        }
-
-        /* =========================================================
-           HERO
-        ========================================================= */
 
         .project-label {
             display: inline-block;
@@ -91,20 +61,70 @@
             color: #3730A3;
             padding: 7px 14px;
             border-radius: 20px;
-            font-size: 0.78rem;
+            font-size: .78rem;
             font-weight: 700;
         }
 
         .cs-tagline {
             max-width: 900px;
-            font-size: 1.08rem !important;
+            font-size: 1.05rem !important;
             color: #4b5563 !important;
-            margin-bottom: 28px !important;
+            margin-bottom: 25px !important;
         }
 
-        /* =========================================================
-           PROJECT META
-        ========================================================= */
+        /* STATUS LABELS */
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 11px;
+            border-radius: 30px;
+            font-size: .7rem;
+            font-weight: 800;
+            letter-spacing: .04em;
+            white-space: nowrap;
+        }
+
+        .status--live {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status--previous {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .status--approved {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status--confirm {
+            background: #f3f4f6;
+            color: #4b5563;
+        }
+
+        .status-list {
+            list-style: none;
+            padding: 0;
+            margin: 22px 0;
+            display: grid;
+            gap: 10px;
+        }
+
+        .status-list li {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 13px 16px;
+            background: white;
+            border: 1px solid #e8e8ef;
+            border-radius: 9px;
+        }
+
+        /* PROJECT DETAILS */
 
         .project-meta {
             display: grid;
@@ -114,29 +134,75 @@
         }
 
         .meta-card {
-            background: #ffffff;
+            background: white;
             padding: 18px;
             border-radius: 11px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 18px rgba(0,0,0,.05);
         }
 
         .meta-card span {
             display: block;
             color: #777;
-            font-size: 0.7rem;
+            font-size: .7rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
             margin-bottom: 4px;
         }
 
         .meta-card strong {
             color: #374151;
-            font-size: 0.87rem;
+            font-size: .87rem;
         }
 
-        /* =========================================================
-           CONFIDENTIALITY
-        ========================================================= */
+        .resource-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            margin: 18px 0 25px;
+        }
+
+        .resource-links a,
+        .case-link a {
+            color: #3730A3;
+            font-weight: 650;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* CONTENT CARDS */
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .overview-card,
+        .collaboration-card,
+        .project-summary-card {
+            background: white;
+            padding: 23px;
+            border-radius: 13px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.05);
+        }
+
+        .overview-card h3,
+        .collaboration-card h3 {
+            color: #3730A3;
+        }
+
+        .overview-card p {
+            font-size: .87rem;
+            margin-bottom: 0;
+        }
+
+        .context-box {
+            background: #f3f3ff;
+            border-left: 4px solid #3730A3;
+            padding: 24px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
 
         .confidential-card {
             display: flex;
@@ -146,7 +212,6 @@
             border-radius: 11px;
             padding: 22px;
             margin-top: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
 
         .confidential-icon {
@@ -154,607 +219,143 @@
         }
 
         .confidential-content h3 {
-            margin-top: 0;
+            color: #92400e;
         }
 
-        .confidential-content p {
-            font-size: 0.86rem;
-        }
-
-        /* =========================================================
-           OVERVIEW
-        ========================================================= */
-
-        .overview-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .overview-card {
-            background: #ffffff;
-            padding: 23px;
-            border-radius: 13px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .overview-card h3 {
-            margin-top: 0;
-            color: #3730A3;
-        }
-
-        .overview-card p {
-            font-size: 0.87rem;
-            margin-bottom: 0;
-        }
-
-        /* =========================================================
-           PRODUCT CONTEXT
-        ========================================================= */
-
-        .context-box {
-            background: #f3f3ff;
-            border-left: 4px solid #3730A3;
-            padding: 26px;
-            border-radius: 11px;
-            margin-top: 25px;
-        }
-
-        /* =========================================================
-           GOALS
-        ========================================================= */
-
-        .goal-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .goal-card {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
-        }
-
-        .goal-number {
-            font-size: 0.72rem;
-            color: #3730A3;
-            font-weight: 700;
-        }
-
-        .goal-card h3 {
-            font-size: 0.95rem;
-            margin-top: 6px;
-        }
-
-        .goal-card p {
-            font-size: 0.8rem;
-            margin-bottom: 0;
-        }
-
-        /* =========================================================
-           PROBLEM
-        ========================================================= */
-
-        .problem-box {
-            background: #f7f7fb;
-            padding: 27px;
-            border-radius: 13px;
-            margin-top: 25px;
-            border: 1px solid #e7e7ef;
-        }
-
-        /* =========================================================
-           RESEARCH
-        ========================================================= */
-
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
-            margin-top: 25px;
-        }
-
-        .research-card {
-            background: #ffffff;
-            padding: 24px;
-            border-radius: 13px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .research-card h3 {
-            margin-top: 0;
-            color: #3730A3;
-        }
-
-        /* =========================================================
-           DISCOVERY INSIGHTS
-        ========================================================= */
-
-        .insight-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            margin-top: 25px;
-        }
-
-        .insight-card {
-            background: #ffffff;
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
-        }
-
-        .insight-card h3 {
-            color: #3730A3;
-            margin-top: 0;
-        }
-
-        .design-implication {
-            border-top: 1px solid #eeeeee;
-            padding-top: 13px;
-            margin-top: 14px;
-        }
-
-        .design-implication strong {
-            color: #3730A3;
-            font-size: 0.78rem;
-            text-transform: uppercase;
-        }
-
-        /* =========================================================
-           USER JOURNEY
-        ========================================================= */
-
-        .journey-box {
-            background: #ffffff;
-            padding: 23px;
-            border-radius: 14px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            margin-top: 25px;
-        }
-
-        .journey-box img {
-            width: 100%;
-            display: block;
-            border-radius: 11px;
-        }
-
-        .journey-highlight {
-            background: #f3f3ff;
-            border-left: 4px solid #3730A3;
-            padding: 18px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-
-        .journey-highlight p {
-            margin-bottom: 0;
-            font-size: 0.88rem;
-        }
-
-        /* =========================================================
-           PROCESS
-        ========================================================= */
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-top: 25px;
-        }
-
-        .process-card {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
-        }
-
-        .process-card span {
-            color: #3730A3;
-            font-size: 0.72rem;
-            font-weight: 700;
-        }
-
-        .process-card h3 {
-            margin-top: 7px;
-            font-size: 1rem;
-        }
-
-        .process-card p {
-            font-size: 0.82rem;
-            margin-bottom: 0;
-        }
-
-        /* =========================================================
-           VISUALS
-        ========================================================= */
-
-        .visual-section {
-            margin-top: 70px;
-        }
-
-        .visual-note {
-            font-size: 0.87rem !important;
-            color: #666 !important;
-            margin-bottom: 25px;
-        }
-
-        .visual-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            margin-top: 25px;
-        }
-
-       .visual-card {
-    background: transparent;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-    overflow: hidden;
-}
-
-.visual-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0;
-}
-
-.visual-card p {
-    display: none;
-}
-
-        /* =========================================================
-           DESIGN DECISIONS
-        ========================================================= */
-
-        .decision-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .decision-card {
-            background: #ffffff;
-            padding: 24px;
-            border-radius: 13px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border-top: 3px solid #3730A3;
-        }
-
-        .decision-card h3 {
-            color: #3730A3;
-            margin-top: 0;
-        }
-
-        .decision-label {
-            display: block;
-            color: #777;
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 0.4px;
-            margin-top: 13px;
-        }
-
-        .decision-card p {
-            font-size: 0.86rem;
-        }
-
-        /* =========================================================
-           TRADE-OFFS
-        ========================================================= */
-
-        .tradeoff-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .tradeoff-card {
-            background: #f7f7fb;
-            padding: 23px;
-            border-radius: 13px;
-            border: 1px solid #e5e5e5;
-        }
-
-        .tradeoff-card h3 {
-            color: #3730A3;
-            margin-top: 0;
-        }
-
-        .tradeoff-card p {
-            font-size: 0.87rem;
-        }
-
-        /* =========================================================
-           DESIGN SYSTEM
-        ========================================================= */
-
-        .system-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 17px;
-            margin-top: 25px;
-        }
-
-        .system-card {
-            background: #ffffff;
-            padding: 21px;
-            border-radius: 12px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
-        }
-
-        .system-card h3 {
-            margin-top: 0;
-            color: #3730A3;
-            font-size: 1rem;
-        }
-
-        .system-card p {
-            font-size: 0.83rem;
-            margin-bottom: 0;
-        }
-
-        /* =========================================================
-           RESPONSIVE DESIGN
-        ========================================================= */
-
-        .responsive-box {
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 14px;
-            box-shadow: 0 7px 22px rgba(0,0,0,0.05);
-            margin-top: 25px;
-        }
-
-        .responsive-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 20px;
-        }
-
-        .responsive-item {
-            background: #f7f7fb;
-            padding: 18px;
-            border-radius: 10px;
-        }
-
-        .responsive-item h3 {
-            margin-top: 0;
-            color: #3730A3;
-            font-size: 0.95rem;
-        }
-
-        .responsive-item p {
-            font-size: 0.82rem;
-            margin-bottom: 0;
-        }
-
-        /* =========================================================
-           EXPERIMENTATION
-        ========================================================= */
-
-        .experiment-box {
-            background: #ffffff;
-            padding: 26px;
-            border-radius: 14px;
-            box-shadow: 0 7px 22px rgba(0,0,0,0.05);
-            margin-top: 25px;
-        }
-
-        .experiment-flow {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+        /* CASE STUDY STRUCTURE */
+
+        .case-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
             gap: 12px;
-            margin-top: 22px;
         }
 
-        .experiment-step {
-            background: #f3f3ff;
-            padding: 17px;
-            border-radius: 9px;
-            text-align: center;
-            font-size: 0.82rem;
+        .case-head h2 {
+            margin-bottom: 8px;
+        }
+
+        .case-steps {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .case-step {
+            min-width: 0;
+            padding: 21px;
+            background: white;
+            border: 1px solid #e8e8ef;
+            border-radius: 12px;
+        }
+
+        .case-step h3 {
+            margin-top: 0;
+        }
+
+        .case-step p,
+        .case-step li {
+            font-size: .87rem;
+        }
+
+        .case-step ul {
+            padding-left: 20px;
+        }
+
+        .case-link {
+            margin-top: 12px;
+        }
+
+        /* IMAGE GALLERY - IMPORTANT */
+
+        .case-shots,
+        .screen-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            align-items: start;
+            margin: 28px 0;
+        }
+
+        .case-shots figure,
+        .screen-gallery figure {
+            min-width: 0;
+            margin: 0;
+            padding: 13px;
+            background: white;
+            border: 1px solid #e8e8ef;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,.045);
+            overflow: hidden;
+        }
+
+        .case-shots img,
+        .screen-gallery img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: top center;
+            border-radius: 7px;
+        }
+
+        .case-shots figcaption,
+        .screen-gallery figcaption {
+            margin: 0 0 10px;
+            color: #4b5563;
+            font-size: .82rem;
             font-weight: 600;
-            color: #3730A3;
         }
 
-        /* =========================================================
-           ENGINEERING COLLABORATION
-        ========================================================= */
+        .case-shots.three-up {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        /* COLLABORATION */
 
         .collaboration-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
-            margin-top: 25px;
-        }
-
-        .collaboration-card {
-            background: #ffffff;
-            padding: 24px;
-            border-radius: 13px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .collaboration-card h3 {
-            color: #3730A3;
-            margin-top: 0;
-        }
-
-        /* =========================================================
-           CHALLENGES
-        ========================================================= */
-
-        .challenge-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 25px;
         }
 
-        .challenge-card {
-            background: #ffffff;
-            padding: 23px;
-            border-radius: 13px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-            border-top: 3px solid #3730A3;
+        /* OTHER PROJECTS */
+
+        .project-summary-card h3 {
+            margin-top: 14px;
         }
 
-        .challenge-card > h3 {
-            color: #3730A3;
-            margin-top: 0;
+        .project-summary-card p {
+            font-size: .87rem;
         }
 
-        .challenge-block,
-        .solution-block,
-        .outcome-block {
-            border-top: 1px solid #eeeeee;
-            padding-top: 13px;
-            margin-top: 16px;
+        .placeholder-note {
+            padding: 14px 16px;
+            background: #fffbeb;
+            border-left: 3px solid #d97706;
+            border-radius: 7px;
+            color: #78350f;
+            font-size: .84rem;
+            margin-top: 20px;
         }
 
-        .challenge-block h4 {
-            color: #c2410c;
-        }
-
-        .solution-block h4 {
-            color: #3730A3;
-        }
-
-        .outcome-block h4 {
-            color: #15803d;
-        }
-
-        .challenge-card p {
-            font-size: 0.83rem;
-        }
-
-        /* =========================================================
-           OUTCOMES
-        ========================================================= */
-
-        .outcome-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 25px;
-        }
-
-        .outcome-card {
-            background: #ffffff;
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .outcome-card h3 {
-            color: #3730A3;
-            margin-top: 0;
-            font-size: 1rem;
-        }
-
-        .outcome-card p {
-            font-size: 0.85rem;
-            margin-bottom: 0;
-        }
-
-        /* =========================================================
-           OWNERSHIP
-        ========================================================= */
-
-        .ownership-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-top: 25px;
-        }
-
-        .ownership-card {
-            background: #ffffff;
-            padding: 21px;
-            border-radius: 12px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
-        }
-
-        .ownership-icon {
-            font-size: 1.3rem;
-            margin-bottom: 7px;
-        }
-
-        .ownership-card h3 {
-            margin-top: 0;
-            color: #3730A3;
-        }
-
-        .ownership-card li {
-            font-size: 0.8rem;
-        }
-
-        /* =========================================================
-           CONFIDENTIAL METRICS NOTE
-        ========================================================= */
-
-        .metrics-note {
-            background: #f7f7f7;
-            border: 1px dashed #ccc;
-            padding: 19px;
-            border-radius: 10px;
-            margin-top: 25px;
-        }
-
-        .metrics-note p {
-            font-size: 0.84rem;
-            margin-bottom: 0;
-        }
-
-        /* =========================================================
-           MOBILE
-        ========================================================= */
+        /* RESPONSIVE */
 
         @media (max-width: 950px) {
-
             .project-meta {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .goal-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .ownership-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .system-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .responsive-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .experiment-flow {
-                grid-template-columns: repeat(2, 1fr);
+            .case-shots.three-up {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
         @media (max-width: 768px) {
-
             .case-study-container {
                 margin-top: 95px;
                 padding: 0 18px;
@@ -766,55 +367,33 @@
 
             .case-study-container h2 {
                 font-size: 1.45rem;
-                margin-top: 52px;
+                margin-top: 50px;
             }
 
-            .overview-grid,
-            .research-grid,
-            .insight-grid,
-            .visual-grid,
-            .decision-grid,
-            .tradeoff-grid,
-            .collaboration-grid,
-            .system-grid,
-            .responsive-grid,
-            .outcome-grid {
+            .overview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .case-steps {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .collaboration-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .challenge-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .ownership-grid {
-                grid-template-columns: 1fr 1fr;
             }
 
             .project-meta {
-                grid-template-columns: 1fr;
-            }
-
-            .goal-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .experiment-flow {
-                grid-template-columns: 1fr;
-            }
-
-            .confidential-card {
-                flex-direction: column;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        @media (max-width: 480px) {
-
-            .goal-grid,
-            .ownership-grid {
+        @media (max-width: 520px) {
+            .case-shots,
+            .case-shots.three-up,
+            .screen-gallery,
+            .case-steps,
+            .overview-grid,
+            .project-meta {
                 grid-template-columns: 1fr;
             }
         }
@@ -822,16 +401,11 @@
     </style>
 </head>
 
+<body>
 
-<body style="background-color:#f9f9f9;">
-
-
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
+<!-- NAVIGATION -->
 
 <header class="cs-navbar">
-
     <div class="cs-nav-wrapper">
 
         <div class="cs-logo">
@@ -847,64 +421,57 @@
         </label>
 
         <nav class="cs-nav-links">
-
             <a href="../index.html#home">Home</a>
-
             <a href="../index.html#about">About</a>
-
             <a href="../index.html#experience">Experience</a>
-
             <a href="../index.html#portfolio">Portfolio</a>
-
             <a href="../index.html#contact">Contact</a>
-
         </nav>
 
     </div>
-
 </header>
 
 
-<!-- =========================================================
-     CASE STUDY
-========================================================= -->
-
 <main class="case-study-container">
 
-
-<!-- =========================================================
-     HERO
-========================================================= -->
+<!-- =====================================================
+     DUNHILL - LEAD CASE STUDY
+===================================================== -->
 
 <span class="project-label">End-to-End Product Design Case Study</span>
 
 <h1>Dunhill — Luxury E-commerce Experience</h1>
 
-<ul class="status-list" aria-label="Project status">
+<ul class="status-list">
+
     <li>
         <span class="status status--live">LIVE</span>
-        PLP Filter &amp; Sort panel ·
-        <a href="https://www.dunhill.com/en-gb/cat/new/" target="_blank" rel="noopener">View on dunhill.com</a>
+        PLP Filter &amp; Sort Panel
+        <a href="https://www.dunhill.com/en-gb/cat/new/"
+           target="_blank" rel="noopener">View live website</a>
     </li>
+
     <li>
         <span class="status status--live">LIVE</span>
-        Account flows: Sign In, Forgot Password, Create Account
-         <a href="https://www.dunhill.com/en-gb/cat/new/" target="_blank" rel="noopener">View on dunhill.com</a>
+        Sign In, Forgot Password &amp; Create Account
+        <a href="https://www.dunhill.com/en-gb/cat/new/"
+           target="_blank" rel="noopener">View Dunhill</a>
     </li>
+
     <li>
-        <span class="status status--approved">APPROVED, NOT RELEASED</span>
-        Add to Bag loader (implemented in staging, not currently live)
+        <span class="status status--approved">
+            APPROVED, NOT RELEASED
+        </span>
+        Add to Bag Loader — implemented in staging
     </li>
+
 </ul>
 
 <p class="cs-tagline">
-    Designing luxury e-commerce interactions within Salesforce Commerce Cloud:
-    a product listing filter, account flows and a loading state, shipped
-    across desktop and mobile.
+    Designing luxury e-commerce interactions within Salesforce Commerce Cloud,
+    covering product discovery, account experiences and cart interactions
+    across desktop, tablet and mobile.
 </p>
-
-
-<!-- PROJECT META -->
 
 <div class="project-meta">
 
@@ -914,7 +481,7 @@
     </div>
 
     <div class="meta-card">
-        <span>Project</span>
+        <span>Client</span>
         <strong>Dunhill — Richemont</strong>
     </div>
 
@@ -940,42 +507,44 @@
 
 </div>
 
+<div class="resource-links">
+    <a href="https://www.dunhill.com/en-gb/cat/new/"
+       target="_blank" rel="noopener">
+        View live Dunhill PLP
+    </a>
 
-<!-- CONFIDENTIALITY -->
+    <!-- Replace with your actual Figma share link -->
+    <a href="REPLACE_WITH_DUNHILL_FIGMA_VIEW_LINK"
+       target="_blank" rel="noopener">
+        View Dunhill Figma designs
+    </a>
+</div>
 
 <section>
-
     <div class="confidential-card">
-
         <div class="confidential-icon">🔒</div>
 
         <div class="confidential-content">
-
-            <h3>Client Project</h3>
+            <h3>Client Project &amp; Confidentiality</h3>
 
             <p>
                 This case study presents selected product design work from
                 the Dunhill e-commerce experience. Some production details,
-                business information, implementation specifics, and
-                confidential project assets have been simplified or omitted.
+                business information and confidential project assets have
+                been simplified or omitted.
             </p>
 
             <p>
                 Live pages are linked where they can be viewed. The focus is
-                on my design decisions, how I worked with engineering, and
-                what shipped.
+                on my design decisions, collaboration with engineering,
+                responsive design and what shipped.
             </p>
-
         </div>
-
     </div>
-
 </section>
 
 
-<!-- =========================================================
-     01 — PRODUCT CONTEXT
-========================================================= -->
+<!-- 01 PRODUCT CONTEXT -->
 
 <section>
 
@@ -986,15 +555,15 @@
         <div class="overview-card">
             <h3>Product</h3>
             <p>
-                Dunhill’s online store for luxury menswear and accessories,
-                covering product discovery, product detail, cart and checkout.
+                Dunhill's online store for luxury menswear and accessories,
+                covering product discovery, product details, cart and checkout.
             </p>
         </div>
 
         <div class="overview-card">
             <h3>Platform</h3>
             <p>
-                Salesforce Commerce Cloud, with responsive experiences
+                Salesforce Commerce Cloud with responsive experiences
                 designed for desktop, tablet and mobile.
             </p>
         </div>
@@ -1003,7 +572,7 @@
             <h3>Design Challenge</h3>
             <p>
                 Balance luxury brand expression with usability, responsive
-                behaviour and what could be built on an existing platform.
+                behaviour and technical feasibility within an existing platform.
             </p>
         </div>
 
@@ -1011,29 +580,32 @@
 
     <div class="context-box">
         <p>
-            This page covers three pieces of my work in detail: the PLP
-            Filter &amp; Sort panel, the account flows, and the Add to Bag
-            loader. I also worked on the footer, promotional
-            banners, listed at the end.
+            My key contributions included the PLP Filter &amp; Sort panel,
+            account flows (Sign In, Forgot Password and Create Account),
+            and the Add to Bag loader. I also contributed to the site footer
+            and promotional banners.
         </p>
     </div>
 
 </section>
 
 
-<!-- =========================================================
-     02 — CASE 1: PLP FILTER & SORT
-========================================================= -->
+<!-- =====================================================
+     02 PLP FILTER AND SORT
+===================================================== -->
 
 <section id="filter-sort">
 
     <div class="case-head">
-        <h2>02 — PLP Filter &amp; Sort panel</h2>
+        <h2>02 — PLP Filter &amp; Sort Panel</h2>
         <span class="status status--live">LIVE</span>
     </div>
 
     <p class="case-link">
-        <a href="https://www.dunhill.com/en-gb/cat/new/" target="_blank" rel="noopener">See it live on dunhill.com</a>
+        <a href="https://www.dunhill.com/en-gb/cat/new/"
+           target="_blank" rel="noopener">
+            View live Filter &amp; Sort experience
+        </a>
     </p>
 
     <div class="case-steps">
@@ -1041,108 +613,127 @@
         <div class="case-step">
             <h3>Problem</h3>
             <p>
-                The earlier filter carried dense information. In a luxury
-                setting, shoppers don’t want a wall of options. The panel
-                needed to show only the information that matters.
+                The filter experience needed to help shoppers narrow down
+                products without overwhelming them with too many options.
+                For a luxury brand, the interaction needed to feel simple,
+                considered and consistent with the overall visual identity.
             </p>
         </div>
 
         <div class="case-step">
-            <h3>My role</h3>
+            <h3>My Role</h3>
             <p>
-                I designed the Filter &amp; Sort panel for desktop, tablet and
-                mobile (1440, 768 and 375px), with open and closed states.
+                I designed the Filter &amp; Sort panel across desktop,
+                tablet and mobile (1440px, 768px and 375px), including
+                open and closed states.
             </p>
         </div>
 
         <div class="case-step">
             <h3>Constraints</h3>
             <ul>
-                <li>Luxury brand expression: calm, uncluttered, premium.</li>
-                <li>Salesforce Commerce Cloud.</li>
-                <li>An existing overlay that the new panel could not break.</li>
+                <li>Maintain Dunhill's luxury visual language.</li>
+                <li>Work within Salesforce Commerce Cloud.</li>
+                <li>Integrate with the existing overlay behaviour.</li>
+                <li>Maintain responsive behaviour across breakpoints.</li>
             </ul>
         </div>
 
         <div class="case-step">
-            <h3>Key decisions and trade-offs</h3>
+            <h3>Key Decisions &amp; Trade-offs</h3>
             <ul>
                 <li>
-                    <strong>Grouping:</strong> Sort, Product Type, Colour, Size
-                    and Material, the main attributes shoppers use to decide
-                    quickly. Fewer options per screen supports the premium
-                    feel, at the cost of leaving out lower-priority filters.
+                    <strong>Filter grouping:</strong>
+                    Organised Sort, Product Type, Colour, Size and Material
+                    to make product refinement easier.
                 </li>
+
                 <li>
-                    <strong>Colour swatches:</strong> colour is faster to
-                    recognise visually than as text. We agreed with engineering
-                    that swatches come from inventory, so they match what is
-                    actually available. 
+                    <strong>Colour swatches:</strong>
+                    Used visual swatches because colour is easier to scan
+                    visually than through text alone. Swatches were discussed
+                    with engineering in relation to available inventory.
                 </li>
+
                 <li>
-                    <strong>Responsive behaviour:</strong> The panel
-                    opens from the right as a side overlay on desktop and takes
-                    the full width on mobile.
+                    <strong>Desktop behaviour:</strong>
+                    Used a right-side overlay to preserve the product
+                    listing context.
+                </li>
+
+                <li>
+                    <strong>Mobile behaviour:</strong>
+                    Used a full-width panel to make the filter controls
+                    easier to interact with on smaller screens.
                 </li>
             </ul>
         </div>
 
         <div class="case-step">
-            <h3>Working with engineering</h3>
+            <h3>Engineering Collaboration</h3>
             <p>
-                We checked technical feasibility on Salesforce Commerce Cloud
-                and made sure the panel would not cause problems with the
-                existing overlay.
+                Worked with engineering to review technical feasibility
+                within Salesforce Commerce Cloud and ensure that the
+                new panel would work with the existing overlay.
+                Responsive behaviour and interaction details were
+                discussed during handoff.
             </p>
         </div>
 
         <div class="case-step">
-            <h3>What shipped</h3>
+            <h3>What Shipped</h3>
             <p>
-                The panel is live on dunhill.com. I don’t have screenshots of
-                the earlier filter, so below is my original Figma design next
-                to the live panel. The live version has since been refined,
-                for example [the result-count button].
+                The Filter &amp; Sort experience is available on the live
+                Dunhill website. The screenshots below show my Figma
+                design direction alongside the current live experience.
             </p>
+
             <p>
-                The earlier filter showed [two or three specific things it
-                included that this one does not].
+                I did not retain a verified screenshot or specification
+                of the previous filter, so I have not presented an
+                unverified before-and-after comparison.
             </p>
         </div>
 
         <div class="case-step">
             <h3>Outcome</h3>
             <p>
-                Shipped to production on dunhill.com. [Add client feedback
-                only if you can confirm it.]
+                The Filter &amp; Sort experience was released on the
+                production website. The live page provides evidence
+                of implementation. No unverified conversion or
+                usage figures are claimed.
             </p>
         </div>
 
         <div class="case-step">
-            <h3>What I’d improve</h3>
-            <p>[One honest line: what you would test or change next.]</p>
+            <h3>What I'd Improve</h3>
+            <p>
+                I would validate the filter hierarchy through usability
+                sessions and product-listing analytics, then refine the
+                order and labels based on how shoppers narrow their choices.
+            </p>
         </div>
 
     </div>
 
-    <div class="case-shots">
+    <div class="case-shots three-up">
 
         <figure>
-            <figcaption>My Figma design, filter closed</figcaption><br>
-            <img src="../images/Filter-Closed.png" alt="Filter and sort panel, my Figma design, closed state">
-            
+            <figcaption>My Figma Design — Filter Closed</figcaption>
+            <img src="../images/Filter-Closed.png"
+                 alt="Dunhill Filter and Sort closed state design">
         </figure>
-<br>
+
         <figure>
-            <figcaption>My Figma design, filter open</figcaption><br>
-            <img src="../images/Filter-Open.png" alt="Filter and sort panel, my Figma design, open state">
-            
+            <figcaption>My Figma Design — Filter Open</figcaption>
+            <img src="../images/Filter-Open.png"
+                 alt="Dunhill Filter and Sort open state design">
         </figure>
-<br>
+
         <figure>
-            <figcaption>Live on dunhill.com</figcaption><br>
-            <img src="../images/Filter-Live.png" alt="The live filter and sort panel on dunhill.com">
-            
+            <figcaption>Live Website — Filter Panel</figcaption>
+            <img src="../images/Filter-Live.png"
+                 alt="Live Dunhill Filter and Sort panel">
         </figure>
 
     </div>
@@ -1150,19 +741,22 @@
 </section>
 
 
-<!-- =========================================================
-     03 — CASE 2: ACCOUNT FLOWS
-========================================================= -->
+<!-- =====================================================
+     03 ACCOUNT FLOWS
+===================================================== -->
 
 <section id="account-flows">
 
     <div class="case-head">
-        <h2>03 — Account flows</h2>
+        <h2>03 — Account Flows</h2>
         <span class="status status--live">LIVE</span>
     </div>
 
     <p class="case-link">
-        <strong>Live: </strong> <a href="https://www.dunhill.com/en-gb/cat/gifts/best-selling-gifts/">Account Flow</a>
+        <a href="https://www.dunhill.com/en-gb/cat/new/"
+           target="_blank" rel="noopener">
+            View Dunhill website
+        </a>
     </p>
 
     <div class="case-steps">
@@ -1170,17 +764,20 @@
         <div class="case-step">
             <h3>Problem</h3>
             <p>
-                Sign-in, reset and account creation needed clear validation,
-                failure and success states without adding weight to a minimal
-                luxury interface.
+                The account experience needed to support Sign In,
+                Forgot Password and Create Account without making
+                the interface feel complicated. Validation, error
+                and success states needed to communicate clearly
+                while maintaining a minimal luxury aesthetic.
             </p>
         </div>
 
         <div class="case-step">
-            <h3>My role</h3>
+            <h3>My Role</h3>
             <p>
                 I designed the Sign In, Forgot Password and Create Account
-                overlays, including their validation, error and success states.
+                overlays, including form validation, error messages,
+                password requirements and success states.
             </p>
         </div>
 
@@ -1188,117 +785,148 @@
             <h3>Constraints</h3>
             <ul>
                 <li>Follow the existing account workflow.</li>
-                <li>Keep the interface minimal and on brand.</li>
+                <li>Maintain the Dunhill visual language.</li>
+                <li>Keep validation messages clear and concise.</li>
+                <li>Support the required account states.</li>
             </ul>
         </div>
 
         <div class="case-step">
-            <h3>Key decisions</h3>
+            <h3>Key Decisions</h3>
             <ul>
                 <li>
-                    <strong>Password rules up front:</strong> “Your password
-                    must include: 1 number, 10 characters, 1 special
-                    character,” so users see the requirements before they fail.
+                    <strong>Password requirements:</strong>
+                    Displayed requirements upfront, including one number,
+                    ten characters and one special character.
                 </li>
+
                 <li>
-                    <strong>Sign-in error:</strong> “Sorry, but your email or
-                    password is not recognised.” The message doesn’t say which
-                    one was wrong, so it doesn’t reveal which accounts exist.
+                    <strong>Sign-in error:</strong>
+                    Used the message "Sorry, but your email or password
+                    is not recognised." This avoids identifying which
+                    credential was incorrect.
                 </li>
+
                 <li>
-                    <strong>Reset success:</strong> “Your password has been
-                    successfully reset.”
+                    <strong>Password reset success:</strong>
+                    Used a clear confirmation message:
+                    "Your password has been successfully reset."
                 </li>
+
                 <li>
-                    <strong>Wording and placement:</strong> short messages
-                    inside the existing flow, so nothing felt heavy or new.
-                    [Add how errors are made visible, for example text and an
-                    icon, only after you check the live site.]
+                    <strong>Visual consistency:</strong>
+                    Kept messages within the existing account flow
+                    rather than introducing unnecessary interface elements.
                 </li>
             </ul>
         </div>
 
         <div class="case-step">
-            <h3>Working with developers and QA</h3>
+            <h3>Engineering &amp; QA Collaboration</h3>
             <p>
-                We confirmed what could be implemented, agreed the animation
-                timing and smooth transitions for the overlays, and checked
-                the behaviour in QA.
+                Worked with developers to confirm implementation feasibility,
+                overlay transitions and animation timing. The designed
+                interactions and states were reviewed during QA to check
+                that the implemented behaviour matched the intended design.
             </p>
         </div>
 
-         <div class="case-shots">
-             <figcaption>My Account flow design</figcaption><br>
-
-        <figure>
-            <figcaption>Sign In</figcaption><br>
-            <img src="../images/Sign-In.png" alt="Sign In overlay">
-            
-        </figure>
-
-        <figure>
-             <figcaption>Create Account</figcaption><br>
-            <img src="../images/Create-acoount .png" alt="Create Account overlay">
-           
-        </figure>
-
-        <figure>
-             <figcaption>Reset Password</figcaption><br>
-            <img src="../images/Reset-Password.png" alt="Reset Password overlay">
-           
-        </figure>
-
-    </div>
-
         <div class="case-step">
-            <h3>What shipped</h3>
-               <figure>
-             <figcaption> Live Reset Password</figcaption><br>
-            <img src="../images/Live-Reset-Password.png" alt="Reset Password overlay">
-           
-        </figure><br>
-             <figure>
-             <figcaption>Live Create Account</figcaption><br>
-            <img src="../images/Live-Create-Account.png" alt="Reset Password overlay">
-           
-        </figure><br>
-             <figure>
-             <figcaption>Live Sign-In</figcaption><br>
-            <img src="../images/Live-Sign-In.png" alt="Reset Password overlay">
-           
-        </figure><br>
+            <h3>What Shipped</h3>
+            <p>
+                The account-flow designs were implemented as part of
+                the Dunhill experience. The screenshots below show
+                selected design and live account screens.
+            </p>
         </div>
 
         <div class="case-step">
             <h3>Outcome</h3>
-            <p>[Client approval, and anything else you can confirm.]</p>
+            <p>
+                The account-flow experience was implemented as part
+                of the website. The live site provides a reference
+                point for the experience. No unverified performance
+                metrics are claimed.
+            </p>
         </div>
 
         <div class="case-step">
-            <h3>What I’d improve</h3>
-            <p>[One honest line.]</p>
+            <h3>What I'd Improve</h3>
+            <p>
+                I would review form analytics and support feedback
+                to identify where users abandon or repeat steps,
+                then test clearer inline validation and recovery guidance.
+            </p>
         </div>
 
     </div>
 
-   
+    <h3 style="margin-top:35px;">Design Screens</h3>
+
+    <div class="case-shots">
+
+        <figure>
+            <figcaption>Sign In — Design</figcaption>
+            <img src="../images/Sign-In.png"
+                 alt="Dunhill Sign In design">
+        </figure>
+
+        <figure>
+            <figcaption>Create Account — Design</figcaption>
+            <img src="../images/Create-acoount .png"
+                 alt="Dunhill Create Account design">
+        </figure>
+
+        <figure>
+            <figcaption>Forgot Password — Design</figcaption>
+            <img src="../images/Reset-Password.png"
+                 alt="Dunhill Forgot Password design">
+        </figure>
+
+    </div>
+
+    <h3 style="margin-top:35px;">Live Implementation</h3>
+
+    <div class="case-shots">
+
+        <figure>
+            <figcaption>Live — Reset Password</figcaption>
+            <img src="../images/Live-Reset-Password.png"
+                 alt="Live Dunhill Reset Password screen">
+        </figure>
+
+        <figure>
+            <figcaption>Live — Create Account</figcaption>
+            <img src="../images/Live-Create-Account.png"
+                 alt="Live Dunhill Create Account screen">
+        </figure>
+
+        <figure>
+            <figcaption>Live — Sign In</figcaption>
+            <img src="../images/Live-Sign-In.png"
+                 alt="Live Dunhill Sign In screen">
+        </figure>
+
+    </div>
 
 </section>
 
 
-<!-- =========================================================
-     04 — CASE 3: ADD TO BAG LOADER
-========================================================= -->
+<!-- =====================================================
+     04 ADD TO BAG LOADER
+===================================================== -->
 
 <section id="add-to-bag-loader">
 
     <div class="case-head">
-        <h2>04 — Add to Bag loader</h2>
-        <span class="status status--approved">APPROVED, NOT RELEASED</span>
+        <h2>04 — Add to Bag Loader</h2>
+        <span class="status status--approved">
+            APPROVED, NOT RELEASED
+        </span>
     </div>
 
     <p class="case-link">
-        Implemented in staging. Not currently live on dunhill.com.
+        Implemented in staging. Not currently live on Dunhill.
     </p>
 
     <div class="case-steps">
@@ -1306,102 +934,131 @@
         <div class="case-step">
             <h3>Problem</h3>
             <p>
-                The add-to-bag popup took 5 to 7 seconds with no feedback. I
-                found it during a routine add-to-cart check. Shoppers couldn’t
-                tell whether the item had been added, so they clicked
-                repeatedly.
+                During a routine add-to-cart check, I noticed that
+                the Add to Bag popup took approximately 5–7 seconds
+                without providing clear loading feedback. Shoppers
+                could not tell whether the item was being added,
+                which could lead to repeated clicks.
             </p>
         </div>
 
         <div class="case-step">
-            <h3>My role</h3>
+            <h3>My Role</h3>
             <p>
-                I identified the issue, designed the loader and supported its
-                implementation.
+                I identified the usability issue, proposed a
+                brand-consistent loading interaction, designed
+                the loader and supported implementation.
             </p>
         </div>
 
         <div class="case-step">
             <h3>Constraints</h3>
             <ul>
-                <li>Dunhill brand guidelines.</li>
-                <li>One sprint (10 days).</li>
+                <li>Follow Dunhill brand guidelines.</li>
+                <li>Work within one sprint (10 days).</li>
+                <li>Respect the existing Add to Bag interaction.</li>
             </ul>
         </div>
 
         <div class="case-step">
-            <h3>Key decisions and trade-offs</h3>
+            <h3>Key Decisions &amp; Trade-offs</h3>
             <ul>
                 <li>
-                    <strong>Brand-consistent diamond loader instead of a
-                    generic spinner:</strong> recognisable and unobtrusive.
+                    <strong>Diamond loader:</strong>
+                    Used a brand-consistent diamond animation
+                    instead of a generic spinner.
                 </li>
+
                 <li>
-                    <strong>Success message only after the system confirms the
-                    add:</strong> loading and success are different states, and
-                    users shouldn’t be told “added” before it’s true.
+                    <strong>Loading versus success:</strong>
+                    Kept loading and success as separate states.
+                    A success message should appear only after
+                    the system confirms the item has been added.
                 </li>
             </ul>
         </div>
 
         <div class="case-step">
-            <h3>What shipped</h3>
+            <h3>What Shipped</h3>
             <p>
-                The client approved the design and it was implemented in
-                staging. It is not currently live, and I don’t know the
-                reason, since I left the project in July 2026.
+                The design received client approval and was
+                implemented in staging. It was not live on the
+                production website when I left the project in July 2026.
             </p>
         </div>
 
         <div class="case-step">
             <h3>Outcome</h3>
-            <p>Client approval. </p>
+            <p>
+                Client-approved design with staging implementation.
+                Production release was not confirmed.
+            </p>
         </div>
 
-       
+        <div class="case-step">
+            <h3>What I'd Improve</h3>
+            <p>
+                I would validate the loader behaviour under different
+                network conditions and review the time between
+                the loading state and the confirmed cart response.
+            </p>
+        </div>
 
     </div>
+
+    <!-- Add your loader screenshot if available -->
 
 </section>
 
 
-<!-- =========================================================
-     05 — OTHER WORK
-========================================================= -->
+<!-- =====================================================
+     05 OTHER DUNHILL WORK
+===================================================== -->
 
 <section id="other-work">
 
-    <h2>05 — Other work on Dunhill</h2>
+    <h2>05 — Additional Work on Dunhill</h2>
 
     <p>
-        I also worked on the site footer, promotional banners. 
-        
-        <strong>LIVE</strong> <a href="https://www.dunhill.com/en-gb/">Footer</a>
+        In addition to the main case studies, I contributed to
+        the website footer and promotional banner experiences.
+    </p>
+
+    <p>
+        <span class="status status--live">LIVE</span>
+        <a href="https://www.dunhill.com/en-gb/"
+           target="_blank" rel="noopener">
+            View Dunhill website
+        </a>
     </p>
 
     <div class="case-shots">
+
         <figure>
-            <img src="../images/Footer.png" alt="Site footer">
-            <figcaption>Footer</figcaption>
+            <figcaption>Website Footer</figcaption>
+            <img src="../images/Footer.png"
+                 alt="Dunhill website footer">
         </figure>
+
     </div>
 
 </section>
 
 
-<!-- =========================================================
-     06 — COLLABORATION & MY ROLE
-========================================================= -->
+<!-- =====================================================
+     06 COLLABORATION
+===================================================== -->
 
-<section>
+<section id="collaboration">
 
     <h2>06 — Collaboration &amp; My Role</h2>
 
     <p>
-        I contributed from understanding the problem through interaction
-        design, responsive UI, developer handoff, design QA and implementation
-        validation. Work ran in sprints, with direct collaboration with the
-        Dunhill design team.
+        I contributed from understanding the problem through
+        interaction design, responsive UI, developer handoff,
+        design QA and implementation validation. Work ran in
+        sprints, with direct collaboration with the Dunhill
+        design team.
     </p>
 
     <div class="collaboration-grid">
@@ -1411,8 +1068,8 @@
             <ul>
                 <li>Dunhill designer and design team</li>
                 <li>Product / business stakeholders</li>
-                <li>Engineering</li>
-                <li>QA</li>
+                <li>Engineering team</li>
+                <li>QA team</li>
             </ul>
         </div>
 
@@ -1421,6 +1078,7 @@
             <ul>
                 <li>Design reviews</li>
                 <li>Technical feasibility discussions</li>
+                <li>Responsive design specifications</li>
                 <li>Developer handoff</li>
                 <li>Design QA and implementation validation</li>
             </ul>
@@ -1431,8 +1089,9 @@
 </section>
 
 
-</main>
 
+
+</main>
 
 </body>
 </html>
